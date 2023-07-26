@@ -1,3 +1,17 @@
+--CONFIG--
+local configPath = "PRAY"
+local config = mwse.loadConfig(configPath)
+if (config == nil) then
+	config = {
+        logLevel = "INFO",
+        hotKey = {
+            enabled = true,
+            keyCode = tes3.scanCode.p,
+        },
+    }
+end
+
+
 --INITIALISE SKILLS--
 local skillModule = require("OtherSkills.skillModule")
 
@@ -21,3 +35,45 @@ local function onSkillReady()
     )
 end
 event.register("OtherSkills:Ready", onSkillReady)
+
+
+
+--------------------------------------------
+--MCM
+--------------------------------------------
+
+local function registerMCM()
+    local  sideBarDefault = (
+        "PRAY: Prayers, Rituals, And You \n\n" ..
+        "PRAY adds Divine Prayers into the game " ..
+        "utilising merlord's skill frameworks in MWSE " ..
+        "to fully integrate it into the vanilla UI. \n\n" ..
+        "Your Divine Theology skill can be found in your stats menu " ..
+        "under 'Other Skills'. Your skill at theology is " ..
+        "based on your Wisdom."
+    )
+    local function addSideBar(component)
+        component.sidebar:createInfo{ text = sideBarDefault}
+        local hyperlink = component.sidebar:createCategory("Credits: ")
+        hyperlink:createHyperLink{
+            text = "Scripting: hornsilk",
+            exec = "start https://github.com/hornsilk/PRAY_for_morrowind",
+        }
+    end
+
+    local template = mwse.mcm.createTemplate("PRAY")
+    template:saveOnClose(configPath, config)
+    local page = template:createSideBarPage{}
+    addSideBar(page)
+
+    page:createKeyBinder{
+        label = "Hot key",
+        description = "The key to activate the prayer menu.",
+        variable = mwse.mcm.createTableVariable{ id = "hotKey", table = config },
+        allowCombinations = true
+    }
+
+    template:register()
+end
+
+event.register("modConfigReady", registerMCM)
