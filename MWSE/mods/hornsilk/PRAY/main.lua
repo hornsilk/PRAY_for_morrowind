@@ -86,7 +86,7 @@ local function registerPrayers()
         id = "PRAY:ActivatePrayerMenu",
         type = "event",
         name = "Prayer Menu",
-        recipies = recipeList,
+        recipes = recipeList,
         defaultSort = "skill",
         defaultFilter = "skill",
         defaultShowCategories = true
