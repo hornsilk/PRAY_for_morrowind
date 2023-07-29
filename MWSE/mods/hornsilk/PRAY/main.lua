@@ -100,6 +100,61 @@ local function initialised()
 end
 event.register("initialized", initialised)
 
+
+-- INITIALISE--
+local function registerPrayer(prayerTable)
+    local id = prayerTable.id
+    local skill = prayerTable.skill
+    local skillValue = prayerTable.skillReq
+    local effect = prayerTable.effect
+    local description = prayerTable.description
+    local category = prayerTable.handler
+
+    local recipe = {
+        id = id,
+        description = description,
+        skillRequirements = {
+            { skill = skill, requirement = skillValue }
+        },
+        category = category,
+        noResult = true,
+        knownByDefault = true,
+        craftCallback = effect
+    }
+
+    return recipe
+end
+
+local function registerPrayers()
+    mwse.log("Registering prayers for PRAY")
+    if not CraftingFramework then
+        --ERROR: CraftingFramework not found
+        return
+    end
+    --Create recipe list
+    local recipeList = {}
+    for _, prayerTable in pairs(prayers.divinePrayers) do
+        local recipe = registerPrayer(prayerTable)
+        table.insert(recipeList, recipe)
+    end
+
+    CraftingFramework.menuActivator:new{
+        id = "PRAY:ActivatePrayerMenu",
+        type = "event",
+        name = "Prayer Menu",
+        recipies = recipeList,
+        defaultSort = "skill",
+        defaultFilter = "skill",
+        defaultShowCategories = true
+    }
+end
+
+local function initialised()
+    mwse.log("Registering Prayers")
+    registerPrayers()
+end
+event.register("initialized", initialised)
+
 --------------------------------------------
 --MCM
 --------------------------------------------
