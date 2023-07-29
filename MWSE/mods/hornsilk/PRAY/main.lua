@@ -47,22 +47,32 @@ event.register("OtherSkills:Ready", onSkillReady)
 -- INITIALISE--
 local function registerPrayer(prayerTable)
     local id = prayerTable.id
+    local name = prayerTable.name
     local skill = prayerTable.skill
     local skillValue = prayerTable.skillReq
-    local effect = prayerTable.effect
     local description = prayerTable.description
     local category = prayerTable.handler
+    local effect = prayerTable.effect
 
     local recipe = {
         id = id,
+        -- craftableId = "",
         description = description,
+        noResult = true,
+        materials = {},
+        timeTaken = 60,
+        knownByDefault = true,
         skillRequirements = {
             { skill = skill, requirement = skillValue }
         },
         category = category,
-        noResult = true,
-        knownByDefault = true,
-        craftCallback = effect
+        name = name,
+        uncarryable = true       
+        -- craftCallback = effect
+        -- soundId = "",
+        -- successMessageCallback = "",
+        -- previewMesh = "",
+        -- previewImage = "",
     }
 
     return recipe
@@ -104,7 +114,6 @@ event.register("initialized", initialised)
 local function onKeyDown(e)
     if tes3ui.menuMode() then return end
     if e.keyCode == config.hotKey.keyCode then
-        tes3.messageBox("I want to pray")
         event.trigger("PRAY:ActivatePrayerMenu")
     end
 end
