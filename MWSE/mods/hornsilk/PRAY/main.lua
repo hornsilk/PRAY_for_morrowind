@@ -34,7 +34,7 @@ local function onSkillReady()
             name = "Divine Theology",
             icon = "Icons/PRAY/divine.dds",
             value = 10,
-            attribute =  tes3.attribute.willpower,
+            attribute =  tes3.attribute.mysticism,
             description = divineDescription,
             specialization = tes3.specialization.magic,
             active = "active"
