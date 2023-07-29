@@ -1,3 +1,7 @@
+--Get the Crafting Framework API and check that it exists
+local CraftingFramework = include("CraftingFramework")
+if not CraftingFramework then return end
+
 --CONFIG--
 local configPath = "PRAY"
 local config = mwse.loadConfig(configPath)
