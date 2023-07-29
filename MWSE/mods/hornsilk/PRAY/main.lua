@@ -81,6 +81,7 @@ local function registerPrayers()
         table.insert(recipeList, recipe)
     end
 
+    --Register your MenuActivator
     CraftingFramework.MenuActivator:new{
         id = "PRAY:ActivatePrayerMenu",
         type = "event",
@@ -99,9 +100,15 @@ end
 event.register("initialized", initialised)
 
 
--- Filter by the scan code to get P key presses only.
-event.register(tes3.event.key, "PRAY:ActivatePrayerMenu", { filter = config.hotKey.keyCode } )
-
+---@param e keyDownEventData
+local function onKeyDown(e)
+    if tes3ui.menuMode() then return end
+    if e.keyCode == config.hotKey.keyCode then
+        tes3.messageBox("I want to pray")
+        event.trigger("PRAY:ActivatePrayerMenu")
+    end
+end
+event.register(tes3.event.keyDown, onKeyDown, { filter = config.hotKey.keyCode } )
 
 --------------------------------------------
 --MCM
