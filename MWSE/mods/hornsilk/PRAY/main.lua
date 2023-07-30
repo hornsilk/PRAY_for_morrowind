@@ -52,8 +52,10 @@ local function registerPrayer(prayerTable)
     local skillValue = prayerTable.skillReq
     local description = prayerTable.description
     local category = prayerTable.handler
-    local effect = prayerTable.effect
     local text = prayerTable.text
+    local effects = prayerTable.spellEffects
+    local bypassResistances = prayerTable.bypassResistances or true
+    local castChance = prayerTable.castChance or 100
 
     local recipe = {
         id = id,
@@ -71,7 +73,13 @@ local function registerPrayer(prayerTable)
         uncarryable = true,
         craftCallback = function()
             tes3.messageBox(text)
-            prayerTable.effect()
+            tes3.applyMagicSource({
+                reference = tes3.player,
+                castChance = castChance,
+                bypassResistances = bypassResistances,
+                name = name,
+                effects = effects
+            })
         end
         -- soundId = "",
         -- successMessageCallback = "",

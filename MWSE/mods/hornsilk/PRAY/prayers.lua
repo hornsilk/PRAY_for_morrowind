@@ -1,32 +1,5 @@
 local this = {}
 
-local function myTestCallback()
-
-    -- PLAY ANIMATION
-
-    -- tes3.applyMagicSource({
-    --     reference = tes3.player, 
-    --     name = ..., 
-    --     castChance = 100, 
-    --     bypassResistances = true, 
-    --     effects = {...}, 
-    -- })
-    tes3.applyMagicSource({
-        reference = tes3.player,
-        castChance = 100,
-        bypassResistances = true,
-        name = "Prayer to Mara",
-        effects = {
-            {
-                id = 80, --fortifyHealth
-                duration = 60,
-                min = 50,
-                max = 50,
-            }
-        }
-    })
-end
-
 this.divinePrayers = {
     {
         name = "Prayer to Mara",
@@ -34,10 +7,17 @@ this.divinePrayers = {
         handler = "Divine Prayers",
         skillReq = 10,
         skill = "divine",
-        effect = myTestCallback,
         description = "Pray to Mara to fortify my health.",
+        spellEffects = {
+            {
+                id = 80, --fortifyHealth
+                duration = 60,
+                min = 50,
+                max = 50,
+            }
+        },
         time = 60,
-        text = "Dear Mara, you are awesome.\n\n Isn't modding fun?"
+        text = "Dear Mara, you are awesome.\n\n Isn't modding fun?",
     },
     {
         name = "Prayer to Talos",
