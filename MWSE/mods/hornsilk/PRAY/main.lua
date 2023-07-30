@@ -4,6 +4,7 @@ if not CraftingFramework then return end
 
 local prayers = require("hornsilk.PRAY.prayers")
 local animation = require("hornsilk.PRAY.animation")
+local materials = require("hornsilk.PRAY.materials")
 
 
 --CONFIG--
@@ -45,6 +46,11 @@ local function onSkillReady()
 end
 event.register("OtherSkills:Ready", onSkillReady)
 
+
+-- REGISTER MATERIALS
+local function registerMaterials(materials)
+    CraftingFramework.Material:registerMaterials(materials)
+end
 
 -- REGISTER RECIPIES --
 local function registerPrayer(prayerTable)
@@ -95,6 +101,8 @@ local function registerPrayer(prayerTable)
                         name = name,
                         effects = effects
                     })
+
+                    -- tes3.playSound()
                 end
             }
         end
@@ -104,7 +112,6 @@ local function registerPrayer(prayerTable)
 end
 
 local function registerPrayers()
-    mwse.log("Registering prayers for PRAY")
     if not CraftingFramework then
         --ERROR: CraftingFramework not found
         return
@@ -129,8 +136,10 @@ local function registerPrayers()
 end
 
 local function initialised()
-    mwse.log("Registering Prayers")
+    mwse.log("PRAY: Registering Prayers")
     registerPrayers()
+    mwse.log("PRAY: Registering Materials")
+    registerMaterials(materials)
 end
 event.register("initialized", initialised)
 
