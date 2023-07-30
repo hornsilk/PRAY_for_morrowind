@@ -3,7 +3,7 @@ local CraftingFramework = include("CraftingFramework")
 if not CraftingFramework then return end
 
 local prayers = require("hornsilk.PRAY.prayers")
-local animations = require("hornsilk.PRAY.animations")
+local animation = require("hornsilk.PRAY.animation")
 
 
 --CONFIG--
@@ -75,12 +75,12 @@ local function registerPrayer(prayerTable)
         uncarryable = true,
         craftCallback = function()
             tes3.messageBox(text)
-            animations.divineAnimationBegin()
+            animation.divineAnimationBegin()
             timer.start{
                 duration = prayerDuration/60, --duration in hours for game timers
                 type = timer.game,
                 callback = function ()
-                    animations.divineAnimationEnd()
+                    animation.divineAnimationEnd()
                     tes3.applyMagicSource({
                         reference = tes3.player,
                         castChance = castChance,
