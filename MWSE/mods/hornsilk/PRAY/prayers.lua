@@ -36,7 +36,8 @@ this.divinePrayers = {
         skill = "divine",
         effect = myTestCallback,
         description = "Pray to Mara to fortify my health.",
-        time = 60
+        time = 60,
+        text = "Dear Mara, you are awesome.\n\n Isn't modding fun?"
     },
     {
         name = "Prayer to Talos",

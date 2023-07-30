@@ -53,6 +53,7 @@ local function registerPrayer(prayerTable)
     local description = prayerTable.description
     local category = prayerTable.handler
     local effect = prayerTable.effect
+    local text = prayerTable.text
 
     local recipe = {
         id = id,
@@ -68,7 +69,10 @@ local function registerPrayer(prayerTable)
         category = category,
         name = name,
         uncarryable = true,
-        craftCallback = effect
+        craftCallback = function()
+            tes3.messageBox(text)
+            prayerTable.effect()
+        end
         -- soundId = "",
         -- successMessageCallback = "",
         -- previewMesh = "",
