@@ -3,6 +3,7 @@ local CraftingFramework = include("CraftingFramework")
 if not CraftingFramework then return end
 
 local prayers = require("hornsilk.PRAY.prayers")
+local animations = require("hornsilk.PRAY.animations")
 
 
 --CONFIG--
@@ -44,7 +45,7 @@ end
 event.register("OtherSkills:Ready", onSkillReady)
 
 
--- INITIALISE--
+-- REGISTER RECIPIES --
 local function registerPrayer(prayerTable)
     local id = prayerTable.id
     local name = prayerTable.name
@@ -73,6 +74,7 @@ local function registerPrayer(prayerTable)
         uncarryable = true,
         craftCallback = function()
             tes3.messageBox(text)
+            animations.prayerAnimationBegin()
             tes3.applyMagicSource({
                 reference = tes3.player,
                 castChance = castChance,
