@@ -1,10 +1,29 @@
 local this = {
     {
-        id = "wood",
-        name = "Wood",
+        id = "longsword",
+        name = "Longsword",
         ids = {
-            "misc_firewood",
-            "misc_oak_wood_01"
+            "daedric claymore",
+            "dwarven claymore",
+            "glass claymore",
+            "iron claymore",
+            "nordic claymore",
+            "steel claymore",
+            "adamantium_claymore",
+            "BM nordic silver claymore",
+            "BM nordic silver claymore_ber",
+            "silver claymore",
+            "daedric longsword",
+            "silver longsword",
+            "glass longsword",
+            "iron longsword",
+            "BM ice longsword",
+            "steel longsword",
+            "ebony longsword",
+            "BM nordic silver longsword",
+            "BM nordic silver longsword_ber",
+            "BM nordic_longsword_tracker",
+            "BM hunstman longsword",
         }
     },
     {
