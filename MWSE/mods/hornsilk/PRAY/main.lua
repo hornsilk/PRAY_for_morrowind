@@ -2,9 +2,10 @@
 local CraftingFramework = include("CraftingFramework")
 if not CraftingFramework then return end
 
-local prayers = require("hornsilk.PRAY.prayers")
-local animation = require("hornsilk.PRAY.animation")
 local materials = require("hornsilk.PRAY.materials")
+local prayers = require("hornsilk.PRAY.prayers")
+local rituals = require("hornsilk.PRAY.rituals")
+local animation = require("hornsilk.PRAY.animation")
 
 
 --CONFIG--
@@ -48,31 +49,40 @@ event.register("OtherSkills:Ready", onSkillReady)
 
 
 -- REGISTER MATERIALS
-local function registerMaterials(materials)
-    CraftingFramework.Material:registerMaterials(materials)
+local function registerMaterials(materialTable)
+    CraftingFramework.Material:registerMaterials(materialTable)
 end
 
 -- REGISTER RECIPIES --
-local function registerPrayer(prayerTable)
-    local id = prayerTable.id
-    local name = prayerTable.name
-    local skill = prayerTable.skill
-    local skillValue = prayerTable.skillReq
-    local description = prayerTable.description
-    local category = prayerTable.handler
-    local text = prayerTable.text
-    local effects = prayerTable.spellEffects
-    local image = prayerTable.image
-    local prayerDuration = prayerTable.prayerDuration or 30
-    local bypassResistances = prayerTable.bypassResistances or true
-    local castChance = prayerTable.castChance or 100
+local function registerPrayerOrRitual(recipeTable, type)
+    local id = recipeTable.id
+    local name = recipeTable.name
+    local skill = recipeTable.skill
+    local skillValue = recipeTable.skillReq
+    local description = recipeTable.description
+    local category = recipeTable.handler
+    local text = recipeTable.text
+    local effects = recipeTable.spellEffects
+    local image = recipeTable.image
+    local prayerDuration = recipeTable.prayerDuration or 30
+    local bypassResistances = recipeTable.bypassResistances or true
+    local castChance = recipeTable.castChance or 100
+
+    local materialsReq = {}
+    if type == "prayer" then
+        materialsReq = {}
+    end
+    if type == "ritual" then
+        materialsReq = recipeTable.materials
+    end
+
 
     local recipe = {
         id = id,
         -- craftableId = "",
         description = description,
         noResult = true,
-        materials = {},
+        materials = materialsReq,
         knownByDefault = true,
         skillRequirements = {
             { skill = skill, requirement = skillValue }
@@ -111,7 +121,7 @@ local function registerPrayer(prayerTable)
     return recipe
 end
 
-local function registerPrayers()
+local function registerPrayersAndRituals()
     if not CraftingFramework then
         --ERROR: CraftingFramework not found
         return
@@ -119,7 +129,11 @@ local function registerPrayers()
     --Create recipe list
     local recipeList = {}
     for _, prayerTable in pairs(prayers.divinePrayers) do
-        local recipe = registerPrayer(prayerTable)
+        local recipe = registerPrayerOrRitual(prayerTable, "prayer")
+        table.insert(recipeList, recipe)
+    end
+    for _, ritualTable in pairs(rituals.divineRituals) do
+        local recipe = registerPrayerOrRitual(ritualTable, "ritual")
         table.insert(recipeList, recipe)
     end
 
@@ -136,10 +150,10 @@ local function registerPrayers()
 end
 
 local function initialised()
-    mwse.log("PRAY: Registering Prayers")
-    registerPrayers()
     mwse.log("PRAY: Registering Materials")
     registerMaterials(materials)
+    mwse.log("PRAY: Registering Prayers and Rituals")
+    registerPrayersAndRituals()
 end
 event.register("initialized", initialised)
 
