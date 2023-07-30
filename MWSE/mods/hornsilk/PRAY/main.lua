@@ -65,7 +65,6 @@ local function registerPrayer(prayerTable)
         description = description,
         noResult = true,
         materials = {},
-        timeTaken = 60,
         knownByDefault = true,
         skillRequirements = {
             { skill = skill, requirement = skillValue }
