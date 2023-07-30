@@ -55,6 +55,7 @@ local function registerPrayer(prayerTable)
     local category = prayerTable.handler
     local text = prayerTable.text
     local effects = prayerTable.spellEffects
+    local prayerDuration = prayerTable.prayerDuration or 15
     local bypassResistances = prayerTable.bypassResistances or true
     local castChance = prayerTable.castChance or 100
 
@@ -74,14 +75,21 @@ local function registerPrayer(prayerTable)
         uncarryable = true,
         craftCallback = function()
             tes3.messageBox(text)
-            animations.prayerAnimationBegin()
-            tes3.applyMagicSource({
-                reference = tes3.player,
-                castChance = castChance,
-                bypassResistances = bypassResistances,
-                name = name,
-                effects = effects
-            })
+            animations.divineAnimationBegin()
+            timer.start{
+                duration = prayerDuration/60, --duration in hours for game timers
+                type = timer.game,
+                callback = function ()
+                    animations.divineAnimationEnd()
+                    tes3.applyMagicSource({
+                        reference = tes3.player,
+                        castChance = castChance,
+                        bypassResistances = bypassResistances,
+                        name = name,
+                        effects = effects
+                    })
+                end
+            }
         end
         -- soundId = "",
         -- successMessageCallback = "",
