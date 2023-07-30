@@ -35,7 +35,8 @@ local function onSkillReady()
             name = "Divine Theology",
             icon = "Icons\\PRAY\\divine.dds",
             value = 10,
-            attribute =  tes3.attribute.wisdom,
+            lvlCap = 50,
+            -- attribute =  tes3.attribute.wisdom,
             description = divineDescription,
             specialization = tes3.specialization.magic,
             active = "active"
@@ -80,6 +81,7 @@ local function registerPrayer(prayerTable)
 
         craftCallback = function()
             tes3.messageBox(text)
+            skillModule.incrementSkill( skill, {progress = 20} )
             animation.divineAnimationBegin()
             timer.start{
                 duration = prayerDuration/60, --duration in hours for game timers
@@ -153,8 +155,7 @@ local function registerMCM()
         "utilising merlord's skill frameworks in MWSE " ..
         "to fully integrate it into the vanilla UI. \n\n" ..
         "Your Divine Theology skill can be found in your stats menu " ..
-        "under 'Other Skills'. Your skill at theology is " ..
-        "based on your Wisdom."
+        "under 'Other Skills'."
     )
     local function addSideBar(component)
         component.sidebar:createInfo{ text = sideBarDefault}
