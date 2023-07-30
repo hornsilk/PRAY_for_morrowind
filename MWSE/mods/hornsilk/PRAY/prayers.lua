@@ -14,7 +14,7 @@ this.divinePrayers = {
         skillReq = 10,
         skill = "divine",
         description = "Pray to Akatosh to fortify Speed.",
-        prayerDuration = 3,
+        prayerDuration = 30,
         image = "Icons\\PRAY\\art\\akatosh.dds",
         spellEffects = {
             {
@@ -25,7 +25,7 @@ this.divinePrayers = {
                 max = 5,
             }
         },
-        text = "Dear Akatosh, you are awesome.\n\n Isn't modding fun?",
+        text = "Perched on the edge of an endless rhyme\nIn the Gray Maybe, spirits swirl\nMortal Plane takes its first breath\nDivine mercy or dark trickster's death\nTamriel's dance, the spirits' sway.",
     },
     {
         name = "Prayer of Arkay",
@@ -34,7 +34,7 @@ this.divinePrayers = {
         skillReq = 10,
         skill = "divine",
         description = "Pray to Arkay to fortify Willpower.",
-        prayerDuration = 3,
+        prayerDuration = 30,
         image = "Icons\\PRAY\\art\\arkay.dds",
         spellEffects = {
             {
@@ -45,7 +45,7 @@ this.divinePrayers = {
                 max = 5,
             }
         },
-        text = "Dear Arkay, you are awesome.\n\n Isn't modding fun?",
+        text = "To Arkay, the Unending Dancer,\nDeath's embrace, a cosmic answer\nTravel cycles, birth to fall\nUsher souls, heed the call\nIn twilight's realm, secrets unfold\nDiminuendo, mysteries untold\nWith old rites, we bind the chains\nArkay's laws, our power gains.",
     },
     {
         name = "Prayer of Dibella",
@@ -54,7 +54,7 @@ this.divinePrayers = {
         skillReq = 10,
         skill = "divine",
         description = "Pray to Dibella to fortify Personality.",
-        prayerDuration = 3,
+        prayerDuration = 30,
         image = "Icons\\PRAY\\art\\dibella.dds",
         spellEffects = {
             {
@@ -65,7 +65,7 @@ this.divinePrayers = {
                 max = 5,
             }
         },
-        text = "Dear Dibella, you are awesome.\n\n Isn't modding fun?",
+        text = "Dibella, radiant muse, your allure we embrace\nBeauty's divine essence, a vision to trace\nIn Cyrodiil's embrace, your cults do bloom\nWomen, artists, and passions you consume\nA tapestry of pleasure, healing and art\nTo Dibella's grace, we offer our heart.",
     },
     {
         name = "Prayer of Julianos",
@@ -74,7 +74,7 @@ this.divinePrayers = {
         skillReq = 10,
         skill = "divine",
         description = "Pray to Julianos to fortify Intelligence.",
-        prayerDuration = 3,
+        prayerDuration = 30,
         image = "Icons\\PRAY\\art\\dibella.dds",
         spellEffects = {
             {
@@ -85,7 +85,7 @@ this.divinePrayers = {
                 max = 5,
             }
         },
-        text = "Dear Julianos, you are awesome.\n\n Isn't modding fun?",
+        text = "Julianos, master of enigmas profound\nWith words and numbers, your truth is found\nIn scrolls you dwell, the Damned Equation\nA paradox of wisdom, mind's libation\nThrough arts arcane, your secrets unfurl\nKnowledge's keeper, god of the scholar.",
     },
     {
         name = "Prayer of Kynareth",
@@ -94,7 +94,7 @@ this.divinePrayers = {
         skillReq = 10,
         skill = "divine",
         description = "Pray to Kynareth to fortify Agility.",
-        prayerDuration = 3,
+        prayerDuration = 30,
         image = "Icons\\PRAY\\art\\kynareth.dds",
         spellEffects = {
             {
@@ -105,7 +105,7 @@ this.divinePrayers = {
                 max = 5,
             }
         },
-        text = "Dear Kynareth, you are awesome.\n\n Isn't modding fun?",
+        text = "Kynareth, goddess of winds untamed\nIn heavens' embrace, your power proclaimed\nWith rain's sweet song and whispering breeze\nGuide us through skies, with grace and ease\nBy canah's feather, we soar on high\nTo realms unseen, where spirits lie.",
     },
     {
         name = "Prayer of Mara",
@@ -114,7 +114,7 @@ this.divinePrayers = {
         skillReq = 10,
         skill = "divine",
         description = "Pray to Mara to fortify Endurance.",
-        prayerDuration = 3,
+        prayerDuration = 30,
         image = "Icons\\PRAY\\art\\mara.dds",
         spellEffects = {
             {
@@ -125,7 +125,7 @@ this.divinePrayers = {
                 max = 5,
             }
         },
-        text = "Dear Mara, you are awesome.\n\n Isn't modding fun?",
+        text = "Goddess of Love, Mara divine\nEmbrace us with affection's twine\nGuide us through life's ebb and flow\nWith boundless love\nmay we grow.",
     },
     {
         name = "Prayer of Stendarr",
@@ -134,7 +134,7 @@ this.divinePrayers = {
         skillReq = 10,
         skill = "divine",
         description = "Pray to Stendarr to fortify Strength.",
-        prayerDuration = 3,
+        prayerDuration = 30,
         image = "Icons\\PRAY\\art\\stendarr.dds",
         spellEffects = {
             {
@@ -145,7 +145,7 @@ this.divinePrayers = {
                 max = 5,
             }
         },
-        text = "Dear Stendarr, you are awesome.\n\n Isn't modding fun?",
+        text = "Stendarr, oh apologist of Men\nWhose whispers echo in fen and glen\nWith hammer's weight, he swung the stars\nIn Legions and in moonlit bazaars\nIn mercy's runt, his power lies\nUnraveling truths in twilight skies.",
     },
     {
         name = "Prayer of Talos",
@@ -154,7 +154,7 @@ this.divinePrayers = {
         skillReq = 10,
         skill = "divine",
         description = "Pray to Talos to fortify Attack.",
-        prayerDuration = 3,
+        prayerDuration = 30,
         image = "Icons\\PRAY\\art\\talos.dds",
         spellEffects = {
             {
@@ -164,7 +164,7 @@ this.divinePrayers = {
                 max = 5,
             }
         },
-        text = "But you were once man! Aye! And as man, you said, 'Let me show you the power of Talos Stormcrown, born of the North, where my breath is long winter.' 'I breathe now, in royalty, and reshape this land which is mine. I do this for you, Red Legions, for I love you.nb1 Aye, love. Love! Even as man, great Talos cherished us. For he saw in us, in each of us, the future of Skyrim! The future of Tamriel! And there it is, friends! The ugly truth! We are the children of man! Talos is the true god of man! Ascended from flesh, to rule the realm of spirit! The very idea is inconceivable to our Elven overlords! Sharing the heavens with us? With man? Ha! They can barely tolerate our presence on earth! Today, they take away your faith. But what of tomorrow? What then? Do the elves take your homes? Your businesses? Your children? Your very lives? And what does the Empire do? Nothing! Nay, worse than nothing! The Imperial machine enforces the will of the Thalmor! Against its own people! So rise up! Rise up, children of the Empire! Rise up, Stormcloaks! Embrace the word of mighty Talos, he who is both man and Divine!",
+        text = "Talos, Dragon of the North\nYsmir's legacy, a hero-god forth\nScion of Emperors, Earth and Sky,\nShining Hosts protect, never to die\nThrough days of blood and venom, he strode\nUniting Tamriel, an Empire's abode.\nApotheosis granted, among the Divines\nTiber Septim, Talos, forever to shine.",
     },
     {
         name = "Prayer of Zenithar",
@@ -173,33 +173,19 @@ this.divinePrayers = {
         skillReq = 10,
         skill = "divine",
         description = "Pray to Zenithar to fortify Luck.",
-        prayerDuration = 3,
+        prayerDuration = 30,
         image = "Icons\\PRAY\\divine.dds",
         spellEffects = {
             {
                 id = 79, --fortifyAttribute
                 attribute = 7, --luck
-                duration = 60,
+                duration = 300,
                 min = 5,
                 max = 5,
             }
         },
-        text = "Dear Zenithar, you are awesome.\n\n Isn't modding fun?",
+        text = "Zenithar, Provider of our needs\nGrant us success in worthy deeds\nWith honest toil, we shall strive\nIn labor's grace, may we thrive.",
     },
 }
 
 return this
-
-
--- Gnomey — 11/25/2021 2:43 PM
--- Respective effect names: 
--- Jaws of Akatosh
--- Breath of Arkay (1)/Wheel of Arkay (2)
--- Dibella's Kiss
--- Inspiration of Aetherius
--- Scales of Julianos
--- Kynareth's Way
--- Wisdom of Mara (1)/Mara's Embrace (2)
--- Judgement of Stendarr
--- Fist of Talos
--- Zenithar's Ear
