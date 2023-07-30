@@ -67,8 +67,8 @@ local function registerPrayer(prayerTable)
         },
         category = category,
         name = name,
-        uncarryable = true       
-        -- craftCallback = effect
+        uncarryable = true,
+        craftCallback = effect
         -- soundId = "",
         -- successMessageCallback = "",
         -- previewMesh = "",
