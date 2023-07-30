@@ -73,6 +73,11 @@ local function registerPrayer(prayerTable)
         category = category,
         name = name,
         uncarryable = true,
+        soundPath = "PRAY\\marble-church.wav",
+        -- successMessageCallback = "",
+        -- previewMesh = "",
+        -- previewImage = "",
+
         craftCallback = function()
             tes3.messageBox(text)
             animation.divineAnimationBegin()
@@ -91,10 +96,6 @@ local function registerPrayer(prayerTable)
                 end
             }
         end
-        -- soundId = "",
-        -- successMessageCallback = "",
-        -- previewMesh = "",
-        -- previewImage = "",
     }
 
     return recipe
