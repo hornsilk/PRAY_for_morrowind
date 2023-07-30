@@ -1,5 +1,11 @@
 local this = {}
 
+-- use these pages to look up spell effects
+-- https://mwse.github.io/MWSE/apis/tes3/?h=script#tes3applymagicsource
+-- https://mwse.github.io/MWSE/references/magic-effects/
+-- https://mwse.github.io/MWSE/references/attributes/
+-- https://mwse.github.io/MWSE/references/skills/
+
 this.divinePrayers = {
     {
         name = "Prayer to Mara",
