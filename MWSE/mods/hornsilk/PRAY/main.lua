@@ -33,9 +33,9 @@ local function onSkillReady()
         "divine",
         {
             name = "Divine Theology",
-            icon = "Icons/PRAY/divine.dds",
+            icon = "Icons\\PRAY\\divine.dds",
             value = 10,
-            attribute =  tes3.attribute.personality,
+            attribute =  tes3.attribute.wisdom,
             description = divineDescription,
             specialization = tes3.specialization.magic,
             active = "active"
@@ -55,6 +55,7 @@ local function registerPrayer(prayerTable)
     local category = prayerTable.handler
     local text = prayerTable.text
     local effects = prayerTable.spellEffects
+    local image = prayerTable.image
     local prayerDuration = prayerTable.prayerDuration or 15
     local bypassResistances = prayerTable.bypassResistances or true
     local castChance = prayerTable.castChance or 100
@@ -73,9 +74,9 @@ local function registerPrayer(prayerTable)
         name = name,
         uncarryable = true,
         soundPath = "PRAY\\marble-church.wav",
+        previewImage = image,
         -- successMessageCallback = "",
         -- previewMesh = "",
-        -- previewImage = "",
 
         craftCallback = function()
             tes3.messageBox(text)
@@ -161,6 +162,9 @@ local function registerMCM()
         hyperlink:createHyperLink{
             text = "Scripting: hornsilk",
             exec = "start https://github.com/hornsilk/PRAY_for_morrowind",
+        }
+        hyperlink:createHyperLink{
+            text = "Divines Art: Feivelyn",
         }
     end
 
