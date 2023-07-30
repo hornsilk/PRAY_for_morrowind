@@ -63,7 +63,7 @@ local function registerPrayer(prayerTable)
     local text = prayerTable.text
     local effects = prayerTable.spellEffects
     local image = prayerTable.image
-    local prayerDuration = prayerTable.prayerDuration or 3
+    local prayerDuration = prayerTable.prayerDuration or 30
     local bypassResistances = prayerTable.bypassResistances or true
     local castChance = prayerTable.castChance or 100
 
