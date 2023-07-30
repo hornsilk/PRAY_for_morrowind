@@ -75,7 +75,7 @@ this.divinePrayers = {
         skill = "divine",
         description = "Pray to Julianos to fortify Intelligence.",
         prayerDuration = 30,
-        image = "Icons\\PRAY\\art\\dibella.dds",
+        image = "Icons\\PRAY\\art\\julianos.dds",
         spellEffects = {
             {
                 id = 79, --fortifyAttribute
@@ -174,7 +174,7 @@ this.divinePrayers = {
         skill = "divine",
         description = "Pray to Zenithar to fortify Luck.",
         prayerDuration = 30,
-        image = "Icons\\PRAY\\divine.dds",
+        image = "Icons\\PRAY\\art\\zenithar.dds",
         spellEffects = {
             {
                 id = 79, --fortifyAttribute
