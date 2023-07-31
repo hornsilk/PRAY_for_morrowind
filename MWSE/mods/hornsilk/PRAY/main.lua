@@ -26,6 +26,8 @@ end
 local skillModule = require("OtherSkills.skillModule")
 
 --REGISTER SKILLS--
+--decent place to look for iconshttps://en.uesp.net/wiki/Category:Morrowind-Banner_Images
+
 local function onSkillReady()
     local divineDescription = (
         "The Divine Theology skill determines your knowledge of prayers and rituals of the Divines."
@@ -50,11 +52,11 @@ local function onSkillReady()
     skillModule.registerSkill(
         "ashlander",
         {
-            name = "Ashalnder Theology",
+            name = "Ashlander Theology",
             icon = "Icons\\PRAY\\ashlander.dds",
             value = 10,
             lvlCap = 50,
-            attribute =  tes3.attribute.willpower,
+            attribute =  tes3.attribute.endurance,
             description = ashlanderDescription,
             specialization = tes3.specialization.magic,
             active = "active"
@@ -64,12 +66,12 @@ end
 event.register("OtherSkills:Ready", onSkillReady)
 
 
--- REGISTER MATERIALS
+--REGISTER MATERIALS--
 local function registerMaterials(materialTable)
     CraftingFramework.Material:registerMaterials(materialTable)
 end
 
--- REGISTER RECIPIES --
+--REGISTER RECIPIES--
 local function registerPrayerOrRitual(recipeTable, type)
     local id = recipeTable.id
     local name = recipeTable.name
@@ -203,9 +205,9 @@ local function registerPrayersAndRituals()
 end
 
 local function initialised()
-    mwse.log("PRAY: Registering Materials")
+    mwse.log("[PRAY] Registering Materials")
     registerMaterials(materials)
-    mwse.log("PRAY: Registering Prayers and Rituals")
+    mwse.log("[PRAY] Registering Prayers and Rituals")
     registerPrayersAndRituals()
 end
 event.register("initialized", initialised)
@@ -225,7 +227,7 @@ end
 event.register(tes3.event.keyDown, onKeyDown, { filter = config.hotKey.keyCode } )
 
 
--- CALLBACKS FOR LEARNING RECIPES
+--CALLBACKS FOR LEARNING RECIPES--
 
 --- @param e journalEventData
 local function caiusMeetingCallback(e)
