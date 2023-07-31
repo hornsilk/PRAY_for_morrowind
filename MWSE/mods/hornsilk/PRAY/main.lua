@@ -92,6 +92,14 @@ local function registerPrayerOrRitual(recipeTable, type)
         materialsReq = recipeTable.materials
     end
 
+    local soundPath = "Fx\\envrn\\chant.wav"
+    if recipeTable.soundPath then
+        soundPath = recipeTable.soundPath
+    elseif skill == "divine" then
+        soundPath = "PRAY\\marble-church.wav"
+    elseif skill == "ashlander" then
+        soundPath = "Fx\\envrn\\woodchimes.wav"
+    end
 
     -- TESTING
     prayerDuration = 3
@@ -110,7 +118,7 @@ local function registerPrayerOrRitual(recipeTable, type)
         category = category,
         name = name,
         uncarryable = true,
-        soundPath = "PRAY\\marble-church.wav",
+        soundPath = soundPath,
         previewImage = image,
         -- successMessageCallback = "",
         -- previewMesh = "",
