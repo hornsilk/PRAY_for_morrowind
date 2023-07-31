@@ -204,7 +204,7 @@ this.ashlanderPrayers = {
                 duration = 300,
             }
         },
-        text = "I pray for the herder\nThat whistles to his guar at play.\n\nI pray for the hunter\nThat stalks the white walkers.\n\nI pray for the wise one\nThat seeks under the hill,\n\n\nAnd the wife who wishes\nFor one last touch of her dead child's hand."
+        text = "I pray for the herder\nThat whistles to his guar at play.\n\nI pray for the hunter\nThat stalks the white walkers.\n\nI pray for the wise one\nThat seeks under the hill,\n\nAnd the wife who wishes\nFor one last touch of her dead child's hand."
     },
     {
         name = "Wanderer Under Moon-and-Star",
