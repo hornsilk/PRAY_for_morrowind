@@ -143,6 +143,7 @@ local function registerPrayerOrRitual(recipeTable, type)
                         name = name,
                         effects = effects
                     })
+                    tes3.player.data.lastDayPrayed = tes3.worldController.daysPassed.value
 
                     -- tes3.playSound()
                 end
@@ -210,7 +211,11 @@ event.register("initialized", initialised)
 local function onKeyDown(e)
     if tes3ui.menuMode() then return end
     if e.keyCode == config.hotKey.keyCode then
+        if tes3.player.data.lastDayPrayed == nil or tes3.player.data.lastDayPrayed < tes3.worldController.daysPassed.value then
         event.trigger("PRAY:ActivatePrayerMenu")
+        else
+            tes3.messageBox("Wait until tomorrow to pray again.")
+        end
     end
 end
 event.register(tes3.event.keyDown, onKeyDown, { filter = config.hotKey.keyCode } )
