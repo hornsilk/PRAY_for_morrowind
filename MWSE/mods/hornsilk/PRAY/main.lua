@@ -264,19 +264,12 @@ local function wiseWomanCallback(e)
 
         tes3.player.data.ashlanderRecipeLearned = true
         tes3.messageBox("The Wise Woman teaches you the basic prayer of the Ashlanders.")
-        CraftingFramework.interop.learnRecipe("ancestor_prayer")
-        CraftingFramework.interop.learnRecipe("feather_prayer")
-        CraftingFramework.interop.learnRecipe("alandro_sul")
-    CraftingFramework.interop.learnRecipe("wanderer_prayer")
-
-        -- for _, prayerTable in pairs(prayers.ashlanderPrayers) do
-        --     print(prayerTable.id)
-        --     CraftingFramework.interop.learnRecipe(prayerTable.id)
-        -- end
-        -- for _, ritualTable in pairs(rituals.ashlanderRituals) do
-        --     print(ritualTable.id)
-        --     CraftingFramework.interop.learnRecipe(ritualTable.id)
-        -- end
+    for _, prayerTable in pairs(prayers.ashlanderPrayers) do
+        CraftingFramework.interop.learnRecipe(prayerTable.id)
+    end
+    for _, ritualTable in pairs(rituals.ashlanderRituals) do
+        CraftingFramework.interop.learnRecipe(ritualTable.id)
+    end
     end
 event.register(tes3.event.cellActivated, wiseWomanCallback)
 
