@@ -81,9 +81,16 @@ local function registerPrayerOrRitual(recipeTable, type)
     local effects = recipeTable.spellEffects
     local image = recipeTable.image
     local prayerDuration = recipeTable.prayerDuration or 30
-    local bypassResistances = recipeTable.bypassResistances or true
     local castChance = recipeTable.castChance or 100
-    local knownByDefault = recipeTable.knownByDefault or true
+
+    local bypassResistances = recipeTable.bypassResistances
+    if bypassResistances == nil then
+        bypassResistances = true
+    end
+    local knownByDefault = recipeTable.knownByDefault
+    if knownByDefault == nil then
+        knownByDefault = true
+    end
 
     local materialsReq = {}
     if type == "prayer" then
