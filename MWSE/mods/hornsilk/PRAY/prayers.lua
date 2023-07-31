@@ -265,6 +265,7 @@ this.miscPrayers = {
         skill = "mysticism",
         description = "See what luck the day will bring.",
         prayerDuration = 30,
+        skillProgress = 5,
         image = "Icons\\PRAY\\art\\dice.dds",
         spellEffects = {
             {
