@@ -85,6 +85,7 @@ local function registerPrayerOrRitual(recipeTable, type)
     local prayerDuration = recipeTable.prayerDuration or 30
     local castChance = recipeTable.castChance or 100
     local skillProgress = recipeTable.skillProgress or 20
+    local knowledgeRequirement = recipeTable.knowledgeRequirement --journalIndex
 
     local bypassResistances = recipeTable.bypassResistances
     if bypassResistances == nil then
@@ -117,6 +118,7 @@ local function registerPrayerOrRitual(recipeTable, type)
         description = description,
         noResult = true,
         materials = materialsReq,
+        knowledgeRequirement = knowledgeRequirement,
         -- knownByDefault = knownByDefault,
         skillRequirements = {
             { skill = skill, requirement = skillValue }
