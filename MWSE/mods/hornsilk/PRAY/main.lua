@@ -229,22 +229,23 @@ event.register(tes3.event.keyDown, onKeyDown, { filter = config.hotKey.keyCode }
 
 --- @param e journalEventData
 local function caiusMeetingCallback(e)
+    if tes3.player.data.caiusRecipeLearned then return end
     if e.topic.id ~= "A1_1_FindSpymaster" then
         return
     elseif e.topic.journalIndex < 14 then
         return
     end
 
-    if not tes3.player.data.caiusRecipeLearned then
         tes3.player.data.caiusRecipeLearned = true
     tes3.messageBox("Cauis quickly shows you how to perform a 'secret Blades ritual'.")
     CraftingFramework.interop.learnRecipe("caius_skooma")
-end
 end
 event.register(tes3.event.journal, caiusMeetingCallback)
 
 --- @param e cellActivatedEventData
 local function wiseWomanCallback(e)
+    if tes3.player.data.ashlanderRecipeLearned then return end
+
     local wiseWomanCellNames = {
         "Erabenimsun Camp, Wise Woman's Yurt",
         "Zainab Camp, Wise Woman's Yurt",
@@ -261,7 +262,6 @@ local function wiseWomanCallback(e)
     end
     if not isWiseWomanCell then return end
 
-    if not tes3.player.data.ashlanderRecipeLearned then
         tes3.player.data.ashlanderRecipeLearned = true
         tes3.messageBox("The Wise Woman teaches you the basic prayer of the Ashlanders.")
         CraftingFramework.interop.learnRecipe("ancestor_prayer")
@@ -278,9 +278,6 @@ local function wiseWomanCallback(e)
         --     CraftingFramework.interop.learnRecipe(ritualTable.id)
         -- end
     end
-
-
-end
 event.register(tes3.event.cellActivated, wiseWomanCallback)
 
 
