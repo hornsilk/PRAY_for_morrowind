@@ -85,16 +85,27 @@ local function registerPrayerOrRitual(recipeTable, type)
     local prayerDuration = recipeTable.prayerDuration or 30
     local castChance = recipeTable.castChance or 100
     local skillProgress = recipeTable.skillProgress or 20
-    local knowledgeRequirement = recipeTable.knowledgeRequirement --journalIndex
+    
 
     local bypassResistances = recipeTable.bypassResistances
     if bypassResistances == nil then
         bypassResistances = true
     end
-    -- local knownByDefault = recipeTable.knownByDefault
-    -- if knownByDefault == nil then
-    --     knownByDefault = true
+
+    local knowledgeRequirement = recipeTable.knowledgeRequirement --journalIndex
+    if knowledgeRequirement == nil then
+        if skill == "ashlander" then
+            knowledgeRequirement = function()
+                return tes3.getJournalIndex{ id = "A2_1_MeetSulMatuul" } >= 44
+            end
+        end
+
+        -- if skill == "divine" then
+        --     knowledgeRequirement = function()
+        --         -- return tes3.getJournalIndex{ id = "join the cult" } >= 0
+        --     end
     -- end
+    end
 
     local materialsReq = {}
     if type == "prayer" then
@@ -228,54 +239,6 @@ local function onKeyDown(e)
 end
 event.register(tes3.event.keyDown, onKeyDown, { filter = config.hotKey.keyCode } )
 
-
---CALLBACKS FOR LEARNING RECIPES--
-
--- --- @param e journalEventData
--- local function caiusMeetingCallback(e)
---     if tes3.player.data.caiusRecipeLearned then return end
---     if e.topic.id ~= "A1_1_FindSpymaster" then
---         return
---     elseif e.topic.journalIndex < 14 then
---         return
---     end
-
---     tes3.player.data.caiusRecipeLearned = true
---     tes3.messageBox("Cauis quickly shows you how to perform a 'secret Blades ritual'.")
---     CraftingFramework.interop.learnRecipe("caius_skooma")
--- end
--- event.register(tes3.event.journal, caiusMeetingCallback)
-
---- @param e cellActivatedEventData
-local function wiseWomanCallback(e)
-    if tes3.player.data.ashlanderRecipeLearned then return end
-
-    local wiseWomanCellNames = {
-        "Erabenimsun Camp, Wise Woman's Yurt",
-        "Zainab Camp, Wise Woman's Yurt",
-        "Ahemmusa Camp, Wise Woman's Yurt ",
-        "Urshilaku Camp, Wise Woman's Yurt",
-    }
-    local currentCellName = e.cell.displayName
-    local isWiseWomanCell = false
-    for _,v in pairs(wiseWomanCellNames) do
-        if v == currentCellName then
-            isWiseWomanCell = true
-            break
-        end
-    end
-    if not isWiseWomanCell then return end
-
-        tes3.player.data.ashlanderRecipeLearned = true
-        tes3.messageBox("The Wise Woman teaches you the basic prayer of the Ashlanders.")
-    for _, prayerTable in pairs(prayers.ashlanderPrayers) do
-        CraftingFramework.interop.learnRecipe(prayerTable.id)
-    end
-    for _, ritualTable in pairs(rituals.ashlanderRituals) do
-        CraftingFramework.interop.learnRecipe(ritualTable.id)
-    end
-    end
-event.register(tes3.event.cellActivated, wiseWomanCallback)
 
 
 
