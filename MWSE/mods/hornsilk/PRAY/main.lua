@@ -100,11 +100,11 @@ local function registerPrayerOrRitual(recipeTable, type)
             end
         end
 
-        -- if skill == "divine" then
-        --     knowledgeRequirement = function()
-        --         -- return tes3.getJournalIndex{ id = "join the cult" } >= 0
-        --     end
-    -- end
+        if skill == "divine" then
+            knowledgeRequirement = function()
+                return tes3.getFaction("Imperial Cult").playerJoined
+            end
+        end
     end
 
     local materialsReq = {}
@@ -130,7 +130,6 @@ local function registerPrayerOrRitual(recipeTable, type)
         noResult = true,
         materials = materialsReq,
         knowledgeRequirement = knowledgeRequirement,
-        -- knownByDefault = knownByDefault,
         skillRequirements = {
             { skill = skill, requirement = skillValue }
         },

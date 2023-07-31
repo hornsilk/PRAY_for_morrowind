@@ -50,7 +50,6 @@ this.ashlanderRituals = {
         name = "Invocation of Alandro Sul",
         id = "alandro_sul",
         handler = "Ashlander Rituals",
-        knownByDefault = false,
         skillReq = 20,
         skill = "ashlander",
         skillProgress = 40,
