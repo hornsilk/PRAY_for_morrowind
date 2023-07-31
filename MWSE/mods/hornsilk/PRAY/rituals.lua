@@ -20,11 +20,18 @@ this.divineRituals = {
             { material = "longsword", count = 1 },
         },
         spellEffects = {
-            {
-                id = 117, --fortifyAttack
+             {
+                id = 41, --light
                 duration = 300,
-                min = 100,
-                max = 100,
+                min = 20,
+                max = 20,
+            },
+            {
+                id = 83, --fortifySkill
+                skill = 5, --longBlade,
+                duration = 300,
+                min = 10,
+                max = 20,
             }
         },
         text = "Talos, here's a sword!",
@@ -36,7 +43,7 @@ this.ashlanderRituals = {
         name = "Invocation of Alandro Sul",
         id = "alandro_sul",
         handler = "Ashlander Rituals",
-        skillReq = 10,
+        skillReq = 20,
         skill = "ashlander",
         description = "Commune with the whispers of Alandro Sul's spirit",
         prayerDuration = 30,
