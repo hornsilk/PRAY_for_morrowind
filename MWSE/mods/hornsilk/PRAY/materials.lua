@@ -174,17 +174,17 @@ local this = {
     },
     {
         id = "skooma_pipe",
-        name = "Skooma Pipe",
+        name = "Ritual Pipe",
         ids = {
             "apparatus_a_spipe_01",
             "apparatus_a_spipe_tsiya"
         }
     },
     {
-        id = "skooma",
-        name = "Skooma",
+        id = "moon_sugar",
+        name = "Ritual Dust",
         ids = {
-            "potion_skooma_01"
+            "ingred_moon_sugar_01"
         }
     },
     {

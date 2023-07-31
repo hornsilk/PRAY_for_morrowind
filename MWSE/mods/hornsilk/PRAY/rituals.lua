@@ -45,7 +45,7 @@ this.ashlanderRituals = {
         handler = "Ashlander Rituals",
         skillReq = 20,
         skill = "ashlander",
-        description = "Commune with the whispers of Alandro Sul's spirit",
+        description = "Commune with the whispers of Alandro Sul's spirit.",
         prayerDuration = 30,
         image = "Icons\\PRAY\\art\\alandro_sul.dds",
         materials = {
@@ -86,6 +86,67 @@ this.ashlanderRituals = {
             },
         },
         text = "When earth is sundered, and skies choked black\nAnd sleepers serve the seven curses\nTo the hearth there comes a stranger,\nJourneyed far 'neath moon and star",
+    }
+}
+
+this.miscRituals = {
+    {
+        name = "Caius's 'Ritual'",
+        id = "caius_skooma",
+        handler = "Miscelaneous Rituals",
+        skillReq = 5,
+        skill = "mysticism",
+        description = "Caius taught me a 'ritual'.",
+        image = "Icons\\PRAY\\art\\skooma.dds",
+        knownByDefault = true,
+        soundPath = "Fx\\envrn\\undrwatr.wav",
+        materials = {
+            { material = "skooma_pipe", count = 1},
+            { material = "moon_sugar", count = 1},
+        },
+        spellEffects = {
+            {
+                id = 79, --fortifyAttribute
+                attribute = 0, --strength
+                duration = 300,
+                min = 20,
+                max = 30,
+            },
+            {
+                id = 79, --fortifyAttribute
+                attribute = 4, --speed
+                duration = 300,
+                min = 20,
+                max = 30,
+            },
+            {
+                id = 17, --drainAttribute
+                attribute = 1, --intelligence
+                duration = 300,
+                min = 20,
+                max = 30,
+            },
+            {
+                id = 17, --drainAttribute
+                attribute = 3, --agility
+                duration = 300,
+                min = 20,
+                max = 30,
+            },
+            {
+               id = 43, --nightEye
+               duration = 300,
+               min = 0,
+               max = 50,
+            },
+            {
+               id = 47, --blind
+               duration = 300,
+               min = 0,
+               max = 50,
+            },
+        },
+        text = "'I'm just an old man with a skooma problem.' ~ Caius Cosades",
     }
 }
 
