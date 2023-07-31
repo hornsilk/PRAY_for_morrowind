@@ -125,12 +125,12 @@ local function registerPrayerOrRitual(recipeTable, type)
         craftCallback = function()
             tes3.messageBox(text)
             skillModule.incrementSkill( skill, {progress = 20} )
-            animation.divineAnimationBegin()
+            animation.defaultAnimationBegin()
             timer.start{
                 duration = prayerDuration/60, --duration in hours for game timers
                 type = timer.game,
                 callback = function ()
-                    animation.divineAnimationEnd()
+                    animation.defaultAnimationEnd()
                     tes3.applyMagicSource({
                         reference = tes3.player,
                         castChance = castChance,
