@@ -100,10 +100,6 @@ local function registerPrayerOrRitual(recipeTable, type)
         soundPath = "Fx\\envrn\\woodchimes.wav"
     end
 
-    -- TESTING
-    prayerDuration = 3
-
-
     local recipe = {
         id = id,
         -- craftableId = "",
