@@ -190,7 +190,7 @@ this.divinePrayers = {
 
 this.ashlanderPrayers = {
     {
-        name = "Ancestor Veneration",
+        name = "Venerate the Ancestors",
         id = "ancestor_prayer",
         handler = "Ashlander Prayers",
         skillReq = 10,
@@ -205,6 +205,51 @@ this.ashlanderPrayers = {
             }
         },
         text = "I pray for the herder\nThat whistles to his guar at play.\n\nI pray for the hunter\nThat stalks the white walkers.\n\nI pray for the wise one\nThat seeks under the hill,\n\n\nAnd the wife who wishes\nFor one last touch of her dead child's hand."
+    },
+    {
+        name = "Wanderer Under Moon-and-Star",
+        id = "nightEye_prayer",
+        handler = "Ashlander Prayers",
+        skillReq = 12,
+        skill = "ashlander",
+        description = "See in the darkness by the light of Moon-and-Star.",
+        prayerDuration = 30,
+        image = "Icons\\PRAY\\art\\ashland_night.dds",
+        spellEffects = {
+            {
+                id = 43, --nightEye
+                duration = 300,
+                min = 20,
+                max = 40,
+            }
+        },
+        text = "Never shall I yield my home and hearth.\n\nAnd from my tears shall spring forth\n\nThe flowers of grassland springs."
+    },
+    {
+        name = "Stride 'Cross the Ash-Wastes",
+        id = "feather_prayer",
+        handler = "Ashlander Prayers",
+        skillReq = 14,
+        skill = "ashlander",
+        description = "Travel light and quietly.",
+        prayerDuration = 30,
+        image = "Icons\\PRAY\\art\\ashland_vista.dds",
+        spellEffects = {
+            {
+                id = 8, --feather
+                duration = 300,
+                min = 10,
+                max = 30,
+            },
+            {
+                id = 83, --fortifySkill 
+                skill = 19, --sneak
+                duration = 300,
+                min = 10,
+                max = 30,
+            }
+        },
+        text = "May I shrink to dust\n\nIn your cold, wild Wastes,\n\nAnd may my tongue speak\n\nIts last hymn to your winds."
     },
 }
 
