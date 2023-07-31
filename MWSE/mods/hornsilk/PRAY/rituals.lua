@@ -100,6 +100,7 @@ this.miscRituals = {
         image = "Icons\\PRAY\\art\\skooma.dds",
         knownByDefault = false,
         soundPath = "Fx\\envrn\\undrwatr.wav",
+        skillProgress = 1,
         materials = {
             { material = "skooma_pipe", count = 1},
             { material = "moon_sugar", count = 1},

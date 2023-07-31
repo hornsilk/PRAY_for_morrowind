@@ -82,6 +82,7 @@ local function registerPrayerOrRitual(recipeTable, type)
     local image = recipeTable.image
     local prayerDuration = recipeTable.prayerDuration or 30
     local castChance = recipeTable.castChance or 100
+    local skillProgress = recipeTable.skillProgress or 20
 
     local bypassResistances = recipeTable.bypassResistances
     if bypassResistances == nil then
@@ -128,7 +129,7 @@ local function registerPrayerOrRitual(recipeTable, type)
 
         craftCallback = function()
             tes3.messageBox(text)
-            skillModule.incrementSkill( skill, {progress = 20} )
+            skillModule.incrementSkill( skill, {progress = skillProgress} )
             animation.defaultAnimationBegin()
             timer.start{
                 duration = prayerDuration/60, --duration in hours for game timers
@@ -224,6 +225,7 @@ local function caiusMeetingCallback(e)
     elseif e.topic.journalIndex < 14 then
         return
     end
+    tes3.messageBox("Cauis quickly shows you how to perform a 'secret Blades ritual'.")
     CraftingFramework.interop.learnRecipe("caius_skooma")
 end
 event.register(tes3.event.journal, caiusMeetingCallback)
