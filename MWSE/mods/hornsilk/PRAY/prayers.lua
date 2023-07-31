@@ -209,7 +209,7 @@ this.ashlanderPrayers = {
     },
     {
         name = "Wanderer Under Moon-and-Star",
-        id = "nightEye_prayer",
+        id = "wanderer_prayer",
         handler = "Ashlander Prayers",
         knownByDefault = false,
         skillReq = 12,

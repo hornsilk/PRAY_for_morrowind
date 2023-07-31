@@ -266,8 +266,8 @@ local function wiseWomanCallback(e)
         tes3.messageBox("The Wise Woman teaches you the basic prayer of the Ashlanders.")
         CraftingFramework.interop.learnRecipe("ancestor_prayer")
         CraftingFramework.interop.learnRecipe("feather_prayer")
-        -- CraftingFramework.interop.learnRecipe("nightEye_prayer")
         CraftingFramework.interop.learnRecipe("alandro_sul")
+    CraftingFramework.interop.learnRecipe("wanderer_prayer")
 
         -- for _, prayerTable in pairs(prayers.ashlanderPrayers) do
         --     print(prayerTable.id)
