@@ -253,4 +253,34 @@ this.ashlanderPrayers = {
     },
 }
 
+this.miscPrayers = {
+    {
+        name = "The Gray Maybe",
+        id = "luck_prayer",
+        handler = "Miscellaneous Prayers",
+        skillReq = 5,
+        skill = "mysticism",
+        description = "See what luck the day will bring.",
+        prayerDuration = 30,
+        image = "Icons\\PRAY\\art\\dice.dds",
+        spellEffects = {
+            {
+                id = 79, --fortifyAttribute
+                attribute = 7, --luck
+                duration = 300,
+                min = 0,
+                max = 10,
+            },
+            {
+                id = 17, --drainAttribute
+                attribute = 7, --luck
+                duration = 300,
+                min = 0,
+                max = 10,
+            }
+        },
+        text = "Man or mer, things begin with the dualism of Anu and His Other.\nThese twin forces go by many names\n\nAnu-Padomay\nAnuiel-Sithis\nAk-El\nSatak-Akel\nIs-Is Not."
+    },
+}
+
 return this

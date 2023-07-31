@@ -180,6 +180,10 @@ local function registerPrayersAndRituals()
         table.insert(recipeList, recipe)
     end
 
+    for _, prayerTable in pairs(prayers.miscPrayers) do
+        local recipe = registerPrayerOrRitual(prayerTable, "prayer")
+        table.insert(recipeList, recipe)
+    end
     for _, ritualTable in pairs(rituals.miscRituals) do
         local recipe = registerPrayerOrRitual(ritualTable, "ritual")
         table.insert(recipeList, recipe)
