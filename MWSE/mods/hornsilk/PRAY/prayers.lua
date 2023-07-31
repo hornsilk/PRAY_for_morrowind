@@ -25,7 +25,7 @@ this.divinePrayers = {
                 max = 5,
             }
         },
-        text = "Perched on the edge of an endless rhyme\nIn the Gray Maybe, spirits swirl\nMortal Plane takes its first breath\nDivine mercy or dark trickster's death\nTamriel's dance, the spirits' sway.",
+        text = "To AKATOSH\n\nwhose Perch from Eternity allowed the Day.",
     },
     {
         name = "Prayer of Arkay",
@@ -45,7 +45,7 @@ this.divinePrayers = {
                 max = 5,
             }
         },
-        text = "To Arkay, the Unending Dancer,\nDeath's embrace, a cosmic answer\nTravel cycles, birth to fall\nUsher souls, heed the call\nIn twilight's realm, secrets unfold\nDiminuendo, mysteries untold\nWith old rites, we bind the chains\nArkay's laws, our power gains.",
+        text = "To ARKAY\n\nwho braves the Diminuendo.",
     },
     {
         name = "Prayer of Dibella",
@@ -65,7 +65,7 @@ this.divinePrayers = {
                 max = 5,
             }
         },
-        text = "Dibella, radiant muse, your allure we embrace\nBeauty's divine essence, a vision to trace\nIn Cyrodiil's embrace, your cults do bloom\nWomen, artists, and passions you consume\nA tapestry of pleasure, healing and art\nTo Dibella's grace, we offer our heart.",
+        text = "To DIBELLA\n\nwho pays Men in Moans.",
     },
     {
         name = "Prayer of Julianos",
@@ -85,7 +85,7 @@ this.divinePrayers = {
                 max = 5,
             }
         },
-        text = "Julianos, master of enigmas profound\nWith words and numbers, your truth is found\nIn scrolls you dwell, the Damned Equation\nA paradox of wisdom, mind's libation\nThrough arts arcane, your secrets unfurl\nKnowledge's keeper, god of the scholar.",
+        text = "To JULIANOS\n\nwho incants the Damned Equation",
     },
     {
         name = "Prayer of Kynareth",
@@ -105,7 +105,7 @@ this.divinePrayers = {
                 max = 5,
             }
         },
-        text = "Kynareth, goddess of winds untamed\nIn heavens' embrace, your power proclaimed\nWith rain's sweet song and whispering breeze\nGuide us through skies, with grace and ease\nBy canah's feather, we soar on high\nTo realms unseen, where spirits lie.",
+        text = "To KYNARETH\n\nwho returns the Masculine Breath.",
     },
     {
         name = "Prayer of Mara",
@@ -125,7 +125,7 @@ this.divinePrayers = {
                 max = 5,
             }
         },
-        text = "Goddess of Love, Mara divine\nEmbrace us with affection's twine\nGuide us through life's ebb and flow\nWith boundless love\nmay we grow.",
+        text = "To MARA\n\nwho fills the Empty and drains the Stones.",
     },
     {
         name = "Prayer of Stendarr",
@@ -145,7 +145,7 @@ this.divinePrayers = {
                 max = 5,
             }
         },
-        text = "Stendarr, oh apologist of Men\nWhose whispers echo in fen and glen\nWith hammer's weight, he swung the stars\nIn Legions and in moonlit bazaars\nIn mercy's runt, his power lies\nUnraveling truths in twilight skies.",
+        text = "To STENDARR\n\nwho suffers Men to read.",
     },
     {
         name = "Prayer of Talos",
@@ -164,7 +164,7 @@ this.divinePrayers = {
                 max = 5,
             }
         },
-        text = "Talos, Dragon of the North\nYsmir's legacy, a hero-god forth\nScion of Emperors, Earth and Sky,\nShining Hosts protect, never to die\nThrough days of blood and venom, he strode\nUniting Tamriel, an Empire's abode.\nApotheosis granted, among the Divines\nTiber Septim, Talos, forever to shine.",
+        text = "Scion of Emperors, King of Earth and Sky,\nLord of Shining Hosts,\nProtector of Oathman, Feeman and Yeoman,\nGuarantor of Right and Justice,\nBroad Blessing of Thrones and Powers,\nCynosure of Celestial Glory,\nThe Most High Tiber Septim",
     },
     {
         name = "Prayer of Zenithar",
@@ -184,7 +184,7 @@ this.divinePrayers = {
                 max = 5,
             }
         },
-        text = "Zenithar, Provider of our needs\nGrant us success in worthy deeds\nWith honest toil, we shall strive\nIn labor's grace, may we thrive.",
+        text = "To ZENITHAR\n\nthe Provider of our Ease.",
     },
 }
 
