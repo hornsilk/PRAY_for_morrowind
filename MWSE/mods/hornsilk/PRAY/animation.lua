@@ -2,6 +2,7 @@ local this = {}
 
 -- https://mwse.github.io/MWSE/references/animation-groups/
 -- try `the sitting mod` for some better animations
+-- Use tes3.loadAnimation to play custom animations
 
 this.defaultAnimationBegin = function()
     tes3.setVanityMode{enabled = true, checkVanityDisabled = false}

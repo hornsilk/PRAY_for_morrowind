@@ -21,8 +21,8 @@ this.divinePrayers = {
                 id = 79, --fortifyAttribute
                 attribute = 4, --speed
                 duration = 300,
-                min = 5,
-                max = 5,
+                min = 10,
+                max = 10,
             }
         },
         text = "To AKATOSH\n\nwhose Perch from Eternity allowed the Day.",
@@ -41,8 +41,8 @@ this.divinePrayers = {
                 id = 79, --fortifyAttribute
                 attribute = 2, --willpower
                 duration = 300,
-                min = 5,
-                max = 5,
+                min = 10,
+                max = 10,
             }
         },
         text = "To ARKAY\n\nwho braves the Diminuendo.",
@@ -61,8 +61,8 @@ this.divinePrayers = {
                 id = 79, --fortifyAttribute
                 attribute = 6, --personality
                 duration = 300,
-                min = 5,
-                max = 5,
+                min = 10,
+                max = 10,
             }
         },
         text = "To DIBELLA\n\nwho pays Passion in Pleasure.",
@@ -81,8 +81,8 @@ this.divinePrayers = {
                 id = 79, --fortifyAttribute
                 attribute = 1, --personality
                 duration = 300,
-                min = 5,
-                max = 5,
+                min = 10,
+                max = 10,
             }
         },
         text = "To JULIANOS\n\nwho incants the Damned Equation",
@@ -101,8 +101,8 @@ this.divinePrayers = {
                 id = 79, --fortifyAttribute
                 attribute = 3, --agility
                 duration = 300,
-                min = 5,
-                max = 5,
+                min = 10,
+                max = 10,
             }
         },
         text = "To KYNARETH\n\nwho returns the Masculine Breath.",
@@ -121,8 +121,8 @@ this.divinePrayers = {
                 id = 79, --fortifyAttribute
                 attribute = 5, --endurance
                 duration = 300,
-                min = 5,
-                max = 5,
+                min = 10,
+                max = 10,
             }
         },
         text = "To MARA\n\nwho fills the Empty and tends the Home.",
@@ -141,8 +141,8 @@ this.divinePrayers = {
                 id = 79, --fortifyAttribute
                 attribute = 0, --strenth
                 duration = 300,
-                min = 5,
-                max = 5,
+                min = 10,
+                max = 10,
             }
         },
         text = "To STENDARR\n\nwho suffers Men to read.",
@@ -160,8 +160,8 @@ this.divinePrayers = {
             {
                 id = 117, --fortifyAttack
                 duration = 300,
-                min = 5,
-                max = 5,
+                min = 10,
+                max = 10,
             }
         },
         text = "Scion of Emperors, King of Earth and Sky,\nLord of Shining Hosts,\nProtector of Oathman, Feeman and Yeoman,\nGuarantor of Right and Justice,\nBroad Blessing of Thrones and Powers,\nCynosure of Celestial Glory,\nThe Most High Tiber Septim",
@@ -180,8 +180,8 @@ this.divinePrayers = {
                 id = 79, --fortifyAttribute
                 attribute = 7, --luck
                 duration = 300,
-                min = 5,
-                max = 5,
+                min = 10,
+                max = 10,
             }
         },
         text = "To ZENITHAR\n\nthe Provider of our Ease.",
@@ -197,7 +197,7 @@ this.ashlanderPrayers = {
         skill = "ashlander",
         description = "Remember the memories of our ancestors.",
         prayerDuration = 30,
-        image = "Icons\\PRAY\\art\\ashland_ancestor.dds",
+        image = "Icons\\PRAY\\art\\wise_woman.dds",
         spellEffects = {
             {
                 id = 106, --summonAncestralGhost
@@ -214,7 +214,7 @@ this.ashlanderPrayers = {
         skill = "ashlander",
         description = "See in the darkness by the light of Moon-and-Star.",
         prayerDuration = 30,
-        image = "Icons\\PRAY\\art\\ashland_night.dds",
+        image = "Icons\\PRAY\\art\\ashland_scout.dds",
         spellEffects = {
             {
                 id = 43, --nightEye
