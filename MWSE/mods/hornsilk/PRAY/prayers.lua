@@ -254,6 +254,38 @@ this.ashlanderPrayers = {
         },
         text = "May I shrink to dust\n\nIn your cold, wild Wastes,\n\nAnd may my tongue speak\n\nIts last hymn to your winds."
     },
+    {
+        name = "Prayer of the Ashkhan",
+        id = "ashkhan_prayer",
+        handler = "Ashlander Prayers",
+        knownByDefault = false,
+        skillReq = 18,
+        skill = "ashlander",
+        description = "Gird yourself in mystic armors.",
+        prayerDuration = 30,
+        image = "Icons\\PRAY\\art\\red_mountain.dds",
+        spellEffects = {
+            {
+                id = 3, --shield
+                duration = 300,
+                min = 10,
+                max = 30,
+            },
+            {
+                id = 48, --sound
+                duration = 300,
+                min = 10,
+                max = 30,
+            },
+            {
+                id = 59, --telekinesis 
+                duration = 300,
+                min = 5,
+                max = 15,
+            }
+        },
+        text = "Rise from darkness, Red Mountain!\nSpread your dark clouds and green vapors!\nBirth earthquakes, shatter stones!\nFeed the winds with fire!\nFlay the tents of the tribes from the land!\nFeed the burned earth with our souls!\n\nYet never shall you have your rule over me."
+    },
 }
 
 this.miscPrayers = {
