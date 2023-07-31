@@ -30,7 +30,6 @@ local function onSkillReady()
     local divineDescription = (
         "The Divine Theology skill determines your knowledge of prayers and rituals of the Divines."
     )
-
     skillModule.registerSkill(
         "divine",
         {
@@ -40,6 +39,23 @@ local function onSkillReady()
             lvlCap = 50,
             -- attribute =  tes3.attribute.wisdom,
             description = divineDescription,
+            specialization = tes3.specialization.magic,
+            active = "active"
+        }
+    )
+
+    local ashlanderDescription = (
+        "The Ashlander Theology skill determines your knowledge of traditional prayers and rituals of the Ashlanders of Morrowind."
+    )
+    skillModule.registerSkill(
+        "ashlander",
+        {
+            name = "Ashalnder Theology",
+            icon = "Icons\\PRAY\\ashlander.dds",
+            value = 10,
+            lvlCap = 50,
+            -- attribute =  tes3.attribute.wisdom,
+            description = ashlanderDescription,
             specialization = tes3.specialization.magic,
             active = "active"
         }
@@ -75,6 +91,10 @@ local function registerPrayerOrRitual(recipeTable, type)
     if type == "ritual" then
         materialsReq = recipeTable.materials
     end
+
+
+    -- TESTING
+    prayerDuration = 3
 
 
     local recipe = {
@@ -136,6 +156,12 @@ local function registerPrayersAndRituals()
         local recipe = registerPrayerOrRitual(ritualTable, "ritual")
         table.insert(recipeList, recipe)
     end
+
+    for _, ritualTable in pairs(rituals.ashlanderRituals) do
+        local recipe = registerPrayerOrRitual(ritualTable, "ritual")
+        table.insert(recipeList, recipe)
+    end
+
 
     --Register your MenuActivator
     CraftingFramework.MenuActivator:new{
