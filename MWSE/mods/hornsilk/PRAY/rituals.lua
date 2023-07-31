@@ -107,7 +107,10 @@ this.miscRituals = {
         skill = "mysticism",
         description = "Caius taught me a 'ritual'.",
         image = "Icons\\PRAY\\art\\caius_skooma.dds",
-        knownByDefault = false,
+        -- knownByDefault = false,
+        knowledgeRequirement = function()
+            return tes3.getJournalIndex{ id = "A1_1_FindSpymaster" } >= 11
+        end,
         soundPath = "Fx\\envrn\\undrwatr.wav",
         skillProgress = 5,
         materials = {

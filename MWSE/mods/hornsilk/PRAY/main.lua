@@ -90,10 +90,10 @@ local function registerPrayerOrRitual(recipeTable, type)
     if bypassResistances == nil then
         bypassResistances = true
     end
-    local knownByDefault = recipeTable.knownByDefault
-    if knownByDefault == nil then
-        knownByDefault = true
-    end
+    -- local knownByDefault = recipeTable.knownByDefault
+    -- if knownByDefault == nil then
+    --     knownByDefault = true
+    -- end
 
     local materialsReq = {}
     if type == "prayer" then
@@ -117,7 +117,7 @@ local function registerPrayerOrRitual(recipeTable, type)
         description = description,
         noResult = true,
         materials = materialsReq,
-        knownByDefault = knownByDefault,
+        -- knownByDefault = knownByDefault,
         skillRequirements = {
             { skill = skill, requirement = skillValue }
         },
@@ -229,20 +229,20 @@ event.register(tes3.event.keyDown, onKeyDown, { filter = config.hotKey.keyCode }
 
 --CALLBACKS FOR LEARNING RECIPES--
 
---- @param e journalEventData
-local function caiusMeetingCallback(e)
-    if tes3.player.data.caiusRecipeLearned then return end
-    if e.topic.id ~= "A1_1_FindSpymaster" then
-        return
-    elseif e.topic.journalIndex < 14 then
-        return
-    end
+-- --- @param e journalEventData
+-- local function caiusMeetingCallback(e)
+--     if tes3.player.data.caiusRecipeLearned then return end
+--     if e.topic.id ~= "A1_1_FindSpymaster" then
+--         return
+--     elseif e.topic.journalIndex < 14 then
+--         return
+--     end
 
-        tes3.player.data.caiusRecipeLearned = true
-    tes3.messageBox("Cauis quickly shows you how to perform a 'secret Blades ritual'.")
-    CraftingFramework.interop.learnRecipe("caius_skooma")
-end
-event.register(tes3.event.journal, caiusMeetingCallback)
+--     tes3.player.data.caiusRecipeLearned = true
+--     tes3.messageBox("Cauis quickly shows you how to perform a 'secret Blades ritual'.")
+--     CraftingFramework.interop.learnRecipe("caius_skooma")
+-- end
+-- event.register(tes3.event.journal, caiusMeetingCallback)
 
 --- @param e cellActivatedEventData
 local function wiseWomanCallback(e)
