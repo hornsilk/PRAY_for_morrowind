@@ -87,8 +87,7 @@ local function registerPrayerOrRitual(recipeTable, type)
     local materialsReq = {}
     if type == "prayer" then
         materialsReq = {}
-    end
-    if type == "ritual" then
+    elseif type == "ritual" then
         materialsReq = recipeTable.materials
     end
 
