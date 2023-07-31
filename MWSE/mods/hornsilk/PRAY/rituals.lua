@@ -15,7 +15,7 @@ this.divineRituals = {
         skill = "divine",
         description = "Offer a sword to Talos for a combat blessing.",
         prayerDuration = 30,
-        image = "Icons\\PRAY\\art\\talos.dds",
+        image = "Icons\\PRAY\\art\\talos_gold.dds",
         materials = {
             { material = "longsword", count = 1 },
         },
@@ -29,6 +29,12 @@ this.divineRituals = {
             {
                 id = 83, --fortifySkill
                 skill = 5, --longBlade,
+                duration = 300,
+                min = 10,
+                max = 20,
+            },
+            {
+                id = 117, --fortifyAttack
                 duration = 300,
                 min = 10,
                 max = 20,
@@ -93,11 +99,11 @@ this.miscRituals = {
     {
         name = "Caius's 'Ritual'",
         id = "caius_skooma",
-        handler = "Miscelaneous Rituals",
+        handler = "Miscellaneous Rituals",
         skillReq = 5,
         skill = "mysticism",
         description = "Caius taught me a 'ritual'.",
-        image = "Icons\\PRAY\\art\\skooma.dds",
+        image = "Icons\\PRAY\\art\\caius_skooma.dds",
         knownByDefault = false,
         soundPath = "Fx\\envrn\\undrwatr.wav",
         skillProgress = 1,
