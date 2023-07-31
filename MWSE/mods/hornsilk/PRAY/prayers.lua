@@ -65,7 +65,7 @@ this.divinePrayers = {
                 max = 5,
             }
         },
-        text = "To DIBELLA\n\nwho pays Men in Moans.",
+        text = "To DIBELLA\n\nwho pays Passion in Pleasure.",
     },
     {
         name = "Prayer of Julianos",
@@ -125,7 +125,7 @@ this.divinePrayers = {
                 max = 5,
             }
         },
-        text = "To MARA\n\nwho fills the Empty and drains the Stones.",
+        text = "To MARA\n\nwho fills the Empty and tends the Home.",
     },
     {
         name = "Prayer of Stendarr",
