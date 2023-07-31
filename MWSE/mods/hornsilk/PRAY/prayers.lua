@@ -5,6 +5,7 @@ local this = {}
 -- https://mwse.github.io/MWSE/references/magic-effects/
 -- https://mwse.github.io/MWSE/references/attributes/
 -- https://mwse.github.io/MWSE/references/skills/
+-- https://mwse.github.io/MWSE/references/magic-effects-modded/
 
 this.divinePrayers = {
     {

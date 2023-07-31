@@ -5,6 +5,7 @@ local this = {}
 -- https://mwse.github.io/MWSE/references/magic-effects/
 -- https://mwse.github.io/MWSE/references/attributes/
 -- https://mwse.github.io/MWSE/references/skills/
+-- https://mwse.github.io/MWSE/references/magic-effects-modded/
 
 this.divineRituals = {
     {
@@ -69,6 +70,12 @@ this.ashlanderRituals = {
                 max = 100,
             },
             {
+                id = 42, --sanctuary
+                duration = 300,
+                min = 100,
+                max = 100,
+            },
+            {
                 id = 64, --detectAnimal
                 duration = 300,
                 min = 100,
@@ -86,12 +93,24 @@ this.ashlanderRituals = {
                 min = 100,
                 max = 100,
             },
-            {
-                id = 42, --sanctuary
-                duration = 300,
-                min = 100,
-                max = 100,
-            },
+            -- {
+            --     id = 336, --detectDaedra (Enhanced Detection)
+            --     duration = 300,
+            --     min = 100,
+            --     max = 100,
+            -- },
+            -- {
+            --     id = 338, --detectHumanoid (Enhanced Detection)
+            --     duration = 300,
+            --     min = 100,
+            --     max = 100,
+            -- },
+            -- {
+            --     id = 340, --detectUndead (Enhanced Detection)
+            --     duration = 300,
+            --     min = 100,
+            --     max = 100,
+            -- },
         },
         text = "When earth is sundered, and skies choked black\nAnd sleepers serve the seven curses\nTo the hearth there comes a stranger,\nJourneyed far 'neath moon and star",
     }
