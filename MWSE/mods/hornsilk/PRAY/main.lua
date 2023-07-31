@@ -234,8 +234,12 @@ local function caiusMeetingCallback(e)
     elseif e.topic.journalIndex < 14 then
         return
     end
+
+    if not tes3.player.data.caiusRecipeLearned then
+        tes3.player.data.caiusRecipeLearned = true
     tes3.messageBox("Cauis quickly shows you how to perform a 'secret Blades ritual'.")
     CraftingFramework.interop.learnRecipe("caius_skooma")
+end
 end
 event.register(tes3.event.journal, caiusMeetingCallback)
 
