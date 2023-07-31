@@ -49,6 +49,7 @@ this.ashlanderRituals = {
         name = "Invocation of Alandro Sul",
         id = "alandro_sul",
         handler = "Ashlander Rituals",
+        knownByDefault = false,
         skillReq = 20,
         skill = "ashlander",
         description = "Commune with the whispers of Alandro Sul's spirit.",

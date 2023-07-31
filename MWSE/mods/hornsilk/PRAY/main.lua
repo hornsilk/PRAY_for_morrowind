@@ -225,7 +225,7 @@ end
 event.register(tes3.event.keyDown, onKeyDown, { filter = config.hotKey.keyCode } )
 
 
--- JOURNAL CALLBACKS
+-- CALLBACKS FOR LEARNING RECIPES
 
 --- @param e journalEventData
 local function caiusMeetingCallback(e)
@@ -239,6 +239,45 @@ local function caiusMeetingCallback(e)
 end
 event.register(tes3.event.journal, caiusMeetingCallback)
 
+--- @param e cellActivatedEventData
+local function wiseWomanCallback(e)
+    local wiseWomanCellNames = {
+        "Erabenimsun Camp, Wise Woman's Yurt",
+        "Zainab Camp, Wise Woman's Yurt",
+        "Ahemmusa Camp, Wise Woman's Yurt ",
+        "Urshilaku Camp, Wise Woman's Yurt",
+    }
+    local currentCellName = e.cell.displayName
+    local isWiseWomanCell = false
+    for _,v in pairs(wiseWomanCellNames) do
+        if v == currentCellName then
+            isWiseWomanCell = true
+            break
+        end
+    end
+    if not isWiseWomanCell then return end
+
+    if not tes3.player.data.ashlanderRecipeLearned then
+        tes3.player.data.ashlanderRecipeLearned = true
+        tes3.messageBox("The Wise Woman teaches you the basic prayer of the Ashlanders.")
+        CraftingFramework.interop.learnRecipe("ancestor_prayer")
+        CraftingFramework.interop.learnRecipe("feather_prayer")
+        -- CraftingFramework.interop.learnRecipe("nightEye_prayer")
+        CraftingFramework.interop.learnRecipe("alandro_sul")
+
+        -- for _, prayerTable in pairs(prayers.ashlanderPrayers) do
+        --     print(prayerTable.id)
+        --     CraftingFramework.interop.learnRecipe(prayerTable.id)
+        -- end
+        -- for _, ritualTable in pairs(rituals.ashlanderRituals) do
+        --     print(ritualTable.id)
+        --     CraftingFramework.interop.learnRecipe(ritualTable.id)
+        -- end
+    end
+
+
+end
+event.register(tes3.event.cellActivated, wiseWomanCallback)
 
 
 
