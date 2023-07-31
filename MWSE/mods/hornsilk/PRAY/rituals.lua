@@ -15,6 +15,7 @@ this.divineRituals = {
         skill = "divine",
         description = "Offer a sword to Talos for a combat blessing.",
         prayerDuration = 30,
+        skillProgress = 40,
         image = "Icons\\PRAY\\art\\talos_gold.dds",
         materials = {
             { material = "longsword", count = 1 },
@@ -52,6 +53,7 @@ this.ashlanderRituals = {
         knownByDefault = false,
         skillReq = 20,
         skill = "ashlander",
+        skillProgress = 40,
         description = "Commune with the whispers of Alandro Sul's spirit.",
         prayerDuration = 30,
         image = "Icons\\PRAY\\art\\alandro_sul.dds",

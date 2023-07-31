@@ -37,7 +37,7 @@ local function onSkillReady()
             icon = "Icons\\PRAY\\divine.dds",
             value = 10,
             lvlCap = 50,
-            -- attribute =  tes3.attribute.wisdom,
+            attribute =  tes3.attribute.endurance,
             description = divineDescription,
             specialization = tes3.specialization.magic,
             active = "active"
@@ -54,7 +54,7 @@ local function onSkillReady()
             icon = "Icons\\PRAY\\ashlander.dds",
             value = 10,
             lvlCap = 50,
-            -- attribute =  tes3.attribute.wisdom,
+            attribute =  tes3.attribute.willpower,
             description = ashlanderDescription,
             specialization = tes3.specialization.magic,
             active = "active"
