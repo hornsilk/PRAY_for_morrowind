@@ -98,7 +98,7 @@ this.miscRituals = {
         skill = "mysticism",
         description = "Caius taught me a 'ritual'.",
         image = "Icons\\PRAY\\art\\skooma.dds",
-        knownByDefault = true,
+        knownByDefault = false,
         soundPath = "Fx\\envrn\\undrwatr.wav",
         materials = {
             { material = "skooma_pipe", count = 1},

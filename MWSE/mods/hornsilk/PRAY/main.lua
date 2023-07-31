@@ -214,6 +214,23 @@ local function onKeyDown(e)
 end
 event.register(tes3.event.keyDown, onKeyDown, { filter = config.hotKey.keyCode } )
 
+
+-- JOURNAL CALLBACKS
+
+--- @param e journalEventData
+local function caiusMeetingCallback(e)
+    if e.topic.id ~= "A1_1_FindSpymaster" then
+        return
+    elseif e.topic.journalIndex < 14 then
+        return
+    end
+    CraftingFramework.interop.learnRecipe("caius_skooma")
+end
+event.register(tes3.event.journal, caiusMeetingCallback)
+
+
+
+
 --------------------------------------------
 --MCM
 --------------------------------------------
