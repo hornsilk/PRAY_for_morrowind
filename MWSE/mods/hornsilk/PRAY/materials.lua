@@ -198,16 +198,16 @@ local this = {
         }
     },
     {
-        id = "ashlander_curiass",
-        name = "Ashlander Curiass",
+        id = "ashlander_cuirass",
+        name = "Ashlander Cuirass",
         ids = {
-            "bonemold_armun-an_curiass",
-            "netch_leather_boiled_curiass",
-            "erur_dan_curiass_unique",
-            "bonemold_gah-julan_curiass",
-            "indoril curiass",
-            "bonemold_curiass",
-            "chitin curiass",
+            "bonemold_armun-an_cuirass",
+            "netch_leather_boiled_cuirass",
+            "erur_dan_cuirass_unique",
+            "bonemold_gah-julan_cuirass",
+            "indoril cuirass",
+            "bonemold_cuirass",
+            "chitin cuirass",
         }
     }
 }

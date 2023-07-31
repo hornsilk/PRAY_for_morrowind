@@ -42,7 +42,7 @@ this.ashlanderRituals = {
         prayerDuration = 30,
         image = "Icons\\PRAY\\art\\alandro_sul.dds",
         materials = {
-            { material = "ashlander_curiass", count = 1},
+            { material = "ashlander_cuirass", count = 1},
             { material = "ashlander_lit", count = 1},
             { material = "candle", count = 5 },
         },
