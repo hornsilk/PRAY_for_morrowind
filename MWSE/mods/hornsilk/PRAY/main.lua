@@ -83,6 +83,7 @@ local function registerPrayerOrRitual(recipeTable, type)
     local prayerDuration = recipeTable.prayerDuration or 30
     local bypassResistances = recipeTable.bypassResistances or true
     local castChance = recipeTable.castChance or 100
+    local knownByDefault = recipeTable.knownByDefault or true
 
     local materialsReq = {}
     if type == "prayer" then
@@ -106,7 +107,7 @@ local function registerPrayerOrRitual(recipeTable, type)
         description = description,
         noResult = true,
         materials = materialsReq,
-        knownByDefault = true,
+        knownByDefault = knownByDefault,
         skillRequirements = {
             { skill = skill, requirement = skillValue }
         },
@@ -166,6 +167,11 @@ local function registerPrayersAndRituals()
         table.insert(recipeList, recipe)
     end
     for _, ritualTable in pairs(rituals.ashlanderRituals) do
+        local recipe = registerPrayerOrRitual(ritualTable, "ritual")
+        table.insert(recipeList, recipe)
+    end
+
+    for _, ritualTable in pairs(rituals.miscRituals) do
         local recipe = registerPrayerOrRitual(ritualTable, "ritual")
         table.insert(recipeList, recipe)
     end
