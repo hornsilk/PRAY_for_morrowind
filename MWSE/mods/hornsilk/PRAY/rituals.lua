@@ -416,6 +416,178 @@ this.ashlanderRituals = {
     }
 }
 
+this.sixthHouseRituals = {
+    {
+        name = "TODO_1",
+        id = "sixthHouse_ritual_1",
+        handler = "Sixth House Rituals",
+        skillReq = 10,
+        skill = "sixthHouse",
+        description = "TODO",
+        image = "TODO",
+        skillProgress = 100,
+        materials = {
+            { material = "ash_statue", count = 1 }
+        },
+        spellEffects = {
+            {
+                id = 17, --drainAttribute
+                attribute = 6, --personality
+                duration = 300,
+                min = 10,
+                max = 10,
+            },
+        },
+        text = "He is the Lord, and Father of the Mountain."
+    },
+    {
+        name = "TODO_2",
+        id = "sixthHouse_ritual_2",
+        handler = "Sixth House Rituals",
+        skillReq = 10, --TODO
+        skill = "sixthHouse",
+        description = "TODO",
+        image = "TODO",
+        skillProgress = 200,
+        materials = {
+            { material = "ash_statue", count = 1 },
+            { material = "corprusmeat", count = 3 },
+        },
+        spellEffects = {
+            {
+                id = 17, --drainAttribute
+                attribute = 6, --personality
+                duration = 300,
+                min = 20,
+                max = 20,
+            },
+        },
+        text = "He is the Lord, and Father of the Mountain.\nHe wakes, and the land wakes with him."
+    },
+    {
+        name = "TODO_3",
+        id = "sixthHouse_ritual_3",
+        handler = "Sixth House Rituals",
+        skillReq = 10, --TODO
+        skill = "sixthHouse",
+        description = "TODO",
+        image = "TODO",
+        skillProgress = 300,
+        materials = {
+            { material = "ash_statue", count = 2 },
+            { material = "corprusmeat", count = 5 },
+        },
+        spellEffects = {
+            {
+                id = 17, --drainAttribute
+                attribute = 6, --personality
+                duration = 300,
+                min = 30,
+                max = 30,
+            },
+        },
+        text = "He is the Lord, and Father of the Mountain.\nHe wakes, and the land wakes with him.\nAll the land, and all of its people, shall rise from sleep, and sweep the land clean of the n'wah."
+    },
+    {
+        name = "TODO_4",
+        id = "sixthHouse_ritual_4",
+        handler = "Sixth House Rituals",
+        skillReq = 10, --TODO
+        skill = "sixthHouse",
+        description = "TODO",
+        image = "TODO",
+        skillProgress = 400,
+        materials = {
+            { material = "ash_statue", count = 3 },
+            { material = "corprusmeat", count = 11 },
+        },
+        spellEffects = {
+            {
+                id = 17, --drainAttribute
+                attribute = 6, --personality
+                duration = 300,
+                min = 40,
+                max = 40,
+            },
+        },
+        text = "He is the Lord, and Father of the Mountain.\nHe wakes, and the land wakes with him.\nAll the land, and all of its people, shall rise from sleep, and sweep the land clean of the n'wah.\nWhy have you denied him?"
+    },
+    {
+        name = "TODO_5",
+        id = "sixthHouse_ritual_5",
+        handler = "Sixth House Rituals",
+        skillReq = 10, --TODO
+        skill = "sixthHouse",
+        description = "TODO",
+        image = "TODO",
+        skillProgress = 500,
+        materials = {
+            { material = "ash_statue", count = 4 },
+            { material = "corprusmeat", count = 19 },
+        },
+        spellEffects = {
+            {
+                id = 17, --drainAttribute
+                attribute = 6, --personality
+                duration = 300,
+                min = 50,
+                max = 50,
+            },
+        },
+        text = "He is the Lord, and Father of the Mountain.\nHe wakes, and the land wakes with him.\nAll the land, and all of its people, shall rise from sleep, and sweep the land clean of the n'wah.\nWhy have you denied him?\nAs Lord Dagoth has said. All shall greet him as flesh, or as dust."
+    },
+    {
+        name = "TODO_6",
+        id = "sixthHouse_ritual_6",
+        handler = "Sixth House Rituals",
+        skillReq = 10, --TODO
+        skill = "sixthHouse",
+        description = "TODO",
+        image = "TODO",
+        skillProgress = 600,
+        materials = {
+            { material = "ash_statue", count = 6 },
+            { material = "corprusmeat", count = 36 },
+            { material = "pray_6th_house", count = 1 },
+        },
+        spellEffects = {
+            {
+                id = 79, --fortifyAttribute
+                attribute = 6, --personality
+                duration = 300,
+                min = 60,
+                max = 66,
+            },
+            {
+                id = 79, --fortifyAttribute
+                attribute = 6, --strength
+                duration = 300,
+                min = 60,
+                max = 66,
+            },
+            {
+                id = 3, --shield
+                duration = 300,
+                min = 60,
+                max = 66,
+            },
+            {
+                id = 4, --fireShield
+                duration = 300,
+                min = 60,
+                max = 66,
+            },
+            {
+                id = 98, --resistNormalWeapons
+                duration = 300,
+                min = 60,
+                max = 66,
+            },
+        },
+        text = "He is the Lord, and Father of the Mountain.\nHe wakes, and the land wakes with him.\nAll the land, and all of its people, shall rise from sleep, and sweep the land clean of the n'wah.\nWhy have you denied him?\nAs Lord Dagoth has said. All shall greet him as flesh, or as dust.\nIt is the Hour of Wakening. He comes forth in his glory, and his people shall rejoice, and his enemies shall scatter like dust."
+    },
+}
+
 this.miscRituals = {
     {
         name = "Caius's 'Ritual'",
