@@ -15,7 +15,6 @@ this.divinePrayers = {
         skillReq = 10,
         skill = "divine",
         description = "Pray to Akatosh to fortify Speed.",
-        prayerDuration = 30,
         image = "Icons\\PRAY\\art\\akatosh.dds",
         spellEffects = {
             {
@@ -35,7 +34,6 @@ this.divinePrayers = {
         skillReq = 10,
         skill = "divine",
         description = "Pray to Arkay to fortify Willpower.",
-        prayerDuration = 30,
         image = "Icons\\PRAY\\art\\arkay.dds",
         spellEffects = {
             {
@@ -55,7 +53,6 @@ this.divinePrayers = {
         skillReq = 10,
         skill = "divine",
         description = "Pray to Dibella to fortify Personality.",
-        prayerDuration = 30,
         image = "Icons\\PRAY\\art\\dibella.dds",
         spellEffects = {
             {
@@ -75,7 +72,6 @@ this.divinePrayers = {
         skillReq = 10,
         skill = "divine",
         description = "Pray to Julianos to fortify Intelligence.",
-        prayerDuration = 30,
         image = "Icons\\PRAY\\art\\julianos.dds",
         spellEffects = {
             {
@@ -95,7 +91,6 @@ this.divinePrayers = {
         skillReq = 10,
         skill = "divine",
         description = "Pray to Kynareth to fortify Agility.",
-        prayerDuration = 30,
         image = "Icons\\PRAY\\art\\kynareth.dds",
         spellEffects = {
             {
@@ -115,7 +110,6 @@ this.divinePrayers = {
         skillReq = 10,
         skill = "divine",
         description = "Pray to Mara to fortify Endurance.",
-        prayerDuration = 30,
         image = "Icons\\PRAY\\art\\mara.dds",
         spellEffects = {
             {
@@ -135,7 +129,6 @@ this.divinePrayers = {
         skillReq = 10,
         skill = "divine",
         description = "Pray to Stendarr to fortify Strength.",
-        prayerDuration = 30,
         image = "Icons\\PRAY\\art\\stendarr.dds",
         spellEffects = {
             {
@@ -155,7 +148,6 @@ this.divinePrayers = {
         skillReq = 10,
         skill = "divine",
         description = "Pray to Talos to fortify Attack.",
-        prayerDuration = 30,
         image = "Icons\\PRAY\\art\\talos.dds",
         spellEffects = {
             {
@@ -174,7 +166,6 @@ this.divinePrayers = {
         skillReq = 10,
         skill = "divine",
         description = "Pray to Zenithar to fortify Luck.",
-        prayerDuration = 30,
         image = "Icons\\PRAY\\art\\zenithar.dds",
         spellEffects = {
             {
@@ -214,7 +205,6 @@ this.ashlanderPrayers = {
         skillReq = 12,
         skill = "ashlander",
         description = "See in the darkness by the light of Moon-and-Star.",
-        prayerDuration = 30,
         image = "Icons\\PRAY\\art\\ashland_scout.dds",
         spellEffects = {
             {
@@ -233,7 +223,6 @@ this.ashlanderPrayers = {
         skillReq = 14,
         skill = "ashlander",
         description = "Travel light and quietly.",
-        prayerDuration = 30,
         image = "Icons\\PRAY\\art\\ashland_vista.dds",
         spellEffects = {
             {
@@ -259,7 +248,6 @@ this.ashlanderPrayers = {
         skillReq = 18,
         skill = "ashlander",
         description = "Gird yourself in mystic armors.",
-        prayerDuration = 30,
         image = "Icons\\PRAY\\art\\red_mountain.dds",
         spellEffects = {
             {

@@ -80,11 +80,10 @@ local function registerPrayerOrRitual(recipeTable, type)
     local text = recipeTable.text
     local effects = recipeTable.spellEffects
     local image = recipeTable.image
-    local prayerDuration = recipeTable.prayerDuration or 30
+    local prayerDuration = recipeTable.prayerDuration or 15 --15 in game minutes
     local castChance = recipeTable.castChance or 100
     local skillProgress = recipeTable.skillProgress or 20
     
-
     local bypassResistances = recipeTable.bypassResistances
     if bypassResistances == nil then
         bypassResistances = true
@@ -97,7 +96,6 @@ local function registerPrayerOrRitual(recipeTable, type)
                 return tes3.getJournalIndex{ id = "A2_1_MeetSulMatuul" } >= 44
             end
         end
-
         if skill == "divine" then
             knowledgeRequirement = function()
                 return tes3.getFaction("Imperial Cult").playerJoined
