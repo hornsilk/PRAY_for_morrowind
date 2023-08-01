@@ -42,7 +42,7 @@ this.divineRituals = {
                 max = 20,
             }
         },
-        text = "Talos, here's a sword!",
+        text = "For thirty-eight years, the Emperor Tiber reigned supreme. It was a lawful, pious, and glorious age, when justice was known to one and all, from serf to sovereign. On Tiber's death, it rained for an entire fortnight as if the land of Tamriel itself was weeping.",
     }
 }
 
