@@ -301,7 +301,9 @@ this.miscPrayers = {
         skill = "divine",
         description = "See what luck the day will bring.",
         skillProgress = 0,
+        prayerDuration = 5,
         image = "Icons\\PRAY\\art\\dice.dds",
+        soundPath = "Fx\\magic\\mystC.wav",
         knowledgeRequirement = function()
             return true
         end,
