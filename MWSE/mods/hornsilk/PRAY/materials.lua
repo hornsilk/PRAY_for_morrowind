@@ -258,11 +258,10 @@ local this = {
     },
     {
         id = "pray_6th_house",
-        name = "6th House",
+        name = "6th House Item",
         ids = {
             "misc_goblet_dagoth",
             "misc_de_goblet_04_dagoth",
-            "ingred_corprus_weepings_01",
             "6th bell hammer",
         }
     },
