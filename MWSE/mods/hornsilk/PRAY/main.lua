@@ -18,6 +18,11 @@ if (config == nil) then
             enabled = true,
             keyCode = tes3.scanCode.p,
         },
+        onePrayerPerDay = true,
+        allPrayersShortDuration = false,
+        allSkillReqZero = false,
+        noMaterialsReqs = false,
+        allPrayersKnown = false,
     }
 end
 
@@ -119,6 +124,15 @@ local function registerPrayerOrRitual(recipeTable, type)
         soundPath = "Fx\\envrn\\woodchimes.wav"
     end
 
+    --CONFIG OPTIONS--
+    if config.allPrayersShortDuration then prayerDuration = 3 end
+    if config.allSkillReqZero then skillValue = 0 end
+    if config.noMaterialsReqs then materialsReq = {} end
+    if config.allPrayersKnown then
+        knowledgeRequirement = function () return true end
+    end
+
+
     local recipe = {
         id = id,
         -- craftableId = "",
@@ -139,6 +153,7 @@ local function registerPrayerOrRitual(recipeTable, type)
 
         craftCallback = function()
             tes3.messageBox(text)
+            tes3.player.data.lastDayPrayed = tes3.worldController.daysPassed.value
             animation.defaultAnimationBegin()
             timer.start{
                 duration = prayerDuration/60, --duration in hours for game timers
@@ -152,15 +167,11 @@ local function registerPrayerOrRitual(recipeTable, type)
                         name = name,
                         effects = effects
                     })
-                    tes3.player.data.lastDayPrayed = tes3.worldController.daysPassed.value
-
                     tes3.playSound({soundPath = "Fx\\inter\\levelUP.wav"})
-
                 end
             }
         end
     }
-
     return recipe
 end
 
@@ -225,8 +236,19 @@ event.register("initialized", initialised)
 local function onKeyDown(e)
     if tes3ui.menuMode() then return end
     if e.keyCode == config.hotKey.keyCode then
-        if tes3.player.data.lastDayPrayed == nil or tes3.player.data.lastDayPrayed < tes3.worldController.daysPassed.value then
-        event.trigger("PRAY:ActivatePrayerMenu")
+        local prayerAllowed = false
+        if config.onePrayerPerDay then
+            if tes3.player.data.lastDayPrayed == nil then
+                prayerAllowed = true
+            elseif tes3.player.data.lastDayPrayed < tes3.worldController.daysPassed.value then
+                prayerAllowed = true
+            end
+        else
+            prayerAllowed = true
+        end
+
+        if prayerAllowed then
+            event.trigger("PRAY:ActivatePrayerMenu")
         else
             tes3.messageBox("Wait until tomorrow to pray again.")
         end
@@ -234,7 +256,8 @@ local function onKeyDown(e)
 end
 event.register(tes3.event.keyDown, onKeyDown, { filter = config.hotKey.keyCode } )
 
---CALLBACKS--
+
+--MISC CALLBACKS--
 --- @param e bookGetTextEventData
 local function ashlanderLitCallback(e)
     if CraftingFramework.interop.getRecipe("basic_ancestor_prayer"):isKnown() then return end
@@ -291,6 +314,36 @@ local function registerMCM()
         variable = mwse.mcm.createTableVariable{ id = "hotKey", table = config },
         allowCombinations = true
     }
+
+    page:createYesNoButton({
+        label = "Limit to one prayer per day",
+        description = "By default, the Prayer Menu will not open if you've already crafted a prayer or ritual during this game day.",
+        variable = mwse.mcm:createTableVariable({ id = "onePrayerPerDay", table = config }),
+    })
+
+    page:createYesNoButton({
+        label = "[DEBUG] Set all prayers and rituals to short duration",
+        description = "Debug feature, RESTART REQUIRED.",
+        variable = mwse.mcm:createTableVariable({ id = "allPrayersShortDuration", table = config }),
+    })
+
+    page:createYesNoButton({
+        label = "[DEBUG] Set all prayers and rituals skill requirements to zero",
+        description = "Debug feature, RESTART REQUIRED.",
+        variable = mwse.mcm:createTableVariable({ id = "allSkillReqZero", table = config }),
+    })
+
+    page:createYesNoButton({
+        label = "[DEBUG] Set all prayers and rituals material requirements to none",
+        description = "Debug feature, RESTART REQUIRED.",
+        variable = mwse.mcm:createTableVariable({ id = "noMaterialsReqs", table = config }),
+    })
+
+    page:createYesNoButton({
+        label = "[DEBUG] Set all prayers and rituals knowledge requirements to none",
+        description = "Debug feature, RESTART REQUIRED.",
+        variable = mwse.mcm:createTableVariable({ id = "allPrayersKnown", table = config }),
+    })
 
     template:register()
 end
