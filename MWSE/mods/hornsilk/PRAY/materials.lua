@@ -1,6 +1,6 @@
 local this = {
     {
-        id = "longsword",
+        id = "pray_longsword",
         name = "Longsword",
         ids = {
             "daedric claymore",
@@ -156,12 +156,20 @@ local this = {
         }
     },
     {
-        id = "6th_house",
+        id = "pray_6th_house",
         name = "6th House",
         ids = {
             "misc_goblet_dagoth",
             "misc_de_goblet_04_dagoth",
             "ingred_corprus_weepings_01",
+            "6th bell hammer",
+        }
+    },
+    {
+        id = "corprusmeat",
+        name = "Corprusmeat",
+        ids = {
+
             "ingred_6th_corprusmeat_01",
             "ingred_6th_corprusmeat_02",
             "ingred_6th_corprusmeat_03",
@@ -169,7 +177,6 @@ local this = {
             "ingred_6th_corprusmeat_05",
             "ingred_6th_corprusmeat_06",
             "ingred_6th_corprusmeat_07",
-            "6th bell hammer",
         }
     },
     {
@@ -181,7 +188,7 @@ local this = {
         }
     },
     {
-        id = "moon_sugar",
+        id = "pray_moon_sugar",
         name = "Ritual Dust",
         ids = {
             "ingred_moon_sugar_01"
@@ -198,7 +205,7 @@ local this = {
         }
     },
     {
-        id = "ashlander_cuirass",
+        id = "pray_ashlander_cuirass",
         name = "Ashlander Cuirass",
         ids = {
             "bonemold_armun-an_cuirass",

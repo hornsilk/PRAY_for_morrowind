@@ -19,7 +19,7 @@ this.divineRituals = {
         skillProgress = 40,
         image = "Icons\\PRAY\\art\\talos_gold.dds",
         materials = {
-            { material = "longsword", count = 1 },
+            { material = "pray_longsword", count = 1 },
         },
         spellEffects = {
              {
@@ -58,7 +58,7 @@ this.ashlanderRituals = {
         prayerDuration = 30,
         image = "Icons\\PRAY\\art\\alandro_sul.dds",
         materials = {
-            { material = "ashlander_cuirass", count = 1},
+            { material = "pray_ashlander_cuirass", count = 1},
             { material = "ashlander_lit", count = 1},
             { material = "candle", count = 5 },
         },
@@ -132,7 +132,7 @@ this.miscRituals = {
         skillProgress = 5,
         materials = {
             { material = "skooma_pipe", count = 1},
-            { material = "moon_sugar", count = 1},
+            { material = "pray_moon_sugar", count = 1},
         },
         spellEffects = {
             {
