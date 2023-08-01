@@ -183,33 +183,18 @@ local function registerPrayersAndRituals()
 
     --Create recipe list
     local recipeList = {}
-    for _, prayerTable in pairs(prayers.divinePrayers) do
-        local recipe = registerPrayerOrRitual(prayerTable, "prayer")
-        table.insert(recipeList, recipe)
+    for _, prayerList in pairs(prayers) do
+        for _, prayerTable in pairs(prayerList) do
+            local recipe = registerPrayerOrRitual(prayerTable, "prayer")
+            table.insert(recipeList, recipe)
+        end
     end
-    for _, ritualTable in pairs(rituals.divineRituals) do
-        local recipe = registerPrayerOrRitual(ritualTable, "ritual")
-        table.insert(recipeList, recipe)
+    for _, ritualList in pairs(rituals) do
+        for _, ritualTable in pairs(ritualList) do
+            local recipe = registerPrayerOrRitual(ritualTable, "ritual")
+            table.insert(recipeList, recipe)
+        end
     end
-
-    for _, prayerTable in pairs(prayers.ashlanderPrayers) do
-        local recipe = registerPrayerOrRitual(prayerTable, "prayer")
-        table.insert(recipeList, recipe)
-    end
-    for _, ritualTable in pairs(rituals.ashlanderRituals) do
-        local recipe = registerPrayerOrRitual(ritualTable, "ritual")
-        table.insert(recipeList, recipe)
-    end
-
-    for _, prayerTable in pairs(prayers.miscPrayers) do
-        local recipe = registerPrayerOrRitual(prayerTable, "prayer")
-        table.insert(recipeList, recipe)
-    end
-    for _, ritualTable in pairs(rituals.miscRituals) do
-        local recipe = registerPrayerOrRitual(ritualTable, "ritual")
-        table.insert(recipeList, recipe)
-    end
-
 
     --Register your MenuActivator
     CraftingFramework.MenuActivator:new{
