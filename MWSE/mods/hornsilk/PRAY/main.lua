@@ -154,7 +154,8 @@ local function registerPrayerOrRitual(recipeTable, type)
                     })
                     tes3.player.data.lastDayPrayed = tes3.worldController.daysPassed.value
 
-                    -- tes3.playSound()
+                    tes3.playSound({soundPath = "Fx\\inter\\levelUP.wav"})
+
                 end
             }
         end
@@ -247,7 +248,7 @@ local function ashlanderLitCallback(e)
     if not isAshlanderLit then return end
 
     tes3.messageBox("You have gained knowledge of a prayer from this book.\nYou learned an Ashlander Prayer.")
-    tes3.playSound("Fx\\inter\\levelUP.wav")
+    tes3.playSound({soundPath = "Fx\\inter\\levelUP.wav"})
     tes3.player.data.hasReadAshlanderLit = true
 end
 event.register(tes3.event.bookGetText, ashlanderLitCallback)
