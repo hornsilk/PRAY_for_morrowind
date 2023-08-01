@@ -129,7 +129,7 @@ local function registerPrayerOrRitual(recipeTable, type)
         materials = materialsReq,
         knowledgeRequirement = knowledgeRequirement,
         skillRequirements = {
-            { skill = skill, requirement = skillValue }
+            { skill = skill, requirement = skillValue, maxProgress = skillProgress }
         },
         category = category,
         name = name,
@@ -141,7 +141,6 @@ local function registerPrayerOrRitual(recipeTable, type)
 
         craftCallback = function()
             tes3.messageBox(text)
-            skillModule.incrementSkill( skill, {progress = skillProgress} )
             animation.defaultAnimationBegin()
             timer.start{
                 duration = prayerDuration/60, --duration in hours for game timers

@@ -291,11 +291,13 @@ this.miscPrayers = {
         id = "luck_prayer",
         handler = "Miscellaneous Prayers",
         skillReq = 5,
-        skill = "mysticism",
+        skill = "divine",
         description = "See what luck the day will bring.",
-        prayerDuration = 30,
-        skillProgress = 5,
+        skillProgress = 0,
         image = "Icons\\PRAY\\art\\dice.dds",
+        knowledgeRequirement = function()
+            return true
+        end,
         spellEffects = {
             {
                 id = 79, --fortifyAttribute

@@ -122,14 +122,14 @@ this.miscRituals = {
         id = "caius_skooma",
         handler = "Miscellaneous Rituals",
         skillReq = 5,
-        skill = "mysticism",
+        skill = "divine",
         description = "Caius taught me a 'ritual'.",
         image = "Icons\\PRAY\\art\\caius_skooma.dds",
         knowledgeRequirement = function()
             return tes3.getJournalIndex{ id = "A1_1_FindSpymaster" } >= 11
         end,
         soundPath = "Fx\\envrn\\undrwatr.wav",
-        skillProgress = 5,
+        skillProgress = 0,
         materials = {
             { material = "skooma_pipe", count = 1},
             { material = "pray_moon_sugar", count = 1},
