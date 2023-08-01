@@ -65,6 +65,22 @@ local function onSkillReady()
             active = "active"
         }
     )
+
+    local sixthHouseDescription = (
+        "The Sixth House Theology skill determines your knowledge of traditional prayers and rituals of the Tribe Unmourned."
+    )
+    skillModule.registerSkill(
+        "sixthHouse",
+        {
+            name = "Sixth House Theology",
+            icon = "Icons\\PRAY\\sixthHouse.dds",
+            value = 10,
+            attribute =  tes3.attribute.personality,
+            description = sixthHouseDescription,
+            specialization = tes3.specialization.magic,
+            active = "active"
+        }
+    )
 end
 event.register("OtherSkills:Ready", onSkillReady)
 
@@ -106,6 +122,11 @@ local function registerPrayerOrRitual(recipeTable, type)
                 return tes3.getFaction("Imperial Cult").playerJoined
             end
         end
+        if skill == "sixthHouse" then
+            knowledgeRequirement = function()
+                return tes3.getJournalIndex{ id = "A2_2_6thHouse" } > 41
+            end
+        end
     end
 
     local materialsReq = {}
@@ -122,6 +143,8 @@ local function registerPrayerOrRitual(recipeTable, type)
         soundPath = "PRAY\\marble-church.wav"
     elseif skill == "ashlander" then
         soundPath = "Fx\\envrn\\woodchimes.wav"
+    elseif skill == "sixthHouse" then
+        soundPath = "TODO.wav"
     end
 
     --CONFIG OPTIONS--
@@ -267,7 +290,7 @@ event.register(tes3.event.bookGetText, ashlanderLitCallback)
 --------------------------------------------
 
 local function registerMCM()
-    local  sideBarDefault = (
+    local  sideBarDefault = ( --TODO : update this!
         "PRAY: Prayers, Rituals, And You \n\n" ..
         "PRAY adds Divine Prayers into the game " ..
         "utilising merlord's skill frameworks in MWSE " ..
