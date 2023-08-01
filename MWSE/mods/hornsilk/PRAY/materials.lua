@@ -27,6 +27,107 @@ local this = {
         }
     },
     {
+        id = "pray_mace",
+        name = "Mace",
+        ids = {
+            "chitin club",
+            "iron club",
+            "steel club",
+            "spiked club",
+            "dreugh club",
+            "daedric club",
+            "iron mace",
+            "steel mace",
+            "dwarven mace",
+            "ebony mace",
+            "daedric mace",
+        }
+    },
+    {
+        id = "pray_empty_soulgem",
+        name = "Empty Soul Gem",
+        ids = {
+            "Misc_SoulGem_Grand",
+            "Misc_SoulGem_Greater",
+            "Misc_SoulGem_Common",
+            "Misc_SoulGem_Lesser",
+            "Misc_SoulGem_Petty",
+        }
+    },
+    {
+        id = "pray_feather",
+        name = "Feather",
+        ids = {
+            "ingred_racer_plumes_01",
+            "Misc_Quill",
+        }
+    },
+    {
+        id = "restore_health_ingred",
+        name = "Health Ingredients",
+        ids = {
+            "ingred_corkbulb_root_01",
+            "ingred_corprus_weepings_01",
+            "ingred_emerald_01",
+            "ingred_marshmerrow_01",
+            "ingred_raw_Stalhrim_01",
+            "ingred_resin_01",
+            "ingred_saltrice_01",
+            "ingred_sweetpulp_01",
+            "ingred_wickwheat_01",
+        }
+    },
+    {
+        id = "gem",
+        name = "Gem",
+        ids = {
+            "ingred_diamond_01",
+            "ingred_emerald_01",
+            "ingred_pearl_01",
+            "ingred_ruby_01",
+            "ingred_diamond_01",
+        }
+    },
+    {
+        id = "cup",
+        name = "Cup",
+        ids = {
+            "misc_com_tankard_01",
+            "misc_com_metal_goblet_01",
+            "misc_com_metal_goblet_02",
+            "misc_com_wood_cup_01",
+            "misc_com_wood_cup_02",
+            "Misc_Com_Redware_Cup",
+            "misc_de_goblet_01",
+            "misc_de_goblet_02",
+            "misc_de_goblet_03",
+            "misc_de_goblet_04",
+            "misc_de_goblet_05",
+            "misc_de_goblet_06",
+            "misc_de_goblet_07",
+            "misc_de_goblet_08",
+            "misc_de_goblet_09",
+            "misc_de_tankard_01",
+            "misc_imp_silverware_cup",
+            "Misc_Imp_Silverware_Cup_01",
+            "misc_dwrv_mug00",
+            "misc_dwrv_mug00_uni",
+            "misc_dwrv_goblet00",
+            "misc_dwrv_goblet00_uni",
+            "misc_dwrv_goblet10",
+            "misc_dwrv_goblet10_uni",
+            "misc_dwrv_goblet10_tgcp",
+            "misc_lw_cup",
+        }
+    },
+    {
+        id = "pray_gold",
+        name = "Gold",
+        ids = {
+            "Gold_001"
+        }
+    },
+    {
         id = "candle",
         name = "Candle",
         ids = {

@@ -6,7 +6,7 @@ local this = {}
 
 this.defaultAnimationBegin = function()
     tes3.setVanityMode{enabled = true, checkVanityDisabled = false}
-	tes3.playAnimation({ reference = tes3.player, group = tes3.animationGroup.idle8})--, lower = tes3.animationGroup.death1})
+	tes3.playAnimation({ reference = tes3.player, group = tes3.animationGroup.idle8})
 end
 
 this.defaultAnimationEnd = function()

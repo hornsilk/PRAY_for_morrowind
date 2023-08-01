@@ -76,7 +76,7 @@ this.divinePrayers = {
         spellEffects = {
             {
                 id = 79, --fortifyAttribute
-                attribute = 1, --personality
+                attribute = 1, --intelligence
                 duration = 300,
                 min = 10,
                 max = 10,
