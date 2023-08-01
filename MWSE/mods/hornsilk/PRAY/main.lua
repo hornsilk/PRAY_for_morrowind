@@ -83,7 +83,7 @@ local function registerPrayerOrRitual(recipeTable, type)
     local prayerDuration = recipeTable.prayerDuration or 15 --15 in game minutes
     local castChance = recipeTable.castChance or 100
     local skillProgress = recipeTable.skillProgress or 20
-    
+
     local bypassResistances = recipeTable.bypassResistances
     if bypassResistances == nil then
         bypassResistances = true
@@ -276,6 +276,7 @@ local function registerMCM()
         }
         hyperlink:createHyperLink{
             text = "Divines Art: Feivelyn",
+            exec = "https://www.deviantart.com/feivelyn",
         }
     end
 
