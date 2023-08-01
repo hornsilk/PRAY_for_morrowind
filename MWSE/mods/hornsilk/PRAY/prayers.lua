@@ -182,13 +182,32 @@ this.divinePrayers = {
 
 this.ashlanderPrayers = {
     {
+        name = "Acknowledge the Ancestors",
+        id = "basic_ancestor_prayer",
+        handler = "Ashlander Prayers",
+        skillReq = 10,
+        skill = "ashlander",
+        skillProgress = 10,
+        description = "Acknowledge the memories of our ancestors.",
+        image = "Icons\\PRAY\\art\\wise_woman.dds",
+        knowledgeRequirement = function ()
+            return tes3.player.data.hasReadAshlanderLit or tes3.getJournalIndex{ id = "A2_1_MeetSulMatuul" } >= 44
+        end,
+        spellEffects = {
+            {
+                id = 106, --summonAncestralGhost
+                duration = 100,
+            }
+        },
+        text = "I pray for the herder\nThat whistles to his guar at play."
+    },
+    {
         name = "Venerate the Ancestors",
         id = "ancestor_prayer",
         handler = "Ashlander Prayers",
         skillReq = 10,
         skill = "ashlander",
-        description = "Remember the memories of our ancestors.",
-        prayerDuration = 30,
+        description = "Praise the memories of our ancestors.",
         image = "Icons\\PRAY\\art\\wise_woman.dds",
         spellEffects = {
             {

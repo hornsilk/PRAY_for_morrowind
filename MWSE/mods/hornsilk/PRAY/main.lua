@@ -233,7 +233,24 @@ local function onKeyDown(e)
 end
 event.register(tes3.event.keyDown, onKeyDown, { filter = config.hotKey.keyCode } )
 
+--CALLBACKS--
+--- @param e bookGetTextEventData
+local function ashlanderLitCallback(e)
+    if CraftingFramework.interop.getRecipe("basic_ancestor_prayer"):isKnown() then return end
+    local isAshlanderLit = false
+        for bookId, _ in pairs(CraftingFramework.interop.getMaterials("ashlander_lit").ids) do
+        if string.lower(e.book.id) == string.lower(bookId) then
+            isAshlanderLit = true
+            break
+        end
+    end
+    if not isAshlanderLit then return end
 
+    tes3.messageBox("You have gained knowledge of a prayer from this book.\nYou learned an Ashlander Prayer.")
+    tes3.playSound("Fx\\inter\\levelUP.wav")
+    tes3.player.data.hasReadAshlanderLit = true
+end
+event.register(tes3.event.bookGetText, ashlanderLitCallback)
 
 
 --------------------------------------------
