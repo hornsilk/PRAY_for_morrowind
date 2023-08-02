@@ -342,6 +342,63 @@ this.divineRituals = {
 
 this.tribunalRituals = {
     {
+        name = "Prostration Towards Vivec",
+        id = "vivec_donation_ritual",
+        handler = "Tribunal Rituals",
+        skillReq = 10,
+        skill = "tribunal_theology",
+        description = "Pray to the Child of Verse and Memory",
+        image = "Icons\\PRAY\\V.dds",
+        materials = { { material = "pray_gold", count = 50 } },
+        spellEffects = {
+            {
+                id = 82, --fortifyFatigue
+                duration = 720,
+                min = 5,
+                max = 10,
+            },
+        },
+        text = "Learn by serving.\nBlessed Almsivi, Mercy, Mastery, Mystery."--https://en.uesp.net/wiki/Morrowind:The_Book_of_Dawn_and_Dusk
+    },
+    {
+        name = "Prostration Towards Almalexia",
+        id = "alma_donation_ritual",
+        handler = "Tribunal Rituals",
+        skillReq = 10,
+        skill = "tribunal_theology",
+        description = "Pray to Mother Morrowind",
+        image = "Icons\\PRAY\\A.dds",
+        materials = { { material = "pray_gold", count = 50 } },
+        spellEffects = {
+            {
+                id = 80, --fortifyHealth
+                duration = 720,
+                min = 5,
+                max = 10,
+            },
+        },
+        text = "From the heart, the light; from the head, the law.\nBlessed Almsivi, Mercy, Mastery, Mystery."--https://en.uesp.net/wiki/Morrowind:The_Book_of_Dawn_and_Dusk
+    },
+    {
+        name = "Prostration Towards Sotha Sil",
+        id = "sotha_donation_ritual",
+        handler = "Tribunal Rituals",
+        skillReq = 10,
+        skill = "tribunal_theology",
+        description = "Pray to the Father of Mysteries",
+        image = "Icons\\PRAY\\S.dds",
+        materials = { { material = "pray_gold", count = 50 } },
+        spellEffects = {
+            {
+                id = 81, --fortifyMagicka
+                duration = 720,
+                min = 5,
+                max = 10,
+            },
+        },
+        text = "Refuse neither brother nor ghost.\nBlessed Almsivi, Mercy, Mastery, Mystery." --https://en.uesp.net/wiki/Morrowind:The_Book_of_Dawn_and_Dusk
+    },
+    {
         name = "Rite of Saint Aralor's Intervention",
         id = "aralor_ritual",
         handler = "Tribunal Rituals",
