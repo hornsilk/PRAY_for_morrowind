@@ -48,7 +48,7 @@ this.divineRituals = {
         text = "We have suffered, and are diminished, for all time, but the mortal world we have made is glorious, filling our hearts and spirits with hope. Let us teach the Mortal Races to live well, to cherish beauty and honor, and to love one another as we love them.", --https://en.uesp.net/wiki/Morrowind:The_Monomyth
     },
     {
-        name = "Rites of Arkay",
+        name = "Rite of Arkay",
         id = "ritual_of_arkay",
         handler = "Divine Rituals",
         skillReq = 20,
@@ -342,13 +342,13 @@ this.divineRituals = {
 
 this.tribunalRituals = {
     {
-        name = "Rites of Saint Aralor's Intervention",
+        name = "Rite of Saint Aralor's Intervention",
         id = "aralor_ritual",
         handler = "Tribunal Rituals",
         skillReq = 20,
         skill = "tribunal_theology",
         description = "TODO",
-        image = "TODO",
+        image = "Icons\\PRAY\\art\\tx_saint_aralor_01.dds",
         materials = { { material = "candle", count = 1 } },
         spellEffects = {
             {
@@ -365,13 +365,13 @@ this.tribunalRituals = {
         text = "TODO"
     },
     {
-        name = "Rites of Saint Delyn's Shield",
+        name = "Rite of Saint Deyln's Shield",
         id = "delyn_ritual",
         handler = "Tribunal Rituals",
         skillReq = 20,
         skill = "tribunal_theology",
         description = "TODO",
-        image = "TODO",
+        image = "Icons\\PRAY\\art\\tx_saint_deyln_01.dds",
         materials = { { material = "candle", count = 1 } },
         spellEffects = {
             {
@@ -387,13 +387,13 @@ this.tribunalRituals = {
         text = "TODO"
     },
     {
-        name = "Rites of Saint Felms's Glory",
+        name = "Rite of Saint Felms's Glory",
         id = "felms_ritual",
         handler = "Tribunal Rituals",
         skillReq = 20,
         skill = "tribunal_theology",
         description = "TODO",
-        image = "TODO",
+        image = "Icons\\PRAY\\art\\tx_saint_felms_01.dds",
         materials = { { material = "candle", count = 1 } },
         spellEffects = {
             {
@@ -410,13 +410,13 @@ this.tribunalRituals = {
         text = "TODO"
     },
     {
-        name = "Rites of Saint Llothis's Rock",
+        name = "Rite of Saint Llothis's Rock",
         id = "llothis_ritual",
         handler = "Tribunal Rituals",
         skillReq = 20,
         skill = "tribunal_theology",
         description = "TODO",
-        image = "TODO",
+        image = "Icons\\PRAY\\art\\tx_saint_llothis_01.dds",
         materials = { { material = "candle", count = 1 } },
         spellEffects = {
             {
@@ -433,13 +433,13 @@ this.tribunalRituals = {
         text = "TODO"
     },
     {
-        name = "Rites of Saint Meris's Warding",
+        name = "Rite of Saint Meris's Warding",
         id = "meris_ritual",
         handler = "Tribunal Rituals",
         skillReq = 20,
         skill = "tribunal_theology",
         description = "TODO",
-        image = "TODO",
+        image = "Icons\\PRAY\\art\\tx_saint_meris_01.dds",
         materials = { { material = "candle", count = 1 } },
         spellEffects = {
             {
@@ -455,13 +455,13 @@ this.tribunalRituals = {
         text = "TODO"
     },
     {
-        name = "Rites of Saint Nerevar's Spirit",
+        name = "Rite of Saint Nerevar's Spirit",
         id = "nerevar_ritual",
         handler = "Tribunal Rituals",
         skillReq = 20,
         skill = "tribunal_theology",
         description = "TODO",
-        image = "TODO",
+        image = "Icons\\PRAY\\art\\tx_saint_nerevar_01.dds",
         materials = { { material = "candle", count = 1 } },
         spellEffects = {
             {
@@ -477,13 +477,13 @@ this.tribunalRituals = {
         text = "TODO"
     },
     {
-        name = "Rites of Saint Olms's Benediction",
+        name = "Rite of Saint Olms's Benediction",
         id = "olms_ritual",
         handler = "Tribunal Rituals",
         skillReq = 20,
         skill = "tribunal_theology",
         description = "TODO",
-        image = "TODO",
+        image = "Icons\\PRAY\\art\\tx_saint_olms_01.dds",
         materials = { { material = "candle", count = 1 } },
         spellEffects = {
             {
@@ -499,13 +499,13 @@ this.tribunalRituals = {
         text = "TODO"
     },
     {
-        name = "Rites of Saint Rilms's Grace",
+        name = "Rite of Saint Rilms's Grace",
         id = "rilm_ritual",
         handler = "Tribunal Rituals",
         skillReq = 20,
         skill = "tribunal_theology",
         description = "TODO",
-        image = "TODO",
+        image = "Icons\\PRAY\\art\\tx_saint_rilms_01.dds",
         materials = { { material = "candle", count = 1 } },
         spellEffects = {
             {
@@ -522,13 +522,13 @@ this.tribunalRituals = {
         text = "TODO"
     },
     {
-        name = "Rites of Saint Roris's Bloom",
+        name = "Rite of Saint Roris's Bloom",
         id = "roris_ritual",
         handler = "Tribunal Rituals",
         skillReq = 20,
         skill = "tribunal_theology",
         description = "TODO",
-        image = "TODO",
+        image = "Icons\\PRAY\\art\\tx_saint_roris_01.dds",
         materials = { { material = "candle", count = 1 } },
         spellEffects = {
             {
@@ -544,13 +544,13 @@ this.tribunalRituals = {
         text = "TODO"
     },
     {
-        name = "Rites of Saint Seryn's Shield",
+        name = "Rite of Saint Seryn's Shield",
         id = "seryn_ritual",
         handler = "Tribunal Rituals",
         skillReq = 20,
         skill = "tribunal_theology",
         description = "TODO",
-        image = "TODO",
+        image = "Icons\\PRAY\\art\\tx_saint_seryn_01.dds",
         materials = { { material = "candle", count = 1 } },
         spellEffects = {
             {
@@ -566,13 +566,13 @@ this.tribunalRituals = {
         text = "TODO"
     },
     {
-        name = "Rites of Saint Veloth's Indwelling",
+        name = "Rite of Saint Veloth's Indwelling",
         id = "veloth_ritual",
         handler = "Tribunal Rituals",
         skillReq = 20,
         skill = "tribunal_theology",
         description = "TODO",
-        image = "TODO",
+        image = "Icons\\PRAY\\art\\tx_saint_veloth_01.dds",
         materials = { { material = "candle", count = 1 } },
         spellEffects = {
             {
