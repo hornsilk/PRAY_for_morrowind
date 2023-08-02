@@ -433,7 +433,7 @@ this.sixthHouseRituals = {
             { material = "ash_statue", count = 1 }
         },
         knowledgeRequirement = function()
-            return tes3.getJournalIndex{ id = "A1_1_FindSpymaster" } >= 11 and skillModule.getSkill('sixthHouse').value < 11
+            return tes3.getJournalIndex{ id = "A2_2_6thHouse" } > 41 and skillModule.getSkill('sixthHouse').value < 11
         end,
         spellEffects = {
             {
@@ -453,14 +453,14 @@ this.sixthHouseRituals = {
         skillReq = 11,
         skill = "sixthHouse",
         description = "How will you honor the Sixth House, the tribe unmourned?",
-        image = "Icons\\PRAY\\art\\dagoth1.dds",
+        image = "Icons\\PRAY\\art\\dagoth2.dds",
         skillProgress = 200,
         materials = {
             { material = "ash_statue", count = 1 },
             { material = "corprusmeat", count = 3 },
         },
         knowledgeRequirement = function()
-            return tes3.getJournalIndex{ id = "A1_1_FindSpymaster" } >= 11 and skillModule.getSkill('sixthHouse').value < 12
+            return tes3.getJournalIndex{ id = "A2_2_6thHouse" } > 41 and skillModule.getSkill('sixthHouse').value < 12
         end,
         spellEffects = {
             {
@@ -480,14 +480,14 @@ this.sixthHouseRituals = {
         skillReq = 12,
         skill = "sixthHouse",
         description = "How will you honor the Sixth House, the tribe unmourned? Together we shall speak for the Law and the Land, and shall drive the mongrel dogs of the Empire from Morrowind.",
-        image = "Icons\\PRAY\\art\\dagoth2.dds",
+        image = "Icons\\PRAY\\art\\dagoth3.dds",
         skillProgress = 200,
         materials = {
             { material = "ash_statue", count = 2 },
             { material = "corprusmeat", count = 5 },
         },
         knowledgeRequirement = function()
-            return tes3.getJournalIndex{ id = "A1_1_FindSpymaster" } >= 11 and skillModule.getSkill('sixthHouse').value < 13
+            return tes3.getJournalIndex{ id = "A2_2_6thHouse" } > 41 and skillModule.getSkill('sixthHouse').value < 13
         end,
         spellEffects = {
             {
@@ -507,14 +507,14 @@ this.sixthHouseRituals = {
         skillReq = 13,
         skill = "sixthHouse",
         description = "How will you honor the Sixth House, the tribe unmourned? Together we shall speak for the Law and the Land, and shall drive the mongrel dogs of the Empire from Morrowind.",
-        image = "Icons\\PRAY\\art\\dagoth2.dds",
+        image = "Icons\\PRAY\\art\\dagoth4.dds",
         skillProgress = 200,
         materials = {
             { material = "ash_statue", count = 3 },
             { material = "corprusmeat", count = 11 },
         },
         knowledgeRequirement = function()
-            return tes3.getJournalIndex{ id = "A1_1_FindSpymaster" } >= 11 and skillModule.getSkill('sixthHouse').value < 14
+            return tes3.getJournalIndex{ id = "A2_2_6thHouse" } > 41 and skillModule.getSkill('sixthHouse').value < 14
         end,
         spellEffects = {
             {
@@ -534,14 +534,14 @@ this.sixthHouseRituals = {
         skillReq = 14,
         skill = "sixthHouse",
         description = "How will you honor the Sixth House, the tribe unmourned? Together we shall speak for the Law and the Land, and shall drive the mongrel dogs of the Empire from Morrowind.\nCome to me, through fire and war. I welcome you.",
-        image = "Icons\\PRAY\\art\\dagoth3.dds",
+        image = "Icons\\PRAY\\art\\dagoth5.dds",
         skillProgress = 200,
         materials = {
             { material = "ash_statue", count = 4 },
             { material = "corprusmeat", count = 19 },
         },
         knowledgeRequirement = function()
-            return tes3.getJournalIndex{ id = "A1_1_FindSpymaster" } >= 11 and skillModule.getSkill('sixthHouse').value < 15
+            return tes3.getJournalIndex{ id = "A2_2_6thHouse" } > 41 and skillModule.getSkill('sixthHouse').value < 15
         end,
         spellEffects = {
             {
@@ -561,13 +561,16 @@ this.sixthHouseRituals = {
         skillReq = 15,
         skill = "sixthHouse",
         description = "How will you honor the Sixth House, the tribe unmourned? Together we shall speak for the Law and the Land, and shall drive the mongrel dogs of the Empire from Morrowind.\nCome to me, through fire and war. I welcome you.\nWelcome, Moon-and-Star. I have prepared a place for you.",
-        image = "Icons\\PRAY\\art\\dagoth4.dds",
+        image = "Icons\\PRAY\\art\\dagoth6.dds",
         skillProgress = 200,
         materials = {
             { material = "ash_statue", count = 6 },
             { material = "corprusmeat", count = 36 },
             { material = "pray_6th_house", count = 1 },
-        },
+        },   
+        knowledgeRequirement = function()
+            return tes3.getJournalIndex{ id = "A2_2_6thHouse" } >= 11 and skillModule.getSkill('sixthHouse').value < 16
+        end,
         spellEffects = {
             {
                 id = 79, --fortifyAttribute
