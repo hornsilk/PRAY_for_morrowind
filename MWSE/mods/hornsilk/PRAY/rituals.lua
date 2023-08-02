@@ -499,7 +499,7 @@ this.tribunalRituals = {
         text = "TODO"
     },
     {
-        name = "Rites of Saint Rilm's Grace",
+        name = "Rites of Saint Rilms's Grace",
         id = "rilm_ritual",
         handler = "Tribunal Rituals",
         skillReq = 20,
