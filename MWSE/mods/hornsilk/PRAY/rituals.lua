@@ -26,21 +26,21 @@ this.divineRituals = {
         spellEffects = {
             {
                 id = 10, --levitate
-                duration = 300,
+                duration = 720,
                 min = 10,
                 max = 30,
             },
             {
                 id = 83, --fortifySkill
                 skill = 14, --mysticism,
-                duration = 300,
+                duration = 720,
                 min = 10,
                 max = 20,
             },
             {
                 id = 79, --fortifyAttribute
                 attribute = 4, --speed
-                duration = 300,
+                duration = 720,
                 min = 10,
                 max = 20,
             },
@@ -63,21 +63,21 @@ this.divineRituals = {
         spellEffects = {
             {
                 id = 42, --sanctuary
-                duration = 300,
+                duration = 720,
                 min = 20,
                 max = 20,
             },
             {
                 id = 83, --fortifySkill
                 skill = 17, --unarmored,
-                duration = 300,
+                duration = 720,
                 min = 10,
                 max = 20,
             },
             {
                 id = 79, --fortifyAttribute
                 attribute = 2, --willpower
-                duration = 300,
+                duration = 720,
                 min = 10,
                 max = 20,
             },
@@ -99,21 +99,21 @@ this.divineRituals = {
         spellEffects = {
             {
                 id = 68, --reflect
-                duration = 300,
+                duration = 720,
                 min = 1,
                 max = 10,
             },
             {
                 id = 83, --fortifySkill
                 skill = 13, --conjuration,
-                duration = 300,
+                duration = 720,
                 min = 10,
                 max = 20,
             },
             {
                 id = 79, --fortifyAttribute
                 attribute = 6, --personality
-                duration = 300,
+                duration = 720,
                 min = 10,
                 max = 20,
             },
@@ -136,19 +136,19 @@ this.divineRituals = {
         spellEffects = {
             {
                 id = 39, --invisibility
-                duration = 300,
+                duration = 720,
             },
             {
                 id = 83, --fortifySkill
                 skill = 9, --enchant,
-                duration = 300,
+                duration = 720,
                 min = 10,
                 max = 20,
             },
             {
                 id = 79, --fortifyAttribute
                 attribute = 1, --intelligence
-                duration = 300,
+                duration = 720,
                 min = 10,
                 max = 20,
             },
@@ -171,21 +171,21 @@ this.divineRituals = {
         spellEffects = {
             {
                 id = 9, --jump
-                duration = 300,
+                duration = 720,
                 min = 20,
                 max = 20,
             },
             {
                 id = 83, --fortifySkill
                 skill = 8, --athletics,
-                duration = 300,
+                duration = 720,
                 min = 10,
                 max = 20,
             },
             {
                 id = 79, --fortifyAttribute
                 attribute = 3, --agility
-                duration = 300,
+                duration = 720,
                 min = 10,
                 max = 20,
             },
@@ -208,21 +208,21 @@ this.divineRituals = {
         spellEffects = {
             {
                 id = 80, --fortifyHealth
-                duration = 300,
+                duration = 720,
                 min = 10,
                 max = 50,
             },
             {
                 id = 83, --fortifySkill
                 skill = 15, --restoration,
-                duration = 300,
+                duration = 720,
                 min = 10,
                 max = 20,
             },
             {
                 id = 79, --fortifyAttribute
                 attribute = 5, --endurance
-                duration = 300,
+                duration = 720,
                 min = 10,
                 max = 20,
             },
@@ -245,21 +245,21 @@ this.divineRituals = {
         spellEffects = {
             {
                 id = 122, --boundMace
-                duration = 300,
+                duration = 720,
                 min = 20,
                 max = 20,
             },
             {
                 id = 83, --fortifySkill
                 skill = 4, --bluntWeapon,
-                duration = 300,
+                duration = 720,
                 min = 10,
                 max = 20,
             },
             {
                 id = 79, --fortifyAttribute
                 attribute = 0, --strenth
-                duration = 300,
+                duration = 720,
                 min = 10,
                 max = 20,
             },
@@ -282,20 +282,20 @@ this.divineRituals = {
         spellEffects = {
             {
                 id = 41, --light
-                duration = 300,
+                duration = 720,
                 min = 20,
                 max = 20,
             },
             {
                 id = 83, --fortifySkill
                 skill = 5, --longBlade,
-                duration = 300,
+                duration = 720,
                 min = 10,
                 max = 20,
             },
             {
                 id = 117, --fortifyAttack
-                duration = 300,
+                duration = 720,
                 min = 10,
                 max = 20,
             }
@@ -317,21 +317,21 @@ this.divineRituals = {
         spellEffects = {
             {
                 id = 59, --telekinesis
-                duration = 300,
+                duration = 720,
                 min = 20,
                 max = 20,
             },
             {
                 id = 83, --fortifySkill
                 skill = 25, --speechcraft,
-                duration = 300,
+                duration = 720,
                 min = 10,
                 max = 20,
             },
             {
                 id = 79, --fortifyAttribute
                 attribute = 7, --luck
-                duration = 300,
+                duration = 720,
                 min = 10,
                 max = 20,
             },
@@ -358,49 +358,49 @@ this.ashlanderRituals = {
         spellEffects = {
             {
                 id = 47, --blind
-                duration = 300,
+                duration = 720,
                 min = 100,
                 max = 100,
             },
             {
                 id = 42, --sanctuary
-                duration = 300,
+                duration = 720,
                 min = 100,
                 max = 100,
             },
             {
                 id = 64, --detectAnimal
-                duration = 300,
+                duration = 720,
                 min = 100,
                 max = 100,
             },
             {
                 id = 65, --detectEnchantment
-                duration = 300,
+                duration = 720,
                 min = 100,
                 max = 100,
             },
             {
                 id = 66, --detectKey
-                duration = 300,
+                duration = 720,
                 min = 100,
                 max = 100,
             },
             -- {
             --     id = 336, --detectDaedra (Enhanced Detection)
-            --     duration = 300,
+            --     duration = 720,
             --     min = 100,
             --     max = 100,
             -- },
             -- {
             --     id = 338, --detectHumanoid (Enhanced Detection)
-            --     duration = 300,
+            --     duration = 720,
             --     min = 100,
             --     max = 100,
             -- },
             -- {
             --     id = 340, --detectUndead (Enhanced Detection)
-            --     duration = 300,
+            --     duration = 720,
             --     min = 100,
             --     max = 100,
             -- },
@@ -429,7 +429,7 @@ this.sixthHouseRituals = {
             {
                 id = 17, --drainAttribute
                 attribute = 6, --personality
-                duration = 300,
+                duration = 720,
                 min = 10,
                 max = 10,
             },
@@ -456,7 +456,7 @@ this.sixthHouseRituals = {
             {
                 id = 17, --drainAttribute
                 attribute = 6, --personality
-                duration = 300,
+                duration = 720,
                 min = 20,
                 max = 20,
             },
@@ -483,7 +483,7 @@ this.sixthHouseRituals = {
             {
                 id = 17, --drainAttribute
                 attribute = 6, --personality
-                duration = 300,
+                duration = 720,
                 min = 30,
                 max = 30,
             },
@@ -510,7 +510,7 @@ this.sixthHouseRituals = {
             {
                 id = 17, --drainAttribute
                 attribute = 6, --personality
-                duration = 300,
+                duration = 720,
                 min = 40,
                 max = 40,
             },
@@ -537,7 +537,7 @@ this.sixthHouseRituals = {
             {
                 id = 17, --drainAttribute
                 attribute = 6, --personality
-                duration = 300,
+                duration = 720,
                 min = 50,
                 max = 50,
             },
@@ -565,32 +565,32 @@ this.sixthHouseRituals = {
             {
                 id = 79, --fortifyAttribute
                 attribute = 6, --personality
-                duration = 300,
+                duration = 720,
                 min = 60,
                 max = 66,
             },
             {
                 id = 79, --fortifyAttribute
                 attribute = 6, --strength
-                duration = 300,
+                duration = 720,
                 min = 60,
                 max = 66,
             },
             {
                 id = 3, --shield
-                duration = 300,
+                duration = 720,
                 min = 60,
                 max = 66,
             },
             {
                 id = 4, --fireShield
-                duration = 300,
+                duration = 720,
                 min = 60,
                 max = 66,
             },
             {
                 id = 98, --resistNormalWeapons
-                duration = 300,
+                duration = 720,
                 min = 60,
                 max = 66,
             },
@@ -621,40 +621,40 @@ this.miscRituals = {
             {
                 id = 79, --fortifyAttribute
                 attribute = 0, --strength
-                duration = 300,
+                duration = 720,
                 min = 20,
                 max = 30,
             },
             {
                 id = 79, --fortifyAttribute
                 attribute = 4, --speed
-                duration = 300,
+                duration = 720,
                 min = 20,
                 max = 30,
             },
             {
                 id = 17, --drainAttribute
                 attribute = 1, --intelligence
-                duration = 300,
+                duration = 720,
                 min = 20,
                 max = 30,
             },
             {
                 id = 17, --drainAttribute
                 attribute = 3, --agility
-                duration = 300,
+                duration = 720,
                 min = 20,
                 max = 30,
             },
             {
                id = 43, --nightEye
-               duration = 300,
+               duration = 720,
                min = 0,
                max = 50,
             },
             {
                id = 47, --blind
-               duration = 300,
+               duration = 720,
                min = 0,
                max = 50,
             },

@@ -20,7 +20,7 @@ this.divinePrayers = {
             {
                 id = 79, --fortifyAttribute
                 attribute = 4, --speed
-                duration = 300,
+                duration = 720,
                 min = 10,
                 max = 10,
             }
@@ -39,7 +39,7 @@ this.divinePrayers = {
             {
                 id = 79, --fortifyAttribute
                 attribute = 2, --willpower
-                duration = 300,
+                duration = 720,
                 min = 10,
                 max = 10,
             }
@@ -58,7 +58,7 @@ this.divinePrayers = {
             {
                 id = 79, --fortifyAttribute
                 attribute = 6, --personality
-                duration = 300,
+                duration = 720,
                 min = 10,
                 max = 10,
             }
@@ -77,7 +77,7 @@ this.divinePrayers = {
             {
                 id = 79, --fortifyAttribute
                 attribute = 1, --intelligence
-                duration = 300,
+                duration = 720,
                 min = 10,
                 max = 10,
             }
@@ -96,7 +96,7 @@ this.divinePrayers = {
             {
                 id = 79, --fortifyAttribute
                 attribute = 3, --agility
-                duration = 300,
+                duration = 720,
                 min = 10,
                 max = 10,
             }
@@ -115,7 +115,7 @@ this.divinePrayers = {
             {
                 id = 79, --fortifyAttribute
                 attribute = 5, --endurance
-                duration = 300,
+                duration = 720,
                 min = 10,
                 max = 10,
             }
@@ -134,7 +134,7 @@ this.divinePrayers = {
             {
                 id = 79, --fortifyAttribute
                 attribute = 0, --strenth
-                duration = 300,
+                duration = 720,
                 min = 10,
                 max = 10,
             }
@@ -152,7 +152,7 @@ this.divinePrayers = {
         spellEffects = {
             {
                 id = 117, --fortifyAttack
-                duration = 300,
+                duration = 720,
                 min = 10,
                 max = 10,
             }
@@ -171,7 +171,7 @@ this.divinePrayers = {
             {
                 id = 79, --fortifyAttribute
                 attribute = 7, --luck
-                duration = 300,
+                duration = 720,
                 min = 10,
                 max = 10,
             }
@@ -196,7 +196,7 @@ this.ashlanderPrayers = {
         spellEffects = {
             {
                 id = 106, --summonAncestralGhost
-                duration = 100,
+                duration = 360,
             }
         },
         text = "I pray for the herder\nThat whistles to his guar at play."
@@ -212,7 +212,7 @@ this.ashlanderPrayers = {
         spellEffects = {
             {
                 id = 106, --summonAncestralGhost
-                duration = 300,
+                duration = 720,
             }
         },
         text = "I pray for the herder\nThat whistles to his guar at play.\n\nI pray for the hunter\nThat stalks the white walkers.\n\nI pray for the wise one\nThat seeks under the hill,\n\nAnd the wife who wishes\nFor one last touch of her dead child's hand."
@@ -228,7 +228,7 @@ this.ashlanderPrayers = {
         spellEffects = {
             {
                 id = 43, --nightEye
-                duration = 300,
+                duration = 720,
                 min = 20,
                 max = 40,
             }
@@ -246,14 +246,14 @@ this.ashlanderPrayers = {
         spellEffects = {
             {
                 id = 8, --feather
-                duration = 300,
+                duration = 720,
                 min = 10,
                 max = 30,
             },
             {
                 id = 83, --fortifySkill 
                 skill = 19, --sneak
-                duration = 300,
+                duration = 720,
                 min = 10,
                 max = 30,
             }
@@ -271,25 +271,25 @@ this.ashlanderPrayers = {
         spellEffects = {
             {
                 id = 90, --resistFire
-                duration = 300,
+                duration = 720,
                 min = 20,
                 max = 50,
             },
             {
                 id = 91, --resistFrost
-                duration = 300,
+                duration = 720,
                 min = 20,
                 max = 50,
             },
             {
                 id = 94, --resistCommonDisease
-                duration = 300,
+                duration = 720,
                 min = 20,
                 max = 50,
             },
             {
                 id = 95, --resistBlightDisease
-                duration = 300,
+                duration = 720,
                 min = 20,
                 max = 50,
             },
@@ -307,19 +307,19 @@ this.ashlanderPrayers = {
         spellEffects = {
             {
                 id = 3, --shield
-                duration = 300,
+                duration = 720,
                 min = 10,
                 max = 30,
             },
             {
                 id = 48, --sound
-                duration = 300,
+                duration = 720,
                 min = 10,
                 max = 30,
             },
             {
                 id = 59, --telekinesis 
-                duration = 300,
+                duration = 720,
                 min = 5,
                 max = 15,
             }
@@ -342,32 +342,32 @@ this.sixthHousePrayers = {
             {
                 id = 79, --fortifyAttribute
                 attribute = 6, --personality
-                duration = 300,
+                duration = 720,
                 min = 60,
                 max = 66,
             },
             {
                 id = 79, --fortifyAttribute
                 attribute = 6, --strength
-                duration = 300,
+                duration = 720,
                 min = 60,
                 max = 66,
             },
             {
                 id = 3, --shield
-                duration = 300,
+                duration = 720,
                 min = 60,
                 max = 66,
             },
             {
                 id = 4, --fireShield
-                duration = 300,
+                duration = 720,
                 min = 60,
                 max = 66,
             },
             {
                 id = 98, --resistNormalWeapons
-                duration = 300,
+                duration = 720,
                 min = 60,
                 max = 66,
             },
@@ -395,14 +395,14 @@ this.miscPrayers = {
             {
                 id = 79, --fortifyAttribute
                 attribute = 7, --luck
-                duration = 300,
+                duration = 720,
                 min = 0,
                 max = 10,
             },
             {
                 id = 17, --drainAttribute
                 attribute = 7, --luck
-                duration = 300,
+                duration = 720,
                 min = 0,
                 max = 10,
             }
