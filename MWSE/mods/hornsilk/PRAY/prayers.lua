@@ -183,60 +183,6 @@ this.divinePrayers = {
 this.tribunalPrayers = {
     {
         name = "TODO",
-        id = "vivec_prayer",
-        handler = "Tribunal Prayers",
-        skillReq = 10,
-        skill = "tribunal_theology",
-        description = "TODO",
-        image = "TODO",
-        spellEffects = {
-            {
-                id = -1, --TODO
-                duration = 720,
-                min = 20,
-                max = 40,
-            },
-        },
-        text = "TODO"
-    },
-    {
-        name = "TODO",
-        id = "sotha_prayer",
-        handler = "Tribunal Prayers",
-        skillReq = 10,
-        skill = "tribunal_theology",
-        description = "TODO",
-        image = "TODO",
-        spellEffects = {
-            {
-                id = -1, --TODO
-                duration = 720,
-                min = 20,
-                max = 40,
-            },
-        },
-        text = "TODO"
-    },
-    {
-        name = "TODO",
-        id = "alma_prayer",
-        handler = "Tribunal Prayers",
-        skillReq = 10,
-        skill = "tribunal_theology",
-        description = "TODO",
-        image = "TODO",
-        spellEffects = {
-            {
-                id = -1, --TODO
-                duration = 720,
-                min = 20,
-                max = 40,
-            },
-        },
-        text = "TODO"
-    },
-    {
-        name = "TODO",
         id = "restore_attributes",
         handler = "Tribunal Prayers",
         skillReq = 25,
@@ -245,17 +191,67 @@ this.tribunalPrayers = {
         image = "TODO",
         spellEffects = {
             {
-                id = -1, --TODO
-                duration = 720,
-                min = 20,
-                max = 40,
+                id = 74, --restoreAttribute
+                attribute = 0,
+                duration = 1,
+                min = 100,
+                max = 100,
+            },
+            {
+                id = 74, --restoreAttribute
+                attribute = 1,
+                duration = 1,
+                min = 100,
+                max = 100,
+            },
+            {
+                id = 74, --restoreAttribute
+                attribute = 2,
+                duration = 1,
+                min = 100,
+                max = 100,
+            },
+            {
+                id = 74, --restoreAttribute
+                attribute = 3,
+                duration = 1,
+                min = 100,
+                max = 100,
+            },
+            {
+                id = 74, --restoreAttribute
+                attribute = 4,
+                duration = 1,
+                min = 100,
+                max = 100,
+            },
+            {
+                id = 74, --restoreAttribute
+                attribute = 5,
+                duration = 1,
+                min = 100,
+                max = 100,
+            },
+            {
+                id = 74, --restoreAttribute
+                attribute = 6,
+                duration = 1,
+                min = 100,
+                max = 100,
+            },
+            {
+                id = 74, --restoreAttribute
+                attribute = 7,
+                duration = 1,
+                min = 100,
+                max = 100,
             },
         },
         text = "TODO"
     },
     {
         name = "TODO",
-        id = "restore_mage_skills",
+        id = "restore_combat_skills", --except for athletics bc space
         handler = "Tribunal Prayers",
         skillReq = 25,
         skill = "tribunal_theology",
@@ -263,17 +259,67 @@ this.tribunalPrayers = {
         image = "TODO",
         spellEffects = {
             {
-                id = -1, --TODO
-                duration = 720,
-                min = 20,
-                max = 40,
+                id = 78, --restoreSkill
+                skill = 3,
+                duration = 1,
+                min = 100,
+                max = 100,
+            },
+            {
+                id = 78, --restoreSkill
+                skill = 2,
+                duration = 1,
+                min = 100,
+                max = 100,
+            },
+            {
+                id = 78, --restoreSkill
+                skill = 7,
+                duration = 1,
+                min = 100,
+                max = 100,
+            },
+            {
+                id = 78, --restoreSkill
+                skill = 1,
+                duration = 1,
+                min = 100,
+                max = 100,
+            },
+            {
+                id = 78, --restoreSkill
+                skill = 6,
+                duration = 1,
+                min = 100,
+                max = 100,
+            },
+            {
+                id = 78, --restoreSkill
+                skill = 4,
+                duration = 1,
+                min = 100,
+                max = 100,
+            },
+            {
+                id = 78, --restoreSkill
+                skill = 5,
+                duration = 1,
+                min = 100,
+                max = 100,
+            },
+            {
+                id = 78, --restoreSkill
+                skill = 0,
+                duration = 1,
+                min = 100,
+                max = 100,
             },
         },
         text = "TODO"
     },
     {
         name = "TODO",
-        id = "restore_thief_skills",
+        id = "restore_stealth_skills", --except for hand-to-hand bc only space for 8
         handler = "Tribunal Prayers",
         skillReq = 25,
         skill = "tribunal_theology",
@@ -281,17 +327,67 @@ this.tribunalPrayers = {
         image = "TODO",
         spellEffects = {
             {
-                id = -1, --TODO
-                duration = 720,
-                min = 20,
-                max = 40,
+                id = 78, --restoreSkill
+                skill = 20,
+                duration = 1,
+                min = 100,
+                max = 100,
+            },
+            {
+                id = 78, --restoreSkill
+                skill = 21,
+                duration = 1,
+                min = 100,
+                max = 100,
+            },
+            {
+                id = 78, --restoreSkill
+                skill = 23,
+                duration = 1,
+                min = 100,
+                max = 100,
+            },
+            {
+                id = 78, --restoreSkill
+                skill = 19,
+                duration = 1,
+                min = 100,
+                max = 100,
+            },
+            {
+                id = 78, --restoreSkill
+                skill = 22,
+                duration = 1,
+                min = 100,
+                max = 100,
+            },
+            {
+                id = 78, --restoreSkill
+                skill = 24,
+                duration = 1,
+                min = 100,
+                max = 100,
+            },
+            {
+                id = 78, --restoreSkill
+                skill = 25,
+                duration = 1,
+                min = 100,
+                max = 100,
+            },
+            {
+                id = 78, --restoreSkill
+                skill = 18,
+                duration = 1,
+                min = 100,
+                max = 100,
             },
         },
         text = "TODO"
     },
     {
         name = "TODO",
-        id = "restore_warrior_skills",
+        id = "restore_magic_skills", --except for unarmored bc only 8
         handler = "Tribunal Prayers",
         skillReq = 25,
         skill = "tribunal_theology",
@@ -299,13 +395,96 @@ this.tribunalPrayers = {
         image = "TODO",
         spellEffects = {
             {
-                id = -1, --TODO
-                duration = 720,
-                min = 20,
-                max = 40,
+                id = 78, --restoreSkill
+                skill = 12,
+                duration = 1,
+                min = 100,
+                max = 100,
+            },
+            {
+                id = 78, --restoreSkill
+                skill = 16,
+                duration = 1,
+                min = 100,
+                max = 100,
+            },
+            {
+                id = 78, --restoreSkill
+                skill = 13,
+                duration = 1,
+                min = 100,
+                max = 100,
+            },
+            {
+                id = 78, --restoreSkill
+                skill = 9,
+                duration = 1,
+                min = 100,
+                max = 100,
+            },
+            {
+                id = 78, --restoreSkill
+                skill = 11,
+                duration = 1,
+                min = 100,
+                max = 100,
+            },
+            {
+                id = 78, --restoreSkill
+                skill = 10,
+                duration = 1,
+                min = 100,
+                max = 100,
+            },
+            {
+                id = 78, --restoreSkill
+                skill = 14,
+                duration = 1,
+                min = 100,
+                max = 100,
+            },
+            {
+                id = 78, --restoreSkill
+                skill = 15,
+                duration = 1,
+                min = 100,
+                max = 100,
             },
         },
         text = "TODO"
+    },
+    {
+        name = "TODO",
+        id = "restore_monk_skills", --unarmored, hand-to-hand, athletics
+        handler = "Tribunal Prayers",
+        skillReq = 25,
+        skill = "tribunal_theology",
+        description = "TODO",
+        image = "TODO",
+        spellEffects = {
+            {
+                id = 78, --restoreSkill
+                skill = 8,
+                duration = 1,
+                min = 100,
+                max = 100,
+            },
+            {
+                id = 78, --restoreSkill
+                skill = 17,
+                duration = 1,
+                min = 100,
+                max = 100,
+            },
+            {
+                id = 78, --restoreSkill
+                skill = 26,
+                duration = 1,
+                min = 100,
+                max = 100,
+            },
+        },
+        text = "TODO",
     },
     {
         name = "TODO",
