@@ -1,5 +1,8 @@
 local this = {}
 
+local skillModule = require("OtherSkills.skillModule")
+
+
 -- use these pages to look up spell effects
 -- https://mwse.github.io/MWSE/apis/tes3/?h=script#tes3applymagicsource
 -- https://mwse.github.io/MWSE/references/magic-effects/
@@ -418,17 +421,20 @@ this.ashlanderRituals = {
 
 this.sixthHouseRituals = {
     {
-        name = "TODO_1",
+        name = "First Word of the Dreamer",
         id = "sixthHouse_ritual_1",
         handler = "Sixth House Rituals",
         skillReq = 10,
         skill = "sixthHouse",
-        description = "TODO",
-        image = "TODO",
-        skillProgress = 100,
+        description = "How will you honor the Sixth House, the tribe unmourned?",
+        image = "Icons\\PRAY\\art\\dagoth1.dds",
+        skillProgress = 200,
         materials = {
             { material = "ash_statue", count = 1 }
         },
+        knowledgeRequirement = function()
+            return tes3.getJournalIndex{ id = "A1_1_FindSpymaster" } >= 11 and skillModule.getSkill('sixthHouse').value < 11
+        end,
         spellEffects = {
             {
                 id = 17, --drainAttribute
@@ -441,18 +447,21 @@ this.sixthHouseRituals = {
         text = "He is the Lord, and Father of the Mountain."
     },
     {
-        name = "TODO_2",
+        name = "Second Word of the Dreamer",
         id = "sixthHouse_ritual_2",
         handler = "Sixth House Rituals",
-        skillReq = 10, --TODO
+        skillReq = 11,
         skill = "sixthHouse",
-        description = "TODO",
-        image = "TODO",
+        description = "How will you honor the Sixth House, the tribe unmourned?",
+        image = "Icons\\PRAY\\art\\dagoth1.dds",
         skillProgress = 200,
         materials = {
             { material = "ash_statue", count = 1 },
             { material = "corprusmeat", count = 3 },
         },
+        knowledgeRequirement = function()
+            return tes3.getJournalIndex{ id = "A1_1_FindSpymaster" } >= 11 and skillModule.getSkill('sixthHouse').value < 12
+        end,
         spellEffects = {
             {
                 id = 17, --drainAttribute
@@ -465,18 +474,21 @@ this.sixthHouseRituals = {
         text = "He is the Lord, and Father of the Mountain.\nHe wakes, and the land wakes with him."
     },
     {
-        name = "TODO_3",
+        name = "Third Word of the Dreamer",
         id = "sixthHouse_ritual_3",
         handler = "Sixth House Rituals",
-        skillReq = 10, --TODO
+        skillReq = 12,
         skill = "sixthHouse",
-        description = "TODO",
-        image = "TODO",
-        skillProgress = 300,
+        description = "How will you honor the Sixth House, the tribe unmourned? Together we shall speak for the Law and the Land, and shall drive the mongrel dogs of the Empire from Morrowind.",
+        image = "Icons\\PRAY\\art\\dagoth2.dds",
+        skillProgress = 200,
         materials = {
             { material = "ash_statue", count = 2 },
             { material = "corprusmeat", count = 5 },
         },
+        knowledgeRequirement = function()
+            return tes3.getJournalIndex{ id = "A1_1_FindSpymaster" } >= 11 and skillModule.getSkill('sixthHouse').value < 13
+        end,
         spellEffects = {
             {
                 id = 17, --drainAttribute
@@ -489,18 +501,21 @@ this.sixthHouseRituals = {
         text = "He is the Lord, and Father of the Mountain.\nHe wakes, and the land wakes with him.\nAll the land, and all of its people, shall rise from sleep, and sweep the land clean of the n'wah."
     },
     {
-        name = "TODO_4",
+        name = "Forth Word of the Dreamer",
         id = "sixthHouse_ritual_4",
         handler = "Sixth House Rituals",
-        skillReq = 10, --TODO
+        skillReq = 13,
         skill = "sixthHouse",
-        description = "TODO",
-        image = "TODO",
-        skillProgress = 400,
+        description = "How will you honor the Sixth House, the tribe unmourned? Together we shall speak for the Law and the Land, and shall drive the mongrel dogs of the Empire from Morrowind.",
+        image = "Icons\\PRAY\\art\\dagoth2.dds",
+        skillProgress = 200,
         materials = {
             { material = "ash_statue", count = 3 },
             { material = "corprusmeat", count = 11 },
         },
+        knowledgeRequirement = function()
+            return tes3.getJournalIndex{ id = "A1_1_FindSpymaster" } >= 11 and skillModule.getSkill('sixthHouse').value < 14
+        end,
         spellEffects = {
             {
                 id = 17, --drainAttribute
@@ -513,18 +528,21 @@ this.sixthHouseRituals = {
         text = "He is the Lord, and Father of the Mountain.\nHe wakes, and the land wakes with him.\nAll the land, and all of its people, shall rise from sleep, and sweep the land clean of the n'wah.\nWhy have you denied him?"
     },
     {
-        name = "TODO_5",
+        name = "Fifth Word of the Dreamer",
         id = "sixthHouse_ritual_5",
         handler = "Sixth House Rituals",
-        skillReq = 10, --TODO
+        skillReq = 14,
         skill = "sixthHouse",
-        description = "TODO",
-        image = "TODO",
-        skillProgress = 500,
+        description = "How will you honor the Sixth House, the tribe unmourned? Together we shall speak for the Law and the Land, and shall drive the mongrel dogs of the Empire from Morrowind.\nCome to me, through fire and war. I welcome you.",
+        image = "Icons\\PRAY\\art\\dagoth3.dds",
+        skillProgress = 200,
         materials = {
             { material = "ash_statue", count = 4 },
             { material = "corprusmeat", count = 19 },
         },
+        knowledgeRequirement = function()
+            return tes3.getJournalIndex{ id = "A1_1_FindSpymaster" } >= 11 and skillModule.getSkill('sixthHouse').value < 15
+        end,
         spellEffects = {
             {
                 id = 17, --drainAttribute
@@ -537,14 +555,14 @@ this.sixthHouseRituals = {
         text = "He is the Lord, and Father of the Mountain.\nHe wakes, and the land wakes with him.\nAll the land, and all of its people, shall rise from sleep, and sweep the land clean of the n'wah.\nWhy have you denied him?\nAs Lord Dagoth has said. All shall greet him as flesh, or as dust."
     },
     {
-        name = "TODO_6",
+        name = "Final Word of the Dreamer",
         id = "sixthHouse_ritual_6",
         handler = "Sixth House Rituals",
-        skillReq = 10, --TODO
+        skillReq = 15,
         skill = "sixthHouse",
-        description = "TODO",
-        image = "TODO",
-        skillProgress = 600,
+        description = "How will you honor the Sixth House, the tribe unmourned? Together we shall speak for the Law and the Land, and shall drive the mongrel dogs of the Empire from Morrowind.\nCome to me, through fire and war. I welcome you.\nWelcome, Moon-and-Star. I have prepared a place for you.",
+        image = "Icons\\PRAY\\art\\dagoth4.dds",
+        skillProgress = 200,
         materials = {
             { material = "ash_statue", count = 6 },
             { material = "corprusmeat", count = 36 },

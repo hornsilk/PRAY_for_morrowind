@@ -144,7 +144,7 @@ local function registerPrayerOrRitual(recipeTable, type)
     elseif skill == "ashlander" then
         soundPath = "Fx\\envrn\\woodchimes.wav"
     elseif skill == "sixthHouse" then
-        soundPath = "TODO.wav"
+        soundPath = "Fx\\envrn\\bell1.wav"
     end
 
     --CONFIG OPTIONS--
@@ -308,6 +308,10 @@ local function registerMCM()
         hyperlink:createHyperLink{
             text = "Divines Art: Feivelyn",
             exec = "https://www.deviantart.com/feivelyn",
+        }
+        hyperlink:createHyperLink{
+            text = "Dagoth Art: Brujoloco",
+            exec = "https://www.nexusmods.com/morrowind/mods/48576?tab=files",
         }
     end
 
