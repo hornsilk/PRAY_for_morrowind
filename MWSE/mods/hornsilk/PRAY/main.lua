@@ -290,13 +290,20 @@ event.register(tes3.event.bookGetText, ashlanderLitCallback)
 --------------------------------------------
 
 local function registerMCM()
-    local  sideBarDefault = ( --TODO : update this!
+    local  sideBarDefault = (
         "PRAY: Prayers, Rituals, And You \n\n" ..
-        "PRAY adds Divine Prayers into the game " ..
-        "utilising merlord's skill frameworks in MWSE " ..
-        "to fully integrate it into the vanilla UI. \n\n" ..
-        "Your Divine Theology skill can be found in your stats menu " ..
-        "under 'Other Skills'."
+        "PRAY adds Divine, Ashlander, and Sixth House Prayers " ..
+        "into the game utilising merlord's skill frameworks " .. 
+        "and MWSE to fully integrate it into the vanilla UI. \n\n" ..
+        "Your new skills (Divine, Ashlander, and Sixth House " ..
+        "Theology) can be found in your stats menu under 'Other" ..
+        " Skills'.\n\nYou are able to pray once a day, and praying " ..
+        "will level up the corresponding skill, unlocking new " ..
+        "prayers and rituals. Rituals are more involved prayers " ..
+        "that consume materials.\n\nUnlock Divine Prayers by " ..
+        "joining the Imperial Cult.\nUnlock Ashlander Prayers " ..
+        "becoming a Clanfriend of the Urshilaku Camp.\nUnlock " ..
+        "Sixth House Prayers by meeting Dagoth Gares."
     )
     local function addSideBar(component)
         component.sidebar:createInfo{ text = sideBarDefault}
