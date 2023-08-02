@@ -242,27 +242,27 @@ event.register("initialized", initialised)
 
 ---@param e keyDownEventData
 local function onKeyDown(e)
+    if e.keyCode ~= config.hotKey.keyCode then return end
     if tes3ui.menuMode() then return end
-    if e.keyCode == config.hotKey.keyCode then
-        local prayerAllowed = false
-        if config.onePrayerPerDay then
-            if tes3.player.data.lastDayPrayed == nil then
-                prayerAllowed = true
-            elseif tes3.player.data.lastDayPrayed < tes3.worldController.daysPassed.value then
-                prayerAllowed = true
-            end
-        else
+
+    local prayerAllowed = false
+    if config.onePrayerPerDay then
+        if tes3.player.data.lastDayPrayed == nil then
+            prayerAllowed = true
+        elseif tes3.player.data.lastDayPrayed < tes3.worldController.daysPassed.value then
             prayerAllowed = true
         end
+    else
+        prayerAllowed = true
+    end
 
-        if prayerAllowed then
-            event.trigger("PRAY:ActivatePrayerMenu")
-        else
-            tes3.messageBox("Wait until tomorrow to pray again.")
-        end
+    if prayerAllowed then
+        event.trigger("PRAY:ActivatePrayerMenu")
+    else
+        tes3.messageBox("Wait until tomorrow to pray again.")
     end
 end
-event.register(tes3.event.keyDown, onKeyDown, { filter = config.hotKey.keyCode } )
+event.register(tes3.event.keyDown, onKeyDown)
 
 
 --MISC CALLBACKS--
