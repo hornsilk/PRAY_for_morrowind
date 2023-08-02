@@ -1,14 +1,14 @@
---Get the Crafting Framework API and check that it exists
+-- Include the Crafting Framework API and check if it exists
 local CraftingFramework = include("CraftingFramework")
 if not CraftingFramework then return end
 
+-- Load required modules
 local materials = require("hornsilk.PRAY.materials")
 local prayers = require("hornsilk.PRAY.prayers")
 local rituals = require("hornsilk.PRAY.rituals")
 local animation = require("hornsilk.PRAY.animation")
 
-
---CONFIG--
+-- CONFIGURATION --
 local configPath = "PRAY"
 local config = mwse.loadConfig(configPath)
 if (config == nil) then
@@ -26,14 +26,14 @@ if (config == nil) then
     }
 end
 
-
---INITIALISE SKILLS--
+-- INITIALIZE SKILLS --
 local skillModule = require("OtherSkills.skillModule")
 
---REGISTER SKILLS--
+-- Register skills for the Prayer System
 --decent place to look for iconshttps://en.uesp.net/wiki/Category:Morrowind-Banner_Images
 
 local function onSkillReady()
+    -- Divine Theology skill
     local divineDescription = (
         "The Divine Theology skill determines your knowledge of prayers and rituals of the Divines."
     )
@@ -50,6 +50,7 @@ local function onSkillReady()
         }
     )
 
+    -- Ashlander Theology skill
     local ashlanderDescription = (
         "The Ashlander Theology skill determines your knowledge of traditional prayers and rituals of the Ashlanders of Morrowind."
     )
@@ -66,6 +67,7 @@ local function onSkillReady()
         }
     )
 
+    -- Sixth House Theology skill
     local sixthHouseDescription = (
         "The Sixth House Theology skill determines your knowledge of traditional prayers and rituals of the Tribe Unmourned."
     )
@@ -84,14 +86,14 @@ local function onSkillReady()
 end
 event.register("OtherSkills:Ready", onSkillReady)
 
-
---REGISTER MATERIALS--
+-- Register materials with the Crafting Framework
 local function registerMaterials(materialTable)
     CraftingFramework.Material:registerMaterials(materialTable)
 end
 
---REGISTER RECIPIES--
+-- Register prayers and rituals
 local function registerPrayerOrRitual(recipeTable, type)
+    -- Extract recipe details
     local id = recipeTable.id
     local name = recipeTable.name
     local skill = recipeTable.skill
@@ -101,6 +103,8 @@ local function registerPrayerOrRitual(recipeTable, type)
     local text = recipeTable.text
     local effects = recipeTable.spellEffects
     local image = recipeTable.image
+
+    -- defaults
     local prayerDuration = recipeTable.prayerDuration or 15 --15 in game minutes
     local castChance = recipeTable.castChance or 100
     local skillProgress = recipeTable.skillProgress or 50
@@ -110,6 +114,7 @@ local function registerPrayerOrRitual(recipeTable, type)
         bypassResistances = true
     end
 
+    -- knowledgeRequirement logic
     local knowledgeRequirement = recipeTable.knowledgeRequirement --journalIndex
     if knowledgeRequirement == nil then
         if skill == "ashlander" then
@@ -129,6 +134,7 @@ local function registerPrayerOrRitual(recipeTable, type)
         end
     end
 
+    -- materialsReq logic
     local materialsReq = {}
     if type == "prayer" then
         materialsReq = {}
@@ -136,6 +142,7 @@ local function registerPrayerOrRitual(recipeTable, type)
         materialsReq = recipeTable.materials
     end
 
+    -- soundPath logic
     local soundPath = "Fx\\envrn\\chant.wav"
     if recipeTable.soundPath then
         soundPath = recipeTable.soundPath
@@ -155,10 +162,9 @@ local function registerPrayerOrRitual(recipeTable, type)
         knowledgeRequirement = function () return true end
     end
 
-
+    -- Define the recipe
     local recipe = {
         id = id,
-        -- craftableId = "",
         description = description,
         noResult = true,
         materials = materialsReq,
@@ -171,10 +177,8 @@ local function registerPrayerOrRitual(recipeTable, type)
         uncarryable = true,
         soundPath = soundPath,
         previewImage = image,
-        -- successMessageCallback = "",
-        -- previewMesh = "",
-
         craftCallback = function()
+            -- Display message, play animation, and apply magic effects
             tes3.messageBox(text)
             tes3.player.data.lastDayPrayed = tes3.worldController.daysPassed.value
             animation.defaultAnimationBegin()
@@ -198,20 +202,23 @@ local function registerPrayerOrRitual(recipeTable, type)
     return recipe
 end
 
+-- Register prayers and rituals in the Crafting Framework
 local function registerPrayersAndRituals()
     if not CraftingFramework then
-        --ERROR: CraftingFramework not found
+        -- CraftingFramework not found, cannot proceed
         return
     end
 
-    --Create recipe list
+    -- Create a list to store recipes
     local recipeList = {}
+    -- Register prayers
     for _, prayerList in pairs(prayers) do
         for _, prayerTable in pairs(prayerList) do
             local recipe = registerPrayerOrRitual(prayerTable, "prayer")
             table.insert(recipeList, recipe)
         end
     end
+    -- Register rituals
     for _, ritualList in pairs(rituals) do
         for _, ritualTable in pairs(ritualList) do
             local recipe = registerPrayerOrRitual(ritualTable, "ritual")
@@ -219,7 +226,7 @@ local function registerPrayersAndRituals()
         end
     end
 
-    --Register your MenuActivator
+    -- Register the Prayer Menu using Crafting Framework's MenuActivator
     CraftingFramework.MenuActivator:new{
         id = "PRAY:ActivatePrayerMenu",
         type = "event",
@@ -231,6 +238,7 @@ local function registerPrayersAndRituals()
     }
 end
 
+-- Callback when the game is initialized
 local function initialised()
     mwse.log("[PRAY] Registering Materials")
     registerMaterials(materials)
@@ -239,14 +247,16 @@ local function initialised()
 end
 event.register("initialized", initialised)
 
-
+-- Callback for a key press event
 ---@param e keyDownEventData
 local function onKeyDown(e)
     if e.keyCode ~= config.hotKey.keyCode then return end
     if tes3ui.menuMode() then return end
 
+    -- Check if prayer is allowed based on config settings
     local prayerAllowed = false
     if config.onePrayerPerDay then
+        -- Check if player has already prayed today
         if tes3.player.data.lastDayPrayed == nil then
             prayerAllowed = true
         elseif tes3.player.data.lastDayPrayed < tes3.worldController.daysPassed.value then
@@ -256,6 +266,7 @@ local function onKeyDown(e)
         prayerAllowed = true
     end
 
+    -- Open the Prayer Menu or show a message if prayer is not allowed
     if prayerAllowed then
         event.trigger("PRAY:ActivatePrayerMenu")
     else
@@ -264,8 +275,7 @@ local function onKeyDown(e)
 end
 event.register(tes3.event.keyDown, onKeyDown)
 
-
---MISC CALLBACKS--
+-- Callback for obtaining book text (Ashlander Lit Books)
 --- @param e bookGetTextEventData
 local function ashlanderLitCallback(e)
     if CraftingFramework.interop.getRecipe("basic_ancestor_prayer"):isKnown() then return end
@@ -284,13 +294,13 @@ local function ashlanderLitCallback(e)
 end
 event.register(tes3.event.bookGetText, ashlanderLitCallback)
 
-
 --------------------------------------------
---MCM
+-- MCM (Mod Configuration Menu)
 --------------------------------------------
 
+-- Register the mod configuration menu
 local function registerMCM()
-    local  sideBarDefault = (
+    local sideBarDefault = (
         "PRAY: Prayers, Rituals, And You \n\n" ..
         "PRAY adds Divine, Ashlander, and Sixth House Prayers " ..
         "into the game utilising merlord's skill frameworks " .. 
@@ -305,6 +315,7 @@ local function registerMCM()
         "becoming a Clanfriend of the Urshilaku Camp.\nUnlock " ..
         "Sixth House Prayers by meeting Dagoth Gares."
     )
+
     local function addSideBar(component)
         component.sidebar:createInfo{ text = sideBarDefault}
         local hyperlink = component.sidebar:createCategory("Credits: ")
@@ -322,18 +333,22 @@ local function registerMCM()
         }
     end
 
+    -- Create MCM template
     local template = mwse.mcm.createTemplate("PRAY")
     template:saveOnClose(configPath, config)
     local page = template:createSideBarPage{}
     addSideBar(page)
 
+    -- Add MCM options
     page:createKeyBinder{
         label = "Hot key",
         description = "The key to activate the prayer menu.",
         variable = mwse.mcm.createTableVariable{ id = "hotKey", table = config },
         allowCombinations = true
     }
+    -- ... (other MCM options)
 
+    -- Register MCM template
     page:createYesNoButton({
         label = "Limit to one prayer per day",
         description = "By default, the Prayer Menu will not open if you've already crafted a prayer or ritual during this game day.",
@@ -367,4 +382,5 @@ local function registerMCM()
     template:register()
 end
 
+-- Register the MCM registration callback
 event.register("modConfigReady", registerMCM)
