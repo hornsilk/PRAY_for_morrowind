@@ -261,6 +261,42 @@ this.ashlanderPrayers = {
         text = "May I shrink to dust\n\nIn your cold, wild Wastes,\n\nAnd may my tongue speak\n\nIts last hymn to your winds."
     },
     {
+        name = "Prayer of the Wise Woman",
+        id = "wise_woman_prayer",
+        handler = "Ashlander Prayers",
+        skillReq = 16,
+        skill = "ashlander",
+        description = "Step through fire and frost, hold fast your body from disease",
+        image = "Icons\\PRAY\\art\\wise_woman_landscape.dds",
+        spellEffects = {
+            {
+                id = 90, --resistFire
+                duration = 300,
+                min = 20,
+                max = 50,
+            },
+            {
+                id = 91, --resistFrost
+                duration = 300,
+                min = 20,
+                max = 50,
+            },
+            {
+                id = 94, --resistCommonDisease
+                duration = 300,
+                min = 20,
+                max = 50,
+            },
+            {
+                id = 95, --resistBlightDisease
+                duration = 300,
+                min = 20,
+                max = 50,
+            },
+        },
+        text = "I will not pray for that which I've lost\nWhen my heart springs forth\nFrom your soil, like a seed,\nAnd blossoms anew beneath tomorrow's sun."
+    },
+    {
         name = "Prayer of the Ashkhan",
         id = "ashkhan_prayer",
         handler = "Ashlander Prayers",
