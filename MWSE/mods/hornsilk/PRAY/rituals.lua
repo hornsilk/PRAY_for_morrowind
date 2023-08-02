@@ -19,7 +19,6 @@ this.divineRituals = {
         skill = "divine",
         description = "Venerate Akatosh for a blessing of flight.",
         prayerDuration = 30,
-        skillProgress = 40,
         image = "Icons\\PRAY\\art\\akatosh_gold.dds",
         materials = {
             { material = "candle", count = 5 },
@@ -56,7 +55,6 @@ this.divineRituals = {
         skill = "divine",
         description = "Sanctify your body with an offering to Arkay",
         prayerDuration = 30,
-        skillProgress = 40,
         image = "Icons\\PRAY\\art\\arkay_gold.dds",
         materials = {
             { material = "pray_empty_soulgem", count = 3 },
@@ -94,7 +92,6 @@ this.divineRituals = {
         skill = "divine",
         description = "Adorn yourself in the dazzling glamour of Dibella",
         prayerDuration = 30,
-        skillProgress = 40,
         image = "Icons\\PRAY\\art\\dibella_gold.dds",
         materials = {
             { material = "gem", count = 1 },
@@ -131,7 +128,6 @@ this.divineRituals = {
         skill = "divine",
         description = "Offer a skull for the ",
         prayerDuration = 30,
-        skillProgress = 40,
         image = "Icons\\PRAY\\art\\julianos_gold.dds",
         materials = {
             { material = "skull", count = 1 },
@@ -167,7 +163,6 @@ this.divineRituals = {
         skill = "divine",
         description = "Offer a feather to soar upon the winds",
         prayerDuration = 30,
-        skillProgress = 40,
         image = "Icons\\PRAY\\art\\kynareth_gold.dds",
         materials = {
             { material = "pray_feather", count = 1 },
@@ -205,7 +200,6 @@ this.divineRituals = {
         skill = "divine",
         description = "Fill a cup with the healing waters of Mara",
         prayerDuration = 30,
-        skillProgress = 40,
         image = "Icons\\PRAY\\art\\mara_gold.dds",
         materials = {
             { material = "cup", count = 1 },
@@ -243,7 +237,6 @@ this.divineRituals = {
         skill = "divine",
         description = "Transform a mace into the steadfast fist of Stendarr",
         prayerDuration = 30,
-        skillProgress = 40,
         image = "Icons\\PRAY\\art\\stendarr_gold.dds",
         materials = {
             { material = "pray_mace", count = 1 },
@@ -281,7 +274,6 @@ this.divineRituals = {
         skill = "divine",
         description = "Offer a sword to Talos for a combat blessing.",
         prayerDuration = 30,
-        skillProgress = 40,
         image = "Icons\\PRAY\\art\\talos_gold.dds",
         materials = {
             { material = "pray_longsword", count = 1 },
@@ -318,7 +310,6 @@ this.divineRituals = {
         skill = "divine",
         description = "Honor Zenithar with the fruits of your labor, and your hands and tongue will be blessed",
         prayerDuration = 30,
-        skillProgress = 40,
         image = "Icons\\PRAY\\art\\zenithar_gold.dds",
         materials = {
             { material = "pray_gold", count = 100 },
@@ -356,7 +347,6 @@ this.ashlanderRituals = {
         handler = "Ashlander Rituals",
         skillReq = 20,
         skill = "ashlander",
-        skillProgress = 40,
         description = "Commune with the whispers of Alandro Sul's spirit.",
         prayerDuration = 30,
         image = "Icons\\PRAY\\art\\alandro_sul.dds",

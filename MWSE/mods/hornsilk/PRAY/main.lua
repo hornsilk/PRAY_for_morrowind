@@ -103,7 +103,7 @@ local function registerPrayerOrRitual(recipeTable, type)
     local image = recipeTable.image
     local prayerDuration = recipeTable.prayerDuration or 15 --15 in game minutes
     local castChance = recipeTable.castChance or 100
-    local skillProgress = recipeTable.skillProgress or 20
+    local skillProgress = recipeTable.skillProgress or 50
 
     local bypassResistances = recipeTable.bypassResistances
     if bypassResistances == nil then
