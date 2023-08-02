@@ -30,7 +30,7 @@ end
 local skillModule = require("OtherSkills.skillModule")
 
 -- Register skills for the Prayer System
---decent place to look for iconshttps://en.uesp.net/wiki/Category:Morrowind-Banner_Images
+-- decent place to look for icons https://en.uesp.net/wiki/Category:Morrowind-Banner_Images
 
 local function onSkillReady()
     -- Divine Theology skill

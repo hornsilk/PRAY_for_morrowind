@@ -21,8 +21,8 @@ this.divinePrayers = {
                 id = 79, --fortifyAttribute
                 attribute = 4, --speed
                 duration = 720,
-                min = 10,
-                max = 10,
+                min = 5,
+                max = 5,
             }
         },
         text = "To AKATOSH\n\nwhose Perch from Eternity allowed the Day.",
@@ -40,8 +40,8 @@ this.divinePrayers = {
                 id = 79, --fortifyAttribute
                 attribute = 2, --willpower
                 duration = 720,
-                min = 10,
-                max = 10,
+                min = 5,
+                max = 5,
             }
         },
         text = "To ARKAY\n\nwho braves the Diminuendo.",
@@ -59,8 +59,8 @@ this.divinePrayers = {
                 id = 79, --fortifyAttribute
                 attribute = 6, --personality
                 duration = 720,
-                min = 10,
-                max = 10,
+                min = 5,
+                max = 5,
             }
         },
         text = "To DIBELLA\n\nwho pays Passion in Pleasure.",
@@ -78,8 +78,8 @@ this.divinePrayers = {
                 id = 79, --fortifyAttribute
                 attribute = 1, --intelligence
                 duration = 720,
-                min = 10,
-                max = 10,
+                min = 5,
+                max = 5,
             }
         },
         text = "To JULIANOS\n\nwho incants the Damned Equation",
@@ -97,8 +97,8 @@ this.divinePrayers = {
                 id = 79, --fortifyAttribute
                 attribute = 3, --agility
                 duration = 720,
-                min = 10,
-                max = 10,
+                min = 5,
+                max = 5,
             }
         },
         text = "To KYNARETH\n\nwho returns the Masculine Breath.",
@@ -116,8 +116,8 @@ this.divinePrayers = {
                 id = 79, --fortifyAttribute
                 attribute = 5, --endurance
                 duration = 720,
-                min = 10,
-                max = 10,
+                min = 5,
+                max = 5,
             }
         },
         text = "To MARA\n\nwho fills the Empty and tends the Home.",
@@ -135,8 +135,8 @@ this.divinePrayers = {
                 id = 79, --fortifyAttribute
                 attribute = 0, --strenth
                 duration = 720,
-                min = 10,
-                max = 10,
+                min = 5,
+                max = 5,
             }
         },
         text = "To STENDARR\n\nwho suffers Men to read.",
@@ -153,8 +153,8 @@ this.divinePrayers = {
             {
                 id = 117, --fortifyAttack
                 duration = 720,
-                min = 10,
-                max = 10,
+                min = 5,
+                max = 5,
             }
         },
         text = "Scion of Emperors, King of Earth and Sky,\nLord of Shining Hosts,\nProtector of Oathman, Feeman and Yeoman,\nGuarantor of Right and Justice,\nBroad Blessing of Thrones and Powers,\nCynosure of Celestial Glory,\nThe Most High Tiber Septim",
@@ -172,8 +172,8 @@ this.divinePrayers = {
                 id = 79, --fortifyAttribute
                 attribute = 7, --luck
                 duration = 720,
-                min = 10,
-                max = 10,
+                min = 5,
+                max = 5,
             }
         },
         text = "To ZENITHAR\n\nthe Provider of our Ease.",
