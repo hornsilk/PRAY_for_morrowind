@@ -38,7 +38,7 @@ local function onSkillReady()
         "The Divine Theology skill determines your knowledge of prayers and rituals of the Divines."
     )
     skillModule.registerSkill(
-        "divine",
+        "divine_theology",
         {
             name = "Divine Theology",
             icon = "Icons\\PRAY\\divine.dds",
@@ -55,7 +55,7 @@ local function onSkillReady()
         "The Ashlander Theology skill determines your knowledge of traditional prayers and rituals of the Ashlanders of Morrowind."
     )
     skillModule.registerSkill(
-        "ashlander",
+        "ashlander_theology",
         {
             name = "Ashlander Theology",
             icon = "Icons\\PRAY\\ashlander.dds",
@@ -72,7 +72,7 @@ local function onSkillReady()
         "The Sixth House Theology skill determines your knowledge of traditional prayers and rituals of the Tribe Unmourned."
     )
     skillModule.registerSkill(
-        "sixthHouse",
+        "sixth_house_theology",
         {
             name = "Sixth House Theology",
             icon = "Icons\\PRAY\\sixthHouse.dds",
@@ -117,17 +117,17 @@ local function registerPrayerOrRitual(recipeTable, type)
     -- knowledgeRequirement logic
     local knowledgeRequirement = recipeTable.knowledgeRequirement --journalIndex
     if knowledgeRequirement == nil then
-        if skill == "ashlander" then
+        if skill == "ashlander_theology" then
             knowledgeRequirement = function()
                 return tes3.getJournalIndex{ id = "A2_1_MeetSulMatuul" } >= 44
             end
         end
-        if skill == "divine" then
+        if skill == "divine_theology" then
             knowledgeRequirement = function()
                 return tes3.getFaction("Imperial Cult").playerJoined
             end
         end
-        if skill == "sixthHouse" then
+        if skill == "sixth_house_theology" then
             knowledgeRequirement = function()
                 return tes3.getJournalIndex{ id = "A2_2_6thHouse" } > 41
             end
@@ -146,11 +146,11 @@ local function registerPrayerOrRitual(recipeTable, type)
     local soundPath = "Fx\\envrn\\chant.wav"
     if recipeTable.soundPath then
         soundPath = recipeTable.soundPath
-    elseif skill == "divine" then
+    elseif skill == "divine_theology" then
         soundPath = "PRAY\\marble-church.wav"
-    elseif skill == "ashlander" then
+    elseif skill == "ashlander_theology" then
         soundPath = "Fx\\envrn\\woodchimes.wav"
-    elseif skill == "sixthHouse" then
+    elseif skill == "sixth_house_theology" then
         soundPath = "Fx\\envrn\\bell1.wav"
     end
 
