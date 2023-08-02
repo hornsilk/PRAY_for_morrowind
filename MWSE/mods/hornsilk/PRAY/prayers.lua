@@ -180,6 +180,189 @@ this.divinePrayers = {
     },
 }
 
+this.tribunalPrayers = {
+    {
+        name = "TODO",
+        id = "vivec_prayer",
+        handler = "Tribunal Prayers",
+        skillReq = 10,
+        skill = "tribunal_theology",
+        description = "TODO",
+        image = "TODO",
+        spellEffects = {
+            {
+                id = -1, --TODO
+                duration = 720,
+                min = 20,
+                max = 40,
+            },
+        },
+        text = "TODO"
+    },
+    {
+        name = "TODO",
+        id = "sotha_prayer",
+        handler = "Tribunal Prayers",
+        skillReq = 10,
+        skill = "tribunal_theology",
+        description = "TODO",
+        image = "TODO",
+        spellEffects = {
+            {
+                id = -1, --TODO
+                duration = 720,
+                min = 20,
+                max = 40,
+            },
+        },
+        text = "TODO"
+    },
+    {
+        name = "TODO",
+        id = "alma_prayer",
+        handler = "Tribunal Prayers",
+        skillReq = 10,
+        skill = "tribunal_theology",
+        description = "TODO",
+        image = "TODO",
+        spellEffects = {
+            {
+                id = -1, --TODO
+                duration = 720,
+                min = 20,
+                max = 40,
+            },
+        },
+        text = "TODO"
+    },
+    {
+        name = "TODO",
+        id = "restore_attributes",
+        handler = "Tribunal Prayers",
+        skillReq = 25,
+        skill = "tribunal_theology",
+        description = "TODO",
+        image = "TODO",
+        spellEffects = {
+            {
+                id = -1, --TODO
+                duration = 720,
+                min = 20,
+                max = 40,
+            },
+        },
+        text = "TODO"
+    },
+    {
+        name = "TODO",
+        id = "restore_mage_skills",
+        handler = "Tribunal Prayers",
+        skillReq = 25,
+        skill = "tribunal_theology",
+        description = "TODO",
+        image = "TODO",
+        spellEffects = {
+            {
+                id = -1, --TODO
+                duration = 720,
+                min = 20,
+                max = 40,
+            },
+        },
+        text = "TODO"
+    },
+    {
+        name = "TODO",
+        id = "restore_thief_skills",
+        handler = "Tribunal Prayers",
+        skillReq = 25,
+        skill = "tribunal_theology",
+        description = "TODO",
+        image = "TODO",
+        spellEffects = {
+            {
+                id = -1, --TODO
+                duration = 720,
+                min = 20,
+                max = 40,
+            },
+        },
+        text = "TODO"
+    },
+    {
+        name = "TODO",
+        id = "restore_warrior_skills",
+        handler = "Tribunal Prayers",
+        skillReq = 25,
+        skill = "tribunal_theology",
+        description = "TODO",
+        image = "TODO",
+        spellEffects = {
+            {
+                id = -1, --TODO
+                duration = 720,
+                min = 20,
+                max = 40,
+            },
+        },
+        text = "TODO"
+    },
+    {
+        name = "TODO",
+        id = "vivec_aspect_prayer",
+        handler = "Tribunal Prayers",
+        skillReq = 30,
+        skill = "tribunal_theology",
+        description = "TODO",
+        image = "TODO",
+        spellEffects = {
+            {
+                id = -1, --TODO
+                duration = 720,
+                min = 20,
+                max = 40,
+            },
+        },
+        text = "TODO"
+    },
+    {
+        name = "TODO",
+        id = "sotha_aspect_prayer",
+        handler = "Tribunal Prayers",
+        skillReq = 30,
+        skill = "tribunal_theology",
+        description = "TODO",
+        image = "TODO",
+        spellEffects = {
+            {
+                id = -1, --TODO
+                duration = 720,
+                min = 20,
+                max = 40,
+            },
+        },
+        text = "TODO"
+    },
+    {
+        name = "TODO",
+        id = "alma_aspect_prayer",
+        handler = "Tribunal Prayers",
+        skillReq = 30,
+        skill = "tribunal_theology",
+        description = "TODO",
+        image = "TODO",
+        spellEffects = {
+            {
+                id = -1, --TODO
+                duration = 720,
+                min = 20,
+                max = 40,
+            },
+        },
+        text = "TODO"
+    },
+}
+
 this.ashlanderPrayers = {
     {
         name = "Acknowledge the Ancestors",

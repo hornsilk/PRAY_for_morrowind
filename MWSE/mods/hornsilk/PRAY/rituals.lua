@@ -340,6 +340,255 @@ this.divineRituals = {
     },
 }
 
+this.tribunalRituals = {
+    {
+        name = "Rites of Saint Aralor's Intervention",
+        id = "aralor_ritual",
+        handler = "Tribunal Rituals",
+        skillReq = 20,
+        skill = "tribunal_theology",
+        description = "TODO",
+        image = "TODO",
+        materials = { { material = "candle", count = 1 } },
+        spellEffects = {
+            {
+                id = 79, --fortifyAttribute
+                attribute = 6, --personality
+                duration = 720,
+                min = 5,
+                max = 5,
+            },
+            {
+                id = 69, --cureCommonDisease
+            },
+        },
+        text = "TODO"
+    },
+    {
+        name = "Rites of Saint Delyn's Shield",
+        id = "delyn_ritual",
+        handler = "Tribunal Rituals",
+        skillReq = 20,
+        skill = "tribunal_theology",
+        description = "TODO",
+        image = "TODO",
+        materials = { { material = "candle", count = 1 } },
+        spellEffects = {
+            {
+                id = 95, --resistBlightDisease
+                duration = 720,
+                min = 10,
+                max = 10,
+            },
+            {
+                id = 69, --cureCommonDisease
+            },
+        },
+        text = "TODO"
+    },
+    {
+        name = "Rites of Saint Felms's Glory",
+        id = "felms_ritual",
+        handler = "Tribunal Rituals",
+        skillReq = 20,
+        skill = "tribunal_theology",
+        description = "TODO",
+        image = "TODO",
+        materials = { { material = "candle", count = 1 } },
+        spellEffects = {
+            {
+                id = 83, --fortifySkill 
+                skill = 15, --restoration
+                duration = 720,
+                min = 5,
+                max = 5,
+            },
+            {
+                id = 69, --cureCommonDisease
+            },
+        },
+        text = "TODO"
+    },
+    {
+        name = "Rites of Saint Llothis's Rock",
+        id = "llothis_ritual",
+        handler = "Tribunal Rituals",
+        skillReq = 20,
+        skill = "tribunal_theology",
+        description = "TODO",
+        image = "TODO",
+        materials = { { material = "candle", count = 1 } },
+        spellEffects = {
+            {
+                id = 79, --fortifyAttribute
+                attribute = 2, --willpower
+                duration = 720,
+                min = 5,
+                max = 5,
+            },
+            {
+                id = 69, --cureCommonDisease
+            },
+        },
+        text = "TODO"
+    },
+    {
+        name = "Rites of Saint Meris's Warding",
+        id = "meris_ritual",
+        handler = "Tribunal Rituals",
+        skillReq = 20,
+        skill = "tribunal_theology",
+        description = "TODO",
+        image = "TODO",
+        materials = { { material = "candle", count = 1 } },
+        spellEffects = {
+            {
+                id = 96, --resistCorprusDisease
+                duration = 720,
+                min = 20,
+                max = 20,
+            },
+            {
+                id = 69, --cureCommonDisease
+            },
+        },
+        text = "TODO"
+    },
+    {
+        name = "Rites of Saint Nerevar's Spirit",
+        id = "nerevar_ritual",
+        handler = "Tribunal Rituals",
+        skillReq = 20,
+        skill = "tribunal_theology",
+        description = "TODO",
+        image = "TODO",
+        materials = { { material = "candle", count = 1 } },
+        spellEffects = {
+            {
+                id = 82, --fortifyFatigue
+                duration = 720,
+                min = 20,
+                max = 20,
+            },
+            {
+                id = 69, --cureCommonDisease
+            },
+        },
+        text = "TODO"
+    },
+    {
+        name = "Rites of Saint Olms's Benediction",
+        id = "olms_ritual",
+        handler = "Tribunal Rituals",
+        skillReq = 20,
+        skill = "tribunal_theology",
+        description = "TODO",
+        image = "TODO",
+        materials = { { material = "candle", count = 1 } },
+        spellEffects = {
+            {
+                id = 94, --resistCommonDisease
+                duration = 720,
+                min = 20,
+                max = 20,
+            },
+            {
+                id = 69, --cureCommonDisease
+            },
+        },
+        text = "TODO"
+    },
+    {
+        name = "Rites of Saint Rilm's Grace",
+        id = "rilm_ritual",
+        handler = "Tribunal Rituals",
+        skillReq = 20,
+        skill = "tribunal_theology",
+        description = "TODO",
+        image = "TODO",
+        materials = { { material = "candle", count = 1 } },
+        spellEffects = {
+            {
+                id = 79, --fortifyAttribute
+                attribute = 5, --endurance
+                duration = 720,
+                min = 5,
+                max = 5,
+            },
+            {
+                id = 69, --cureCommonDisease
+            },
+        },
+        text = "TODO"
+    },
+    {
+        name = "Rites of Saint Roris's Bloom",
+        id = "roris_ritual",
+        handler = "Tribunal Rituals",
+        skillReq = 20,
+        skill = "tribunal_theology",
+        description = "TODO",
+        image = "TODO",
+        materials = { { material = "candle", count = 1 } },
+        spellEffects = {
+            {
+                id = 80, --fortifyHealth
+                duration = 720,
+                min = 5,
+                max = 5,
+            },
+            {
+                id = 69, --cureCommonDisease
+            },
+        },
+        text = "TODO"
+    },
+    {
+        name = "Rites of Saint Seryn's Shield",
+        id = "seryn_ritual",
+        handler = "Tribunal Rituals",
+        skillReq = 20,
+        skill = "tribunal_theology",
+        description = "TODO",
+        image = "TODO",
+        materials = { { material = "candle", count = 1 } },
+        spellEffects = {
+            {
+                id = 97, --resistPoison
+                duration = 720,
+                min = 20,
+                max = 20,
+            },
+            {
+                id = 69, --cureCommonDisease
+            },
+        },
+        text = "TODO"
+    },
+    {
+        name = "Rites of Saint Veloth's Indwelling",
+        id = "veloth_ritual",
+        handler = "Tribunal Rituals",
+        skillReq = 20,
+        skill = "tribunal_theology",
+        description = "TODO",
+        image = "TODO",
+        materials = { { material = "candle", count = 1 } },
+        spellEffects = {
+            {
+                id = 81, --fortifyMagicka
+                duration = 720,
+                min = 10,
+                max = 10,
+            },
+            {
+                id = 69, --cureCommonDisease
+            },
+        },
+        text = "TODO"
+    },
+}
+
 this.ashlanderRituals = {
     {
         name = "Invocation of Alandro Sul",

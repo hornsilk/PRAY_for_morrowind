@@ -50,6 +50,23 @@ local function onSkillReady()
         }
     )
 
+    -- Tribunal Theology skill
+    local tribunalDescription = (
+        "The Tribunal Theology skill determines your knowledge of traditional prayers and rituals of the Tribunal Temple."
+    )
+    skillModule.registerSkill(
+        "tribunal_theology",
+        {
+            name = "Tribunal Theology",
+            icon = "Icons\\PRAY\\almsivi.dds",
+            value = 10,
+            attribute =  tes3.attribute.intelligence,
+            description = tribunalDescription,
+            specialization = tes3.specialization.magic,
+            active = "active"
+        }
+    )
+
     -- Ashlander Theology skill
     local ashlanderDescription = (
         "The Ashlander Theology skill determines your knowledge of traditional prayers and rituals of the Ashlanders of Morrowind."
@@ -127,6 +144,11 @@ local function registerPrayerOrRitual(recipeTable, type)
                 return tes3.getFaction("Imperial Cult").playerJoined
             end
         end
+        if skill == "tribunal_theology" then
+            knowledgeRequirement = function()
+                return tes3.getFaction("Temple").playerJoined
+            end
+        end
         if skill == "sixth_house_theology" then
             knowledgeRequirement = function()
                 return tes3.getJournalIndex{ id = "A2_2_6thHouse" } > 41
@@ -148,6 +170,8 @@ local function registerPrayerOrRitual(recipeTable, type)
         soundPath = recipeTable.soundPath
     elseif skill == "divine_theology" then
         soundPath = "PRAY\\marble-church.wav"
+    elseif skill == "tribunal_theology" then
+        soundPath = "Fx\\envrn\\chant.wav"
     elseif skill == "ashlander_theology" then
         soundPath = "Fx\\envrn\\woodchimes.wav"
     elseif skill == "sixth_house_theology" then
@@ -305,12 +329,13 @@ local function registerMCM()
         "PRAY adds Divine, Ashlander, and Sixth House Prayers " ..
         "into the game utilising merlord's skill frameworks " .. 
         "and MWSE to fully integrate it into the vanilla UI. \n\n" ..
-        "Your new skills (Divine, Ashlander, and Sixth House " ..
+        "Your new skills (Tribunal, Divine, Ashlander, and Sixth House " ..
         "Theology) can be found in your stats menu under 'Other" ..
         " Skills'.\n\nYou are able to pray once a day, and praying " ..
         "will level up the corresponding skill, unlocking new " ..
         "prayers and rituals. Rituals are more involved prayers " ..
-        "that consume materials.\n\nUnlock Divine Prayers by " ..
+        "that consume materials.\n\nUnlock Tribunal Prayers by " ..
+        "joining the Tribunal Temple.\nUnlock Divine Prayers by " ..
         "joining the Imperial Cult.\nUnlock Ashlander Prayers " ..
         "becoming a Clanfriend of the Urshilaku Camp.\nUnlock " ..
         "Sixth House Prayers by meeting Dagoth Gares."
