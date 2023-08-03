@@ -11,7 +11,7 @@ Morrowind is all about religion - with PRAY, your character can practice these r
 - Do freaky Sixth House rituals to chow down on that delicious corprusmeat
 - Learn miscellaneous prayers and rituals from characters and books
 
-PRAY adds Divine, Ashlander, and Sixth House Prayers into the game utilising merlord's skill and crafting frameworks and MWSE to fully integrate it into the vanilla UI. Your new skills (Tribunal, Divine, Ashlander, and Sixth House Theology) can be found in your stats menu under 'Other  Skills'. You are able to pray once a day, and praying will level up the corresponding skill, unlocking new prayers and rituals over time.
+PRAY adds Tribunal, Divine, Ashlander, and Sixth House Prayers into the game utilising merlord's skill and crafting frameworks and MWSE to fully integrate it into the vanilla UI. Your new skills (Tribunal, Divine, Ashlander, and Sixth House Theology) can be found in your stats menu under 'Other  Skills'. You are able to pray once a day, and praying will level up the corresponding skill, unlocking new prayers and rituals over time.
 
 Use the `P` key to access the PRAY menu. Prayers are short rituals that produce a set of magic effects. Rituals are more involved prayers that consume materials.
 
