@@ -182,13 +182,13 @@ this.divinePrayers = {
 
 this.tribunalPrayers = {
     {
-        name = "TODO",
+        name = "Restoration of Saint Meris",
         id = "restore_attributes",
         handler = "Tribunal Prayers",
         skillReq = 25,
         skill = "tribunal_theology",
         description = "TODO",
-        image = "TODO",
+        image = "Icons\\PRAY\\art\\meris_resto.dds",
         spellEffects = {
             {
                 id = 74, --restoreAttribute
@@ -250,13 +250,13 @@ this.tribunalPrayers = {
         text = "TODO"
     },
     {
-        name = "TODO",
+        name = "Restoration of the Warrior",
         id = "restore_combat_skills", --except for athletics bc space
         handler = "Tribunal Prayers",
         skillReq = 25,
         skill = "tribunal_theology",
         description = "TODO",
-        image = "TODO",
+        image = "Icons\\PRAY\\art\\alma_resto.dds",
         spellEffects = {
             {
                 id = 78, --restoreSkill
@@ -318,13 +318,13 @@ this.tribunalPrayers = {
         text = "TODO"
     },
     {
-        name = "TODO",
+        name = "Restoration of the Thief",
         id = "restore_stealth_skills", --except for hand-to-hand bc only space for 8
         handler = "Tribunal Prayers",
         skillReq = 25,
         skill = "tribunal_theology",
         description = "TODO",
-        image = "TODO",
+        image = "Icons\\PRAY\\art\\vivec_resto.dds",
         spellEffects = {
             {
                 id = 78, --restoreSkill
@@ -386,13 +386,13 @@ this.tribunalPrayers = {
         text = "TODO"
     },
     {
-        name = "TODO",
+        name = "Restoration of the Mage",
         id = "restore_magic_skills", --except for unarmored bc only 8
         handler = "Tribunal Prayers",
         skillReq = 25,
         skill = "tribunal_theology",
         description = "TODO",
-        image = "TODO",
+        image = "Icons\\PRAY\\art\\sotha_resto.dds",
         spellEffects = {
             {
                 id = 78, --restoreSkill
@@ -454,13 +454,13 @@ this.tribunalPrayers = {
         text = "TODO"
     },
     {
-        name = "TODO",
+        name = "Restoration of the Wanderer",
         id = "restore_monk_skills", --unarmored, hand-to-hand, athletics
         handler = "Tribunal Prayers",
         skillReq = 25,
         skill = "tribunal_theology",
         description = "TODO",
-        image = "TODO",
+        image = "Icons\\PRAY\\art\\nerevar_resto.dds",
         spellEffects = {
             {
                 id = 78, --restoreSkill
@@ -487,13 +487,13 @@ this.tribunalPrayers = {
         text = "TODO",
     },
     {
-        name = "TODO",
+        name = "Aspect of Vivec",
         id = "vivec_aspect_prayer",
         handler = "Tribunal Prayers",
         skillReq = 30,
         skill = "tribunal_theology",
         description = "TODO",
-        image = "TODO",
+        image = "Icons\\PRAY\\art\\vivec_aspect.dds",
         spellEffects = {
             {
                 id = -1, --TODO
@@ -505,13 +505,13 @@ this.tribunalPrayers = {
         text = "TODO"
     },
     {
-        name = "TODO",
+        name = "Aspect of Sotha Sil",
         id = "sotha_aspect_prayer",
         handler = "Tribunal Prayers",
         skillReq = 30,
         skill = "tribunal_theology",
         description = "TODO",
-        image = "TODO",
+        image = "Icons\\PRAY\\art\\sotha_aspect.dds",
         spellEffects = {
             {
                 id = -1, --TODO
@@ -523,13 +523,13 @@ this.tribunalPrayers = {
         text = "TODO"
     },
     {
-        name = "TODO",
+        name = "Aspect of Almalexia",
         id = "alma_aspect_prayer",
         handler = "Tribunal Prayers",
         skillReq = 30,
         skill = "tribunal_theology",
         description = "TODO",
-        image = "TODO",
+        image = "Icons\\PRAY\\art\\alma_aspect.dds",
         spellEffects = {
             {
                 id = -1, --TODO

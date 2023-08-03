@@ -353,6 +353,10 @@ local function registerMCM()
             exec = "https://www.deviantart.com/feivelyn",
         }
         hyperlink:createHyperLink{
+            text = "Tribunal Saints Art: Matthew Weathers",
+            exec = "https://matinthehat.artstation.com/",
+        }
+        hyperlink:createHyperLink{
             text = "Dagoth Art: Brujoloco",
             exec = "https://www.nexusmods.com/morrowind/mods/48576?tab=files",
         }

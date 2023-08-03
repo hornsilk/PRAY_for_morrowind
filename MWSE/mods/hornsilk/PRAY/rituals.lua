@@ -405,7 +405,7 @@ this.tribunalRituals = {
         skillReq = 20,
         skill = "tribunal_theology",
         description = "Purge yourself of disease and study the virtures of Saint Aralor",
-        image = "Icons\\PRAY\\art\\tx_saint_aralor_01.dds",
+        image = "Icons\\PRAY\\art\\aralor.dds",
         materials = { { material = "candle", count = 1 } },
         spellEffects = {
             {
@@ -428,7 +428,7 @@ this.tribunalRituals = {
         skillReq = 20,
         skill = "tribunal_theology",
         description = "Purge yourself of disease and study the virtures of Saint Delyn",
-        image = "Icons\\PRAY\\art\\tx_saint_deyln_01.dds",
+        image = "Icons\\PRAY\\art\\deyln.dds",
         materials = { { material = "candle", count = 1 } },
         spellEffects = {
             {
@@ -450,7 +450,7 @@ this.tribunalRituals = {
         skillReq = 20,
         skill = "tribunal_theology",
         description = "Purge yourself of disease and study the virtures of Saint Felms",
-        image = "Icons\\PRAY\\art\\tx_saint_felms_01.dds",
+        image = "Icons\\PRAY\\art\\felms.dds",
         materials = { { material = "candle", count = 1 } },
         spellEffects = {
             {
@@ -473,7 +473,7 @@ this.tribunalRituals = {
         skillReq = 20,
         skill = "tribunal_theology",
         description = "Purge yourself of disease and study the virtures of Saint Llothis",
-        image = "Icons\\PRAY\\art\\tx_saint_llothis_01.dds",
+        image = "Icons\\PRAY\\art\\llothis.dds",
         materials = { { material = "candle", count = 1 } },
         spellEffects = {
             {
@@ -496,7 +496,7 @@ this.tribunalRituals = {
         skillReq = 20,
         skill = "tribunal_theology",
         description = "Purge yourself of disease and study the virtures of Saint Meris",
-        image = "Icons\\PRAY\\art\\tx_saint_meris_01.dds",
+        image = "Icons\\PRAY\\art\\meris.dds",
         materials = { { material = "candle", count = 1 } },
         spellEffects = {
             {
@@ -518,7 +518,7 @@ this.tribunalRituals = {
         skillReq = 20,
         skill = "tribunal_theology",
         description = "Purge yourself of disease and study the virtures of Saint Nerevar",
-        image = "Icons\\PRAY\\art\\tx_saint_nerevar_01.dds",
+        image = "Icons\\PRAY\\art\\nerevar.dds",
         materials = { { material = "candle", count = 1 } },
         spellEffects = {
             {
@@ -540,7 +540,7 @@ this.tribunalRituals = {
         skillReq = 20,
         skill = "tribunal_theology",
         description = "Purge yourself of disease and study the virtures of Saint Olms",
-        image = "Icons\\PRAY\\art\\tx_saint_olms_01.dds",
+        image = "Icons\\PRAY\\art\\olms.dds",
         materials = { { material = "candle", count = 1 } },
         spellEffects = {
             {
@@ -562,7 +562,7 @@ this.tribunalRituals = {
         skillReq = 20,
         skill = "tribunal_theology",
         description = "Purge yourself of disease and study the virtures of Saint Rilms",
-        image = "Icons\\PRAY\\art\\tx_saint_rilms_01.dds",
+        image = "Icons\\PRAY\\art\\rilms.dds",
         materials = { { material = "candle", count = 1 } },
         spellEffects = {
             {
@@ -585,7 +585,7 @@ this.tribunalRituals = {
         skillReq = 20,
         skill = "tribunal_theology",
         description = "Purge yourself of disease and study the virtures of Saint Roris",
-        image = "Icons\\PRAY\\art\\tx_saint_roris_01.dds",
+        image = "Icons\\PRAY\\art\\roris.dds",
         materials = { { material = "candle", count = 1 } },
         spellEffects = {
             {
@@ -607,7 +607,7 @@ this.tribunalRituals = {
         skillReq = 20,
         skill = "tribunal_theology",
         description = "Purge yourself of disease and study the virtures of Saint Seryn",
-        image = "Icons\\PRAY\\art\\tx_saint_seryn_01.dds",
+        image = "Icons\\PRAY\\art\\seryn.dds",
         materials = { { material = "candle", count = 1 } },
         spellEffects = {
             {
@@ -629,7 +629,7 @@ this.tribunalRituals = {
         skillReq = 20,
         skill = "tribunal_theology",
         description = "Purge yourself of disease and study the virtures of Saint Veloth",
-        image = "Icons\\PRAY\\art\\tx_saint_veloth_01.dds",
+        image = "Icons\\PRAY\\art\\veloth.dds",
         materials = { { material = "candle", count = 1 } },
         spellEffects = {
             {
