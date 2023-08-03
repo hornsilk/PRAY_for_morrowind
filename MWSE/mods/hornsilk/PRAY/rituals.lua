@@ -85,7 +85,7 @@ this.divineRituals = {
         text = "Blessed are the Bonemen, for they serve without self in spirit forever.\nBlessed are the Mistmen, for they blend in the glory of the transcendent spirit.\nBlessed are the Wrathmen, for they render their rage unto the ages.\nBlessed are the Masters, for they bridge the past and span the future.", --https://en.uesp.net/wiki/Morrowind:Book_of_Life_and_Service
     },
     {
-        name = "Brilliant Gem of Beauty",
+        name = "Brilliant Gem of Dibella",
         id = "ritual_of_dibella",
         handler = "Divine Rituals",
         skillReq = 20,
@@ -303,7 +303,7 @@ this.divineRituals = {
         text = "For thirty-eight years, the Emperor Tiber reigned supreme. It was a lawful, pious, and glorious age, when justice was known to one and all, from serf to sovereign. On Tiber's death, it rained for an entire fortnight as if the land of Tamriel itself was weeping.", --https://en.uesp.net/wiki/Lore:Brief_History_of_the_Empire_v_1
     },
     {
-        name = "Investment of Labor",
+        name = "Investment of Zenithar",
         id = "ritual_of_zenithar",
         handler = "Divine Rituals",
         skillReq = 20,
