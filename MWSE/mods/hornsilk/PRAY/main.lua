@@ -385,26 +385,27 @@ local function registerMCM()
     })
 
     page:createYesNoButton({
-        label = "[DEBUG] Set all prayers and rituals to short duration",
-        description = "Debug feature, RESTART REQUIRED.",
+        label = "Fast prayer mode",
+        description = "Set all prayers and rituals to short duration. RESTART REQUIRED.\nBy default, prayers take 15 game-minutes"..
+        "to complete; setting this to `True` will make them take 3 game-minutes.",
         variable = mwse.mcm:createTableVariable({ id = "allPrayersShortDuration", table = config }),
     })
 
     page:createYesNoButton({
-        label = "[DEBUG] Set all prayers and rituals skill requirements to zero",
-        description = "Debug feature, RESTART REQUIRED.",
+        label = "No skill requirements",
+        description = "Set all prayers and rituals skill requirements to zero. RESTART REQUIRED.",
         variable = mwse.mcm:createTableVariable({ id = "allSkillReqZero", table = config }),
     })
 
     page:createYesNoButton({
-        label = "[DEBUG] Set all prayers and rituals material requirements to none",
-        description = "Debug feature, RESTART REQUIRED.",
+        label = "No material requirements",
+        description = "Set all prayers and rituals material requirements to none. RESTART REQUIRED.",
         variable = mwse.mcm:createTableVariable({ id = "noMaterialsReqs", table = config }),
     })
 
     page:createYesNoButton({
-        label = "[DEBUG] Set all prayers and rituals knowledge requirements to none",
-        description = "Debug feature, RESTART REQUIRED.",
+        label = "Start with all prayers known",
+        description = "Set all prayers and rituals knowledge requirements to none. RESTART REQUIRED.",
         variable = mwse.mcm:createTableVariable({ id = "allPrayersKnown", table = config }),
     })
 
