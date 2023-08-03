@@ -187,7 +187,7 @@ this.tribunalPrayers = {
         handler = "Tribunal Prayers",
         skillReq = 25,
         skill = "tribunal_theology",
-        description = "TODO",
+        description = "Restore your attribues",
         image = "Icons\\PRAY\\art\\meris_resto.dds",
         spellEffects = {
             {
@@ -247,7 +247,7 @@ this.tribunalPrayers = {
                 max = 100,
             },
         },
-        text = "TODO"
+        text = "Your house is safe now\nSo why is it--\nYour house is safe now\nSo why is it--\n\nThe ending of the words is ALMSIVI." -- https://en.uesp.net/wiki/Morrowind:The_36_Lessons_of_Vivec
     },
     {
         name = "Restoration of the Warrior",
@@ -255,7 +255,7 @@ this.tribunalPrayers = {
         handler = "Tribunal Prayers",
         skillReq = 25,
         skill = "tribunal_theology",
-        description = "TODO",
+        description = "Restore the skills of the Warrior",
         image = "Icons\\PRAY\\art\\alma_resto.dds",
         spellEffects = {
             {
@@ -315,7 +315,7 @@ this.tribunalPrayers = {
                 max = 100,
             },
         },
-        text = "TODO"
+        text = "The Mother is active and clawed like a nix-hound, yet she is the holiest of those that reclaim their days.\n\nThe ending of the words is ALMSIVI." -- https://en.uesp.net/wiki/Morrowind:The_36_Lessons_of_Vivec
     },
     {
         name = "Restoration of the Thief",
@@ -323,7 +323,7 @@ this.tribunalPrayers = {
         handler = "Tribunal Prayers",
         skillReq = 25,
         skill = "tribunal_theology",
-        description = "TODO",
+        description = "Restore the skills of the Thief",
         image = "Icons\\PRAY\\art\\vivec_resto.dds",
         spellEffects = {
             {
@@ -383,7 +383,7 @@ this.tribunalPrayers = {
                 max = 100,
             },
         },
-        text = "TODO"
+        text = "The Son is myself, Vehk, and I am unto three, six, nine, and the rest that come after, glorious and sympathetic, without borders, utmost in the perfections of this world and the others, sword and symbol, pale like gold.\n\nThe ending of the words is ALMSIVI." -- https://en.uesp.net/wiki/Morrowind:The_36_Lessons_of_Vivec
     },
     {
         name = "Restoration of the Mage",
@@ -391,7 +391,7 @@ this.tribunalPrayers = {
         handler = "Tribunal Prayers",
         skillReq = 25,
         skill = "tribunal_theology",
-        description = "TODO",
+        description = "Restore the skills of the Mage",
         image = "Icons\\PRAY\\art\\sotha_resto.dds",
         spellEffects = {
             {
@@ -451,7 +451,7 @@ this.tribunalPrayers = {
                 max = 100,
             },
         },
-        text = "TODO"
+        text = "The Father is a machine and the mouth of a machine. His only mystery is an invitation to elaborate further.\n\nThe ending of the words is ALMSIVI." -- https://en.uesp.net/wiki/Morrowind:The_36_Lessons_of_Vivec
     },
     {
         name = "Restoration of the Wanderer",
@@ -459,7 +459,7 @@ this.tribunalPrayers = {
         handler = "Tribunal Prayers",
         skillReq = 25,
         skill = "tribunal_theology",
-        description = "TODO",
+        description = "Restore the skills of the Wanderer, unarmed and unarmored, who walks the ashlands",
         image = "Icons\\PRAY\\art\\nerevar_resto.dds",
         spellEffects = {
             {
@@ -484,61 +484,133 @@ this.tribunalPrayers = {
                 max = 100,
             },
         },
-        text = "TODO",
+        text = "You can hear the words, so run away\nCome, Hortator, unfold into a clear unknown,\nStay quiet until you've slept in the yesterday,\nAnd say no elegies for the melting stone\n\nThe ending of the words is ALMSIVI." -- https://en.uesp.net/wiki/Morrowind:The_36_Lessons_of_Vivec,
     },
     {
-        name = "Aspect of Vivec",
+        name = "Vivec Aspect",
         id = "vivec_aspect_prayer",
         handler = "Tribunal Prayers",
         skillReq = 30,
         skill = "tribunal_theology",
-        description = "TODO",
+        description = "Assume the aspect of Vivec",
         image = "Icons\\PRAY\\art\\vivec_aspect.dds",
         spellEffects = {
             {
-                id = -1, --TODO
+                id = 79, --fortifyAttribute
+                attribute = 6, --personality
                 duration = 720,
                 min = 20,
-                max = 40,
+                max = 20,
+            },
+            {
+                id = 83, --fortifySkill
+                skill = 7, --spear
+                duration = 720,
+                min = 20,
+                max = 20,
+            },
+            {
+                id = 5, --lightningShield
+                duration = 720,
+                min = 20,
+                max = 30,
+            },
+            {
+                id = 124, --boundSpear
+                duration = 720,
+            },
+            {
+                id = 68, --reflect
+                duration = 720,
+                min = 5,
+                max = 5,
             },
         },
-        text = "TODO"
+        text = "For I have crushed a world with my left hand,\nhe will say,\nbut in my right hand is how it could have won against me.\nLove is under my will only.\n\nThe ending of the words is ALMSIVI." -- https://en.uesp.net/wiki/Morrowind:The_36_Lessons_of_Vivec
     },
     {
-        name = "Aspect of Sotha Sil",
+        name = "Sotha Sil Aspect",
         id = "sotha_aspect_prayer",
         handler = "Tribunal Prayers",
         skillReq = 30,
         skill = "tribunal_theology",
-        description = "TODO",
+        description = "Assume the aspect of Sotha Sil",
         image = "Icons\\PRAY\\art\\sotha_aspect.dds",
         spellEffects = {
             {
-                id = -1, --TODO
+                id = 79, --fortifyAttribute
+                attribute = 1, --intelligence
                 duration = 720,
                 min = 20,
-                max = 40,
+                max = 20,
+            },
+            {
+                id = 83, --fortifySkill
+                skill = 14, --mysticism
+                duration = 720,
+                min = 20,
+                max = 20,
+            },
+            {
+                id = 6, --frostShield
+                duration = 720,
+                min = 20,
+                max = 30,
+            },
+            {
+                id = 127, --boundCuirass
+                duration = 720,
+            },
+            {
+                id = 67, --spellAbsorption
+                duration = 720,
+                min = 20,
+                max = 20,
             },
         },
-        text = "TODO"
+        text = "I am the Clockwork King of the Three in One.\nIn you is an egg of my brother-sister, who possesses invisible knowledge of words and swords,\nwhich you shall nurture until the Hortator comes.\n\nThe ending of the words is ALMSIVI." -- https://en.uesp.net/wiki/Morrowind:The_36_Lessons_of_Vivec
     },
     {
-        name = "Aspect of Almalexia",
+        name = "Almalexia Aspect",
         id = "alma_aspect_prayer",
         handler = "Tribunal Prayers",
         skillReq = 30,
         skill = "tribunal_theology",
-        description = "TODO",
+        description = "Assume the aspect of Almalexia",
         image = "Icons\\PRAY\\art\\alma_aspect.dds",
         spellEffects = {
             {
-                id = -1, --TODO
+                id = 79, --fortifyAttribute
+                attribute = 4, --speed
                 duration = 720,
                 min = 20,
-                max = 40,
+                max = 20,
+            },
+            {
+                id = 83, --fortifySkill
+                skill = 6, --axe
+                duration = 720,
+                min = 20,
+                max = 20,
+            },
+            {
+                id = 4, --fireShield
+                duration = 720,
+                min = 20,
+                max = 30,
+            },
+            {
+                id = 128, --boundHelm
+                duration = 720,
+            },
+            {
+                id = 117, --fortifyAttack
+                duration = 720,
+                min = 20,
+                max = 20,
             },
         },
-        text = "TODO"
+        text = "I am the Face-Snaked Queen of the Three in One.\nIn you is an image and a seven-syllable spell,\nAYEM AE SEHTI AE VEHK,\nwhich you will repeat to it until mystery comes.\n\nThe ending of the words is ALMSIVI." -- https://en.uesp.net/wiki/Morrowind:The_36_Lessons_of_Vivec
     },
 }
 
