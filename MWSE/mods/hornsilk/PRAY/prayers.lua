@@ -765,7 +765,7 @@ this.ashlanderPrayers = {
 this.sixthHousePrayers = {
     {
         name = "Form of the Dreamer",
-        id = "sixthHouse_ritual_6",
+        id = "sixthHouse_prayer_6",
         handler = "Sixth House Prayers",
         skillReq = 15,
         skill = "sixth_house_theology",
