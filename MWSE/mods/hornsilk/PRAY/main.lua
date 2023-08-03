@@ -326,7 +326,7 @@ event.register(tes3.event.bookGetText, ashlanderLitCallback)
 local function registerMCM()
     local sideBarDefault = (
         "PRAY: Prayers, Rituals, And You \n\n" ..
-        "PRAY adds Divine, Ashlander, and Sixth House Prayers " ..
+        "PRAY adds Tribunal, Divine, Ashlander, and Sixth House Prayers " ..
         "into the game utilising merlord's skill frameworks " .. 
         "and MWSE to fully integrate it into the vanilla UI. \n\n" ..
         "Your new skills (Tribunal, Divine, Ashlander, and Sixth House " ..
