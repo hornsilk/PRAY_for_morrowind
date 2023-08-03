@@ -218,7 +218,7 @@ local function registerPrayerOrRitual(recipeTable, type)
                         name = name,
                         effects = effects
                     })
-                    tes3.playSound({soundPath = "Fx\\magic\\restH.wav"}) --TODO: change this
+                    tes3.playSound({soundPath = "Fx\\magic\\restH.wav"})
                 end
             }
         end
