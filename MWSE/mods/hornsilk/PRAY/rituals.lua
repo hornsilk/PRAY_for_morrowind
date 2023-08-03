@@ -428,7 +428,7 @@ this.tribunalRituals = {
         skillReq = 20,
         skill = "tribunal_theology",
         description = "Purge yourself of disease and study the virtures of Saint Delyn",
-        image = "Icons\\PRAY\\art\\deyln.dds",
+        image = "Icons\\PRAY\\art\\delyn.dds",
         materials = { { material = "candle", count = 1 } },
         spellEffects = {
             {
