@@ -1,4 +1,4 @@
-# PRAY: Prayers, Religion, And You
+# PRAY: Prayers, Rituals, And You
 
 Morrowind is all about religion - with PRAY, your character can practice these religions!
 

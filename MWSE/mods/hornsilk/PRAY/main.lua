@@ -136,7 +136,7 @@ local function registerPrayerOrRitual(recipeTable, type)
     if knowledgeRequirement == nil then
         if skill == "ashlander_theology" then
             knowledgeRequirement = function()
-                return tes3.getJournalIndex{ id = "A2_1_MeetSulMatuul" } >= 44
+                return tes3.getJournalIndex{ id = "A2_1_MeetSulMatuul" } >= 44 --named ashlander clanfriend
             end
         end
         if skill == "divine_theology" then
@@ -151,7 +151,7 @@ local function registerPrayerOrRitual(recipeTable, type)
         end
         if skill == "sixth_house_theology" then
             knowledgeRequirement = function()
-                return tes3.getJournalIndex{ id = "A2_2_6thHouse" } > 41
+                return tes3.getJournalIndex{ id = "A2_2_6thHouse" } > 41 --dagoth gares talks to you
             end
         end
     end
