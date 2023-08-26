@@ -1,0 +1,24 @@
+[package]
+name = "PRAY"
+description = "A mod for animated praying mechanics, including buffs, skills, and sounds."
+homepage = "https://www.nexusmods.com/morrowind/mods/53337/"
+repository = "https://github.com/hornsilk/PRAY_for_morrowind"
+authors = ["hornsilk"]
+version = "1.0.0"
+
+[tools.mwse]
+lua-mod = "hornsilk.PRAY"
+wait-until-initialize = false
+
+[dependencies]
+assets = [
+	"Icons\\PRAY",
+	"Sound\\PRAY",
+]
+
+[dependencies.mwse]
+buildnumber = 3330
+
+[dependencies.mge-xe]
+version = ">=0.15.0"
+
