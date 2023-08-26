@@ -7,6 +7,7 @@ local materials = require("hornsilk.PRAY.materials")
 local prayers = require("hornsilk.PRAY.prayers")
 local rituals = require("hornsilk.PRAY.rituals")
 local animation = require("hornsilk.PRAY.animation")
+local skills = require("hornsilk.PRAY.skills")
 
 -- CONFIGURATION --
 local configPath = "PRAY"
@@ -132,29 +133,7 @@ local function registerPrayerOrRitual(recipeTable, type)
     end
 
     -- knowledgeRequirement logic
-    local knowledgeRequirement = recipeTable.knowledgeRequirement --journalIndex
-    if knowledgeRequirement == nil then
-        if skill == "ashlander_theology" then
-            knowledgeRequirement = function()
-                return tes3.getJournalIndex{ id = "A2_1_MeetSulMatuul" } >= 44 --named ashlander clanfriend
-            end
-        end
-        if skill == "divine_theology" then
-            knowledgeRequirement = function()
-                return tes3.getFaction("Imperial Cult").playerJoined
-            end
-        end
-        if skill == "tribunal_theology" then
-            knowledgeRequirement = function()
-                return tes3.getFaction("Temple").playerJoined
-            end
-        end
-        if skill == "sixth_house_theology" then
-            knowledgeRequirement = function()
-                return tes3.getJournalIndex{ id = "A2_2_6thHouse" } > 41 --dagoth gares talks to you
-            end
-        end
-    end
+    local knowledgeRequirement = recipeTable.knowledgeRequirement or skills.data[skill].knowledgeRequirement
 
     -- materialsReq logic
     local materialsReq = {}
@@ -165,18 +144,7 @@ local function registerPrayerOrRitual(recipeTable, type)
     end
 
     -- soundPath logic
-    local soundPath = "Fx\\envrn\\chant.wav"
-    if recipeTable.soundPath then
-        soundPath = recipeTable.soundPath
-    elseif skill == "divine_theology" then
-        soundPath = "PRAY\\marble-church.wav"
-    elseif skill == "tribunal_theology" then
-        soundPath = "Fx\\envrn\\chant.wav"
-    elseif skill == "ashlander_theology" then
-        soundPath = "Fx\\envrn\\woodchimes.wav"
-    elseif skill == "sixth_house_theology" then
-        soundPath = "Fx\\envrn\\bell1.wav"
-    end
+    local soundPath = recipeTable.soundPath or skills.data[skill].sound or "Fx\\envrn\\chant.wav"
 
     --CONFIG OPTIONS--
     if config.allPrayersShortDuration then prayerDuration = 3 end
@@ -327,7 +295,7 @@ local function registerMCM()
     local sideBarDefault = (
         "PRAY: Prayers, Rituals, And You \n\n" ..
         "PRAY adds Tribunal, Divine, Ashlander, and Sixth House Prayers " ..
-        "into the game utilising merlord's skill frameworks " .. 
+        "into the game utilising merlord's skill frameworks " ..
         "and MWSE to fully integrate it into the vanilla UI. \n\n" ..
         "Your new skills (Tribunal, Divine, Ashlander, and Sixth House " ..
         "Theology) can be found in your stats menu under 'Other" ..
