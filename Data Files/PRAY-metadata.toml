@@ -21,3 +21,4 @@ buildnumber = 3330
 
 [dependencies.mge-xe]
 version = ">=0.15.0"
+
