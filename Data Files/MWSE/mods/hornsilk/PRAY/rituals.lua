@@ -404,7 +404,7 @@ this.tribunalRituals = {
         handler = "Tribunal Rituals",
         skillReq = 20,
         skill = "tribunal_theology",
-        description = "Purge yourself of disease and study the virtures of Saint Aralor.\n\n    Cure Common Disease\n    Fortify Personality 5",
+        description = "Purge yourself of disease and study the virtures of Saint Aralor.\n\n    Cure Common Disease\n    Fortify Personality 5 - 15",
         image = "Icons\\PRAY\\art\\aralor.dds",
         materials = { { material = "candle", count = 1 } },
         spellEffects = {
@@ -413,7 +413,7 @@ this.tribunalRituals = {
                 attribute = 6, --personality
                 duration = 720,
                 min = 5,
-                max = 5,
+                max = 15,
             },
             {
                 id = 69, --cureCommonDisease
@@ -427,7 +427,7 @@ this.tribunalRituals = {
         handler = "Tribunal Rituals",
         skillReq = 20,
         skill = "tribunal_theology",
-        description = "Purge yourself of disease and study the virtures of Saint Delyn\n\n    Cure Common Disease\n    Resist Blight Disease 10",
+        description = "Purge yourself of disease and study the virtures of Saint Delyn\n\n    Cure Common Disease\n    Resist Blight Disease 10 - 50",
         image = "Icons\\PRAY\\art\\delyn.dds",
         materials = { { material = "candle", count = 1 } },
         spellEffects = {
@@ -435,7 +435,7 @@ this.tribunalRituals = {
                 id = 95, --resistBlightDisease
                 duration = 720,
                 min = 10,
-                max = 10,
+                max = 30,
             },
             {
                 id = 69, --cureCommonDisease
@@ -449,7 +449,7 @@ this.tribunalRituals = {
         handler = "Tribunal Rituals",
         skillReq = 20,
         skill = "tribunal_theology",
-        description = "Purge yourself of disease and study the virtures of Saint Felms\n\n    Cure Common Disease\n    Fortify Restoration 5",
+        description = "Purge yourself of disease and study the virtures of Saint Felms\n\n    Cure Common Disease\n    Fortify Restoration 5 - 15",
         image = "Icons\\PRAY\\art\\felms.dds",
         materials = { { material = "candle", count = 1 } },
         spellEffects = {
@@ -458,7 +458,7 @@ this.tribunalRituals = {
                 skill = 15, --restoration
                 duration = 720,
                 min = 5,
-                max = 5,
+                max = 15,
             },
             {
                 id = 69, --cureCommonDisease
@@ -472,7 +472,7 @@ this.tribunalRituals = {
         handler = "Tribunal Rituals",
         skillReq = 20,
         skill = "tribunal_theology",
-        description = "Purge yourself of disease and study the virtures of Saint Llothis\n\n    Cure Common Disease\n    Fortify Willpower 5",
+        description = "Purge yourself of disease and study the virtures of Saint Llothis\n\n    Cure Common Disease\n    Fortify Willpower 5 - 15",
         image = "Icons\\PRAY\\art\\llothis.dds",
         materials = { { material = "candle", count = 1 } },
         spellEffects = {
@@ -481,7 +481,7 @@ this.tribunalRituals = {
                 attribute = 2, --willpower
                 duration = 720,
                 min = 5,
-                max = 5,
+                max = 15,
             },
             {
                 id = 69, --cureCommonDisease
@@ -495,7 +495,7 @@ this.tribunalRituals = {
         handler = "Tribunal Rituals",
         skillReq = 20,
         skill = "tribunal_theology",
-        description = "Purge yourself of disease and study the virtures of Saint Meris\n\n    Cure Common Disease\n    Resist Corprus Disease 20",
+        description = "Purge yourself of disease and study the virtures of Saint Meris\n\n    Cure Common Disease\n    Resist Corprus Disease 20 - 50",
         image = "Icons\\PRAY\\art\\meris.dds",
         materials = { { material = "candle", count = 1 } },
         spellEffects = {
@@ -503,7 +503,7 @@ this.tribunalRituals = {
                 id = 96, --resistCorprusDisease
                 duration = 720,
                 min = 20,
-                max = 20,
+                max = 60,
             },
             {
                 id = 69, --cureCommonDisease
@@ -517,7 +517,7 @@ this.tribunalRituals = {
         handler = "Tribunal Rituals",
         skillReq = 20,
         skill = "tribunal_theology",
-        description = "Purge yourself of disease and study the virtures of Saint Nerevar\n\n    Cure Common Disease\n    Fortify Fatigue 20",
+        description = "Purge yourself of disease and study the virtures of Saint Nerevar\n\n    Cure Common Disease\n    Fortify Fatigue 20 - 60",
         image = "Icons\\PRAY\\art\\nerevar.dds",
         materials = { { material = "candle", count = 1 } },
         spellEffects = {
@@ -525,7 +525,7 @@ this.tribunalRituals = {
                 id = 82, --fortifyFatigue
                 duration = 720,
                 min = 20,
-                max = 20,
+                max = 60,
             },
             {
                 id = 69, --cureCommonDisease
@@ -539,7 +539,7 @@ this.tribunalRituals = {
         handler = "Tribunal Rituals",
         skillReq = 20,
         skill = "tribunal_theology",
-        description = "Purge yourself of disease and study the virtures of Saint Olms\n\n    Cure Common Disease\n    Resist Common Disease 20",
+        description = "Purge yourself of disease and study the virtures of Saint Olms\n\n    Cure Common Disease\n    Resist Common Disease 20 - 60",
         image = "Icons\\PRAY\\art\\olms.dds",
         materials = { { material = "candle", count = 1 } },
         spellEffects = {
@@ -547,7 +547,7 @@ this.tribunalRituals = {
                 id = 94, --resistCommonDisease
                 duration = 720,
                 min = 20,
-                max = 20,
+                max = 60,
             },
             {
                 id = 69, --cureCommonDisease
@@ -561,7 +561,7 @@ this.tribunalRituals = {
         handler = "Tribunal Rituals",
         skillReq = 20,
         skill = "tribunal_theology",
-        description = "Purge yourself of disease and study the virtures of Saint Rilms\n\n    Cure Common Disease\n    Fortify Endurance 5",
+        description = "Purge yourself of disease and study the virtures of Saint Rilms\n\n    Cure Common Disease\n    Fortify Endurance 5 - 15",
         image = "Icons\\PRAY\\art\\rilms.dds",
         materials = { { material = "candle", count = 1 } },
         spellEffects = {
@@ -570,7 +570,7 @@ this.tribunalRituals = {
                 attribute = 5, --endurance
                 duration = 720,
                 min = 5,
-                max = 5,
+                max = 15,
             },
             {
                 id = 69, --cureCommonDisease
@@ -584,7 +584,7 @@ this.tribunalRituals = {
         handler = "Tribunal Rituals",
         skillReq = 20,
         skill = "tribunal_theology",
-        description = "Purge yourself of disease and study the virtures of Saint Roris\n\n    Cure Common Disease\n    Fortify Health 5",
+        description = "Purge yourself of disease and study the virtures of Saint Roris\n\n    Cure Common Disease\n    Fortify Health 5 - 15",
         image = "Icons\\PRAY\\art\\roris.dds",
         materials = { { material = "candle", count = 1 } },
         spellEffects = {
@@ -592,7 +592,7 @@ this.tribunalRituals = {
                 id = 80, --fortifyHealth
                 duration = 720,
                 min = 5,
-                max = 5,
+                max = 15,
             },
             {
                 id = 69, --cureCommonDisease
@@ -606,7 +606,7 @@ this.tribunalRituals = {
         handler = "Tribunal Rituals",
         skillReq = 20,
         skill = "tribunal_theology",
-        description = "Purge yourself of disease and study the virtures of Saint Seryn\n\n    Cure Common Disease\n    Resist Poison 20",
+        description = "Purge yourself of disease and study the virtures of Saint Seryn\n\n    Cure Common Disease\n    Resist Poison 20 - 60",
         image = "Icons\\PRAY\\art\\seryn.dds",
         materials = { { material = "candle", count = 1 } },
         spellEffects = {
@@ -614,7 +614,7 @@ this.tribunalRituals = {
                 id = 97, --resistPoison
                 duration = 720,
                 min = 20,
-                max = 20,
+                max = 60,
             },
             {
                 id = 69, --cureCommonDisease
@@ -628,7 +628,7 @@ this.tribunalRituals = {
         handler = "Tribunal Rituals",
         skillReq = 20,
         skill = "tribunal_theology",
-        description = "Purge yourself of disease and study the virtures of Saint Veloth\n\n    Cure Common Disease\n    Fortify Magicka 10",
+        description = "Purge yourself of disease and study the virtures of Saint Veloth\n\n    Cure Common Disease\n    Fortify Magicka 10 - 30",
         image = "Icons\\PRAY\\art\\veloth.dds",
         materials = { { material = "candle", count = 1 } },
         spellEffects = {
@@ -636,7 +636,7 @@ this.tribunalRituals = {
                 id = 81, --fortifyMagicka
                 duration = 720,
                 min = 10,
-                max = 10,
+                max = 30,
             },
             {
                 id = 69, --cureCommonDisease
