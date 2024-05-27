@@ -14,7 +14,7 @@ this.divinePrayers = {
         handler = "Divine Prayers",
         skillReq = 10,
         skill = "divine_theology",
-        description = "Pray to Akatosh to fortify Speed.",
+        description = "Pray to Akatosh to fortify Speed\n\n     - Fortify Speed 5",
         image = "Icons\\PRAY\\art\\akatosh.dds",
         spellEffects = {
             {
@@ -33,7 +33,7 @@ this.divinePrayers = {
         handler = "Divine Prayers",
         skillReq = 10,
         skill = "divine_theology",
-        description = "Pray to Arkay to fortify Willpower.",
+        description = "Pray to Arkay to fortify Willpower\n\n     - Fortify Willpower 5",
         image = "Icons\\PRAY\\art\\arkay.dds",
         spellEffects = {
             {
@@ -52,7 +52,7 @@ this.divinePrayers = {
         handler = "Divine Prayers",
         skillReq = 10,
         skill = "divine_theology",
-        description = "Pray to Dibella to fortify Personality.",
+        description = "Pray to Dibella to fortify Personality\n\n     - Fortify Personality 5",
         image = "Icons\\PRAY\\art\\dibella.dds",
         spellEffects = {
             {
@@ -71,7 +71,7 @@ this.divinePrayers = {
         handler = "Divine Prayers",
         skillReq = 10,
         skill = "divine_theology",
-        description = "Pray to Julianos to fortify Intelligence.",
+        description = "Pray to Julianos to fortify Intelligence\n\n     - Fortify Intelligence 5",
         image = "Icons\\PRAY\\art\\julianos.dds",
         spellEffects = {
             {
@@ -90,7 +90,7 @@ this.divinePrayers = {
         handler = "Divine Prayers",
         skillReq = 10,
         skill = "divine_theology",
-        description = "Pray to Kynareth to fortify Agility.",
+        description = "Pray to Kynareth to fortify Agility\n\n     - Fortify Agility 5",
         image = "Icons\\PRAY\\art\\kynareth.dds",
         spellEffects = {
             {
@@ -109,7 +109,7 @@ this.divinePrayers = {
         handler = "Divine Prayers",
         skillReq = 10,
         skill = "divine_theology",
-        description = "Pray to Mara to fortify Endurance.",
+        description = "Pray to Mara to fortify Endurance\n\n     - Fortify Endurance 5",
         image = "Icons\\PRAY\\art\\mara.dds",
         spellEffects = {
             {
@@ -128,7 +128,7 @@ this.divinePrayers = {
         handler = "Divine Prayers",
         skillReq = 10,
         skill = "divine_theology",
-        description = "Pray to Stendarr to fortify Strength.",
+        description = "Pray to Stendarr to fortify Strength\n\n     - Fortify Strength 5",
         image = "Icons\\PRAY\\art\\stendarr.dds",
         spellEffects = {
             {
@@ -147,7 +147,7 @@ this.divinePrayers = {
         handler = "Divine Prayers",
         skillReq = 10,
         skill = "divine_theology",
-        description = "Pray to Talos to fortify Attack.",
+        description = "Pray to Talos to fortify Attack\n\n     - Fortify Attack 5",
         image = "Icons\\PRAY\\art\\talos.dds",
         spellEffects = {
             {
@@ -165,7 +165,7 @@ this.divinePrayers = {
         handler = "Divine Prayers",
         skillReq = 10,
         skill = "divine_theology",
-        description = "Pray to Zenithar to fortify Luck.",
+        description = "Pray to Zenithar to fortify Luck\n\n     - Fortify Luck 5",
         image = "Icons\\PRAY\\art\\zenithar.dds",
         spellEffects = {
             {
@@ -187,7 +187,7 @@ this.tribunalPrayers = {
         handler = "Tribunal Prayers",
         skillReq = 25,
         skill = "tribunal_theology",
-        description = "Restore your attribues",
+        description = "Pray to Saint Meris to restore all of your attribues\n\n    Restore Strength\n    Restore Intelligence\n    Restore Willpower\n    Restore Agility\n    Restore Speed\n    Restore Endurance\n    Restore Personality\n    Restore Luck",
         image = "Icons\\PRAY\\art\\meris_resto.dds",
         spellEffects = {
             {
@@ -255,7 +255,7 @@ this.tribunalPrayers = {
         handler = "Tribunal Prayers",
         skillReq = 25,
         skill = "tribunal_theology",
-        description = "Restore the skills of the Warrior",
+        description = "Restore the skills of the Warrior\n\n    Restore Block\n    Restore Armorer\n    Restore Medium Armor\n    Restore Heavy Armor\n    Restore Blunt Weapon\n    Restore Long Blade\n    Restore Axe\n    Restore Spear",
         image = "Icons\\PRAY\\art\\alma_resto.dds",
         spellEffects = {
             {
@@ -323,7 +323,7 @@ this.tribunalPrayers = {
         handler = "Tribunal Prayers",
         skillReq = 25,
         skill = "tribunal_theology",
-        description = "Restore the skills of the Thief",
+        description = "Restore the skills of the Thief\n\n    Restore Security\n    Restore Sneak\n    Restore Acrobatics\n    Restore Light Armor\n    Restore Short Blade\n    Restore Marksman\n    Restore Mercantile\n    Restore Speechcraft",
         image = "Icons\\PRAY\\art\\vivec_resto.dds",
         spellEffects = {
             {
@@ -391,7 +391,7 @@ this.tribunalPrayers = {
         handler = "Tribunal Prayers",
         skillReq = 25,
         skill = "tribunal_theology",
-        description = "Restore the skills of the Mage",
+        description = "Restore the skills of the Mage\n\n    Restore Enchant\n    Restore Destruction\n    Restore Alteration\n    Restore Illusion\n    Restore Conjuration\n    Restore Mysticism\n    Restore Restoration\n    Restore Alchemy",
         image = "Icons\\PRAY\\art\\sotha_resto.dds",
         spellEffects = {
             {
@@ -459,7 +459,7 @@ this.tribunalPrayers = {
         handler = "Tribunal Prayers",
         skillReq = 25,
         skill = "tribunal_theology",
-        description = "Restore the skills of the Wanderer, unarmed and unarmored, who walks the ashlands",
+        description = "Restore the skills of the Wanderer, unarmed and unarmored, who walks the ashlands\n\n    Restore Athletics\n    Restore Unarmored\n    Restore Hand-to-Hand",
         image = "Icons\\PRAY\\art\\nerevar_resto.dds",
         spellEffects = {
             {
@@ -492,7 +492,7 @@ this.tribunalPrayers = {
         handler = "Tribunal Prayers",
         skillReq = 30,
         skill = "tribunal_theology",
-        description = "Assume the aspect of Vivec",
+        description = "Assume the aspect of Vivec\n\n    Fortify Personality 20\n    Fortify Spear 20\n    Lightning Shield 20 - 30\n    Bound Spear\n    Reflect 5",
         image = "Icons\\PRAY\\art\\vivec_aspect.dds",
         spellEffects = {
             {
@@ -534,7 +534,7 @@ this.tribunalPrayers = {
         handler = "Tribunal Prayers",
         skillReq = 30,
         skill = "tribunal_theology",
-        description = "Assume the aspect of Sotha Sil",
+        description = "Assume the aspect of Sotha Sil\n\n    Fortify Intelligence 20\n    Fortify Mysticism 20\n    Frost Shield 20 - 30\n    Bound Cuirass\n    Spell Absorption 20",
         image = "Icons\\PRAY\\art\\sotha_aspect.dds",
         spellEffects = {
             {
@@ -576,7 +576,7 @@ this.tribunalPrayers = {
         handler = "Tribunal Prayers",
         skillReq = 30,
         skill = "tribunal_theology",
-        description = "Assume the aspect of Almalexia",
+        description = "Assume the aspect of Almalexia\n\n    Fortify Speed 20\n    Fortify Axe 20\n    Fire Shield 20 - 30\n    Bound Helm\n    Fortify Attack 20",
         image = "Icons\\PRAY\\art\\alma_aspect.dds",
         spellEffects = {
             {
@@ -622,7 +622,7 @@ this.ashlanderPrayers = {
         skillReq = 10,
         skill = "ashlander_theology",
         skillProgress = 30,
-        description = "Acknowledge the memories of our ancestors.",
+        description = "Acknowledge the memories of our ancestors\n\n    Summon Ancestral Ghost, 6 minutes",
         image = "Icons\\PRAY\\art\\wise_woman.dds",
         knowledgeRequirement = function ()
             return tes3.player.data.hasReadAshlanderLit or tes3.getJournalIndex{ id = "A2_1_MeetSulMatuul" } >= 44
@@ -641,7 +641,7 @@ this.ashlanderPrayers = {
         handler = "Ashlander Prayers",
         skillReq = 10,
         skill = "ashlander_theology",
-        description = "Praise the memories of our ancestors.",
+        description = "Praise the memories of our ancestors\n\n    Summon Ancestral Ghost, 12 minutes",
         image = "Icons\\PRAY\\art\\wise_woman.dds",
         spellEffects = {
             {
@@ -657,7 +657,7 @@ this.ashlanderPrayers = {
         handler = "Ashlander Prayers",
         skillReq = 12,
         skill = "ashlander_theology",
-        description = "See in the darkness by the light of Moon-and-Star.",
+        description = "See in the darkness by the light of Moon-and-Star\n\n    Night Eye 20 - 40",
         image = "Icons\\PRAY\\art\\ashland_scout.dds",
         spellEffects = {
             {
@@ -675,7 +675,7 @@ this.ashlanderPrayers = {
         handler = "Ashlander Prayers",
         skillReq = 14,
         skill = "ashlander_theology",
-        description = "Travel light and quietly.",
+        description = "Travel light and quietly as our kin of old\n\n    Feather 10 - 30\n    Fortify Sneak 10 - 30",
         image = "Icons\\PRAY\\art\\ashland_vista.dds",
         spellEffects = {
             {
@@ -700,7 +700,7 @@ this.ashlanderPrayers = {
         handler = "Ashlander Prayers",
         skillReq = 16,
         skill = "ashlander_theology",
-        description = "Step through fire and frost, hold fast your body from disease",
+        description = "Step through fire and frost, hold fast your body from disease\n\n    Resist Fire 20 - 50\n    Resist Frost 20 - 50\n    Resist Common Disease 20 - 50\n    Resist Blight Disease 20 - 50",
         image = "Icons\\PRAY\\art\\wise_woman_landscape.dds",
         spellEffects = {
             {
@@ -736,7 +736,7 @@ this.ashlanderPrayers = {
         handler = "Ashlander Prayers",
         skillReq = 18,
         skill = "ashlander_theology",
-        description = "Gird yourself in mystic armors.",
+        description = "Gird yourself in mystic armors\n\n    Shield 10 - 30\n    Sound 10 - 30\n    Telekinesis 5 - 15",
         image = "Icons\\PRAY\\art\\red_mountain.dds",
         spellEffects = {
             {
@@ -817,7 +817,7 @@ this.miscPrayers = {
         handler = "Miscellaneous Prayers",
         skillReq = 5,
         skill = "divine_theology",
-        description = "See what luck the day will bring.",
+        description = "See what luck the day will bring",
         skillProgress = 0,
         prayerDuration = 5,
         image = "Icons\\PRAY\\art\\dice.dds",
