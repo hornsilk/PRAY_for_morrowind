@@ -641,12 +641,12 @@ this.ashlanderPrayers = {
         handler = "Ashlander Prayers",
         skillReq = 10,
         skill = "ashlander_theology",
-        description = "Praise the memories of our ancestors\n\n    Summon Ancestral Ghost, 12 minutes",
+        description = "Praise the memories of our ancestors\n\n    Summon Ancestral Ghost, 24 minutes",
         image = "Icons\\PRAY\\art\\wise_woman.dds",
         spellEffects = {
             {
                 id = 106, --summonAncestralGhost
-                duration = 720,
+                duration = 1440,
             }
         },
         text = "I pray for the herder\nThat whistles to his guar at play.\n\nI pray for the hunter\nThat stalks the white walkers.\n\nI pray for the wise one\nThat seeks under the hill,\n\nAnd the wife who wishes\nFor one last touch of her dead child's hand."
@@ -664,7 +664,7 @@ this.ashlanderPrayers = {
                 id = 43, --nightEye
                 duration = 720,
                 min = 20,
-                max = 40,
+                max = 60,
             }
         },
         text = "Never shall I yield my home and hearth.\n\nAnd from my tears shall spring forth\n\nThe flowers of grassland springs."
@@ -681,15 +681,15 @@ this.ashlanderPrayers = {
             {
                 id = 8, --feather
                 duration = 720,
-                min = 10,
-                max = 30,
+                min = 20,
+                max = 60,
             },
             {
                 id = 83, --fortifySkill 
                 skill = 19, --sneak
                 duration = 720,
-                min = 10,
-                max = 30,
+                min = 20,
+                max = 60,
             }
         },
         text = "May I shrink to dust\n\nIn your cold, wild Wastes,\n\nAnd may my tongue speak\n\nIts last hymn to your winds."
@@ -707,25 +707,25 @@ this.ashlanderPrayers = {
                 id = 90, --resistFire
                 duration = 720,
                 min = 20,
-                max = 50,
+                max = 60,
             },
             {
                 id = 91, --resistFrost
                 duration = 720,
                 min = 20,
-                max = 50,
+                max = 60,
             },
             {
                 id = 94, --resistCommonDisease
                 duration = 720,
                 min = 20,
-                max = 50,
+                max = 60,
             },
             {
                 id = 95, --resistBlightDisease
                 duration = 720,
                 min = 20,
-                max = 50,
+                max = 60,
             },
         },
         text = "I will not pray for that which I've lost\nWhen my heart springs forth\nFrom your soil, like a seed,\nAnd blossoms anew beneath tomorrow's sun."
