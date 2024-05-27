@@ -260,21 +260,7 @@ this.tribunalPrayers = {
         spellEffects = {
             {
                 id = 78, --restoreSkill
-                skill = 3,
-                duration = 1,
-                min = 100,
-                max = 100,
-            },
-            {
-                id = 78, --restoreSkill
-                skill = 2,
-                duration = 1,
-                min = 100,
-                max = 100,
-            },
-            {
-                id = 78, --restoreSkill
-                skill = 7,
+                skill = 0,
                 duration = 1,
                 min = 100,
                 max = 100,
@@ -288,7 +274,14 @@ this.tribunalPrayers = {
             },
             {
                 id = 78, --restoreSkill
-                skill = 6,
+                skill = 2,
+                duration = 1,
+                min = 100,
+                max = 100,
+            },
+            {
+                id = 78, --restoreSkill
+                skill = 3,
                 duration = 1,
                 min = 100,
                 max = 100,
@@ -309,7 +302,14 @@ this.tribunalPrayers = {
             },
             {
                 id = 78, --restoreSkill
-                skill = 0,
+                skill = 6,
+                duration = 1,
+                min = 100,
+                max = 100,
+            },
+            {
+                id = 78, --restoreSkill
+                skill = 7,
                 duration = 1,
                 min = 100,
                 max = 100,
@@ -328,6 +328,20 @@ this.tribunalPrayers = {
         spellEffects = {
             {
                 id = 78, --restoreSkill
+                skill = 18,
+                duration = 1,
+                min = 100,
+                max = 100,
+            },
+            {
+                id = 78, --restoreSkill
+                skill = 19,
+                duration = 1,
+                min = 100,
+                max = 100,
+            },
+            {
+                id = 78, --restoreSkill
                 skill = 20,
                 duration = 1,
                 min = 100,
@@ -342,21 +356,14 @@ this.tribunalPrayers = {
             },
             {
                 id = 78, --restoreSkill
-                skill = 23,
-                duration = 1,
-                min = 100,
-                max = 100,
-            },
-            {
-                id = 78, --restoreSkill
-                skill = 19,
-                duration = 1,
-                min = 100,
-                max = 100,
-            },
-            {
-                id = 78, --restoreSkill
                 skill = 22,
+                duration = 1,
+                min = 100,
+                max = 100,
+            },
+            {
+                id = 78, --restoreSkill
+                skill = 23,
                 duration = 1,
                 min = 100,
                 max = 100,
@@ -375,13 +382,6 @@ this.tribunalPrayers = {
                 min = 100,
                 max = 100,
             },
-            {
-                id = 78, --restoreSkill
-                skill = 18,
-                duration = 1,
-                min = 100,
-                max = 100,
-            },
         },
         text = "The Son is myself, Vehk, and I am unto three, six, nine, and the rest that come after, glorious and sympathetic, without borders, utmost in the perfections of this world and the others, sword and symbol, pale like gold.\n\nThe ending of the words is ALMSIVI." -- https://en.uesp.net/wiki/Morrowind:The_36_Lessons_of_Vivec
     },
@@ -396,28 +396,14 @@ this.tribunalPrayers = {
         spellEffects = {
             {
                 id = 78, --restoreSkill
-                skill = 12,
-                duration = 1,
-                min = 100,
-                max = 100,
-            },
-            {
-                id = 78, --restoreSkill
-                skill = 16,
-                duration = 1,
-                min = 100,
-                max = 100,
-            },
-            {
-                id = 78, --restoreSkill
-                skill = 13,
-                duration = 1,
-                min = 100,
-                max = 100,
-            },
-            {
-                id = 78, --restoreSkill
                 skill = 9,
+                duration = 1,
+                min = 100,
+                max = 100,
+            },
+            {
+                id = 78, --restoreSkill
+                skill = 10,
                 duration = 1,
                 min = 100,
                 max = 100,
@@ -431,7 +417,14 @@ this.tribunalPrayers = {
             },
             {
                 id = 78, --restoreSkill
-                skill = 10,
+                skill = 12,
+                duration = 1,
+                min = 100,
+                max = 100,
+            },
+            {
+                id = 78, --restoreSkill
+                skill = 13,
                 duration = 1,
                 min = 100,
                 max = 100,
@@ -446,6 +439,13 @@ this.tribunalPrayers = {
             {
                 id = 78, --restoreSkill
                 skill = 15,
+                duration = 1,
+                min = 100,
+                max = 100,
+            },
+            {
+                id = 78, --restoreSkill
+                skill = 16,
                 duration = 1,
                 min = 100,
                 max = 100,
