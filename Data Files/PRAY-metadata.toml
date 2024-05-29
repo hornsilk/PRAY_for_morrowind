@@ -4,7 +4,7 @@ description = "A mod for animated praying mechanics, including buffs, skills, an
 homepage = "https://www.nexusmods.com/morrowind/mods/53337/"
 repository = "https://github.com/hornsilk/PRAY_for_morrowind"
 authors = ["hornsilk", "tewlwolow"]
-version = "1.0.1"
+version = "1.1.0"
 
 [tools.mwse]
 lua-mod = "hornsilk.PRAY"
