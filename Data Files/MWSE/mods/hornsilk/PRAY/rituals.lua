@@ -728,9 +728,6 @@ this.sixthHouseRituals = {
         materials = {
             { material = "ash_statue", count = 1 }
         },
-        knowledgeRequirement = function()
-            return tes3.getJournalIndex{ id = "A2_2_6thHouse" } > 41 and skillModule.getSkill('sixthHouse').value < 11
-        end,
         spellEffects = {
             {
                 id = 17, --drainAttribute
@@ -755,9 +752,6 @@ this.sixthHouseRituals = {
             { material = "ash_statue", count = 1 },
             { material = "corprusmeat", count = 3 },
         },
-        knowledgeRequirement = function()
-            return tes3.getJournalIndex{ id = "A2_2_6thHouse" } > 41 and skillModule.getSkill('sixthHouse').value < 12
-        end,
         spellEffects = {
             {
                 id = 17, --drainAttribute
@@ -782,9 +776,6 @@ this.sixthHouseRituals = {
             { material = "ash_statue", count = 2 },
             { material = "corprusmeat", count = 5 },
         },
-        knowledgeRequirement = function()
-            return tes3.getJournalIndex{ id = "A2_2_6thHouse" } > 41 and skillModule.getSkill('sixthHouse').value < 13
-        end,
         spellEffects = {
             {
                 id = 17, --drainAttribute
@@ -809,9 +800,6 @@ this.sixthHouseRituals = {
             { material = "ash_statue", count = 3 },
             { material = "corprusmeat", count = 11 },
         },
-        knowledgeRequirement = function()
-            return tes3.getJournalIndex{ id = "A2_2_6thHouse" } > 41 and skillModule.getSkill('sixthHouse').value < 14
-        end,
         spellEffects = {
             {
                 id = 17, --drainAttribute
@@ -836,9 +824,6 @@ this.sixthHouseRituals = {
             { material = "ash_statue", count = 4 },
             { material = "corprusmeat", count = 19 },
         },
-        knowledgeRequirement = function()
-            return tes3.getJournalIndex{ id = "A2_2_6thHouse" } > 41 and skillModule.getSkill('sixthHouse').value < 15
-        end,
         spellEffects = {
             {
                 id = 17, --drainAttribute
@@ -863,10 +848,7 @@ this.sixthHouseRituals = {
             { material = "ash_statue", count = 6 },
             { material = "corprusmeat", count = 36 },
             { material = "pray_6th_house", count = 1 },
-        },   
-        knowledgeRequirement = function()
-            return tes3.getJournalIndex{ id = "A2_2_6thHouse" } >= 11 and skillModule.getSkill('sixthHouse').value < 16
-        end,
+        },
         spellEffects = {
             {
                 id = 79, --fortifyAttribute
