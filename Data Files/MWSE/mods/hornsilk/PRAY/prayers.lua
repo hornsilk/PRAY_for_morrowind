@@ -843,6 +843,37 @@ this.miscPrayers = {
         },
         text = "Man or mer, things begin with the dualism of Anu and His Other.\nThese twin forces go by many names\n\nAnu-Padomay\nAnuiel-Sithis\nAk-El\nSatak-Akel\nIs-Is Not."
     },
+    {
+        name = "No-h's Prayer",
+        id = "noh_prayer",
+        handler = "Miscellaneous Prayers",
+        skillReq = 5,
+        skill = "tribunal_theology",
+        description = "Read 'No-h's Picture Book of Wood' aloud",
+        skillProgress = 0,
+        prayerDuration = 5,
+        image = "Icons\\PRAY\\art\\kurt_noh.dds",
+        soundPath = "PRAY\\noh_pray.wav",
+        knowledgeRequirement = function ()
+            return tes3.player.data.hasReadNoh
+        end,
+        spellEffects = {
+            {
+                id = 79, --fortifyAttribute
+                attribute = 7, --luck
+                duration = 720,
+                min = 10,
+                max = 20,
+            },
+            {
+                id = 48, --sound
+                duration = 720,
+                min = 50,
+                max = 100,
+            },
+        },
+        text = "Wood is pretty\nWood is nice\nIf one looks good\nI'll make it twice!"
+    },
 }
 
 return this

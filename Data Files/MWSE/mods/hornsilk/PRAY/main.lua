@@ -286,6 +286,17 @@ local function ashlanderLitCallback(e)
 end
 event.register(tes3.event.bookGetText, ashlanderLitCallback)
 
+-- Callback for obtaining book text (Ashlander Lit Books)
+--- @param e bookGetTextEventData
+local function miscLitCallback(e)
+    if string.find(string.lower(e.book.id), string.lower("bk_BriefHistoryofWood")) ~= nil then
+        tes3.messageBox("You have gained knowledge of a prayer from this book.\nYou learned No-h's Prayer.")
+        tes3.playSound({soundPath = "Fx\\inter\\levelUP.wav"})
+        tes3.player.data.hasReadNoh = true
+    end
+end
+event.register(tes3.event.bookGetText, miscLitCallback)
+
 --------------------------------------------
 -- MCM (Mod Configuration Menu)
 --------------------------------------------
