@@ -33,17 +33,17 @@ Unlock Tribunal Prayers by joining the Tribunal Temple.
 
 ### Tribunal Theology Level 20
 
-- Rite of Saint Aralor's Intervention
-- Rite of Saint Delyn's Shield
-- Rite of Saint Felms's Glory
-- Rite of Saint Llothis's Rock
-- Rite of Saint Meris's Warding
-- Rite of Saint Nerevar's Spirit
-- Rite of Saint Olms's Benediction
-- Rite of Saint Rilms's Grace
-- Rite of Saint Roris's Bloom
-- Rite of Saint Seryn's Shield
-- Rite of Saint Veloth's Indwelling
+- Saint Aralor's Intervention
+- Saint Delyn's Shield
+- Saint Felms's Glory
+- Saint Llothis's Rock
+- Saint Meris's Warding
+- Saint Nerevar's Spirit
+- Saint Olms's Benediction
+- Saint Rilms's Grace
+- Saint Roris's Bloom
+- Saint Seryn's Shield
+- Saint Veloth's Indwelling
 
 ### Tribunal Theology Level 25
 
