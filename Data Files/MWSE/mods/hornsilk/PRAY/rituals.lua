@@ -728,6 +728,9 @@ this.sixthHouseRituals = {
         materials = {
             { material = "ash_statue", count = 1 }
         },
+        knowledgeRequirement = function()
+            return tes3.getJournalIndex{ id = "A2_2_6thHouse" } > 41 and skillModule.getSkill('sixth_house_theology').value < 11
+        end,
         spellEffects = {
             {
                 id = 17, --drainAttribute
@@ -761,6 +764,9 @@ this.sixthHouseRituals = {
                 max = 20,
             },
         },
+        knowledgeRequirement = function()
+            return tes3.getJournalIndex{ id = "A2_2_6thHouse" } > 41 and skillModule.getSkill('sixth_house_theology').value < 12
+        end,
         text = "He is the Lord, and Father of the Mountain.\nHe wakes, and the land wakes with him."
     },
     {
@@ -776,6 +782,9 @@ this.sixthHouseRituals = {
             { material = "ash_statue", count = 2 },
             { material = "corprusmeat", count = 5 },
         },
+        knowledgeRequirement = function()
+            return tes3.getJournalIndex{ id = "A2_2_6thHouse" } > 41 and skillModule.getSkill('sixth_house_theology').value < 13
+        end,
         spellEffects = {
             {
                 id = 17, --drainAttribute
@@ -800,6 +809,9 @@ this.sixthHouseRituals = {
             { material = "ash_statue", count = 3 },
             { material = "corprusmeat", count = 11 },
         },
+        knowledgeRequirement = function()
+            return tes3.getJournalIndex{ id = "A2_2_6thHouse" } > 41 and skillModule.getSkill('sixth_house_theology').value < 14
+        end,
         spellEffects = {
             {
                 id = 17, --drainAttribute
@@ -833,6 +845,9 @@ this.sixthHouseRituals = {
                 max = 50,
             },
         },
+        knowledgeRequirement = function()
+            return tes3.getJournalIndex{ id = "A2_2_6thHouse" } > 41 and skillModule.getSkill('sixth_house_theology').value < 15
+        end,
         text = "He is the Lord, and Father of the Mountain.\nHe wakes, and the land wakes with him.\nAll the land, and all of its people, shall rise from sleep, and sweep the land clean of the n'wah.\nWhy have you denied him?\nAs Lord Dagoth has said. All shall greet him as flesh, or as dust."
     },
     {
@@ -849,6 +864,9 @@ this.sixthHouseRituals = {
             { material = "corprusmeat", count = 36 },
             { material = "pray_6th_house", count = 1 },
         },
+        knowledgeRequirement = function()
+            return tes3.getJournalIndex{ id = "A2_2_6thHouse" } > 41 and skillModule.getSkill('sixth_house_theology').value < 16
+        end,
         spellEffects = {
             {
                 id = 79, --fortifyAttribute
