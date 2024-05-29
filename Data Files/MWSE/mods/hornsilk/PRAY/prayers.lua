@@ -664,7 +664,7 @@ this.ashlanderPrayers = {
                 id = 43, --nightEye
                 duration = 720,
                 min = 20,
-                max = 60,
+                max = 40,
             }
         },
         text = "Never shall I yield my home and hearth.\n\nAnd from my tears shall spring forth\n\nThe flowers of grassland springs."
@@ -681,15 +681,15 @@ this.ashlanderPrayers = {
             {
                 id = 8, --feather
                 duration = 720,
-                min = 20,
-                max = 60,
+                min = 10,
+                max = 30,
             },
             {
                 id = 83, --fortifySkill 
                 skill = 19, --sneak
                 duration = 720,
-                min = 20,
-                max = 60,
+                min = 10,
+                max = 30,
             }
         },
         text = "May I shrink to dust\n\nIn your cold, wild Wastes,\n\nAnd may my tongue speak\n\nIts last hymn to your winds."
@@ -707,25 +707,25 @@ this.ashlanderPrayers = {
                 id = 90, --resistFire
                 duration = 720,
                 min = 20,
-                max = 60,
+                max = 50,
             },
             {
                 id = 91, --resistFrost
                 duration = 720,
                 min = 20,
-                max = 60,
+                max = 50,
             },
             {
                 id = 94, --resistCommonDisease
                 duration = 720,
                 min = 20,
-                max = 60,
+                max = 50,
             },
             {
                 id = 95, --resistBlightDisease
                 duration = 720,
                 min = 20,
-                max = 60,
+                max = 50,
             },
         },
         text = "I will not pray for that which I've lost\nWhen my heart springs forth\nFrom your soil, like a seed,\nAnd blossoms anew beneath tomorrow's sun."
