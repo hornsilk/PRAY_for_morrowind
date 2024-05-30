@@ -154,3 +154,4 @@ These are other prayers and rituals you can learn during a playthrough that are 
 
 - The Gray Maybe
 - Caius's Ritual
+- No-h's Prayer

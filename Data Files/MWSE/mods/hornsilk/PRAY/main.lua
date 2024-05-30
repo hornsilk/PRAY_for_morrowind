@@ -20,7 +20,8 @@ local theologies = {
     ashlanderModule,
     sixthHouseModule,
 }
--- decent place to look for icons https://en.uesp.net/wiki/Category:Morrowind-Banner_Images
+
+local miscRecipes = require("hornsilk.PRAY.misc_recipes")
 
 -- CONFIGURATION --
 local configPath = "PRAY"
@@ -173,6 +174,11 @@ local function registerPrayersAndRituals()
             local recipe = registerPrayerOrRitual(recipeDict, theology)
             table.insert(recipeList, recipe)
         end
+    end
+
+    for _, recipeDict in pairs(miscRecipes) do
+        local recipe = registerPrayerOrRitual(recipeDict, nil)
+        table.insert(recipeList, recipe)
     end
 
     -- Register the Prayer Menu using Crafting Framework's MenuActivator
