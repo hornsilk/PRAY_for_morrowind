@@ -30,27 +30,13 @@ end
 -- INITIALIZE SKILLS --
 local skillModule = require("OtherSkills.skillModule")
 local ashlanderModule = require("hornsilk.PRAY.theologies.ashlander")
+local divineModule = require("hornsilk.PRAY.theologies.divine")
 
 -- Register skills for the Prayer System
 -- decent place to look for icons https://en.uesp.net/wiki/Category:Morrowind-Banner_Images
 
 local function onSkillReady()
-    -- Divine Theology skill
-    local divineDescription = (
-        "The Divine Theology skill determines your knowledge of prayers and rituals of the Divines."
-    )
-    skillModule.registerSkill(
-        "divine_theology",
-        {
-            name = "Divine Theology",
-            icon = "Icons\\PRAY\\divine.dds",
-            value = 10,
-            attribute =  tes3.attribute.willpower,
-            description = divineDescription,
-            specialization = tes3.specialization.magic,
-            active = "active"
-        }
-    )
+    
 
     -- Tribunal Theology skill
     local tribunalDescription = (
@@ -70,6 +56,7 @@ local function onSkillReady()
     )
 
     ashlanderModule.registerSkill()
+    divineModule.registerSkill()
 
     -- Sixth House Theology skill
     local sixthHouseDescription = (
@@ -122,6 +109,8 @@ local function registerPrayerOrRitual(recipeTable, type)
     local knowledgeRequirement 
     if skill == "ashlander_theology" then
         knowledgeRequirement = ashlanderModule.knowledgeRequirement
+    elseif skill == "divine_theology" then
+        knowledgeRequirement = divineModule.knowledgeRequirement
     else
         knowledgeRequirement= recipeTable.knowledgeRequirement or skills.data[skill].knowledgeRequirement
     end
@@ -136,7 +125,9 @@ local function registerPrayerOrRitual(recipeTable, type)
     -- soundPath logic
     local soundPath 
     if skill == "ashlander_theology" then
-        soundPath = ashlanderModule.sound    
+        soundPath = ashlanderModule.sound   
+    elseif skill == 'divine_theology' then 
+        soundPath = divineModule.sound
     else
         soundPath = recipeTable.soundPath or skills.data[skill].sound or "Fx\\envrn\\chant.wav"
     end

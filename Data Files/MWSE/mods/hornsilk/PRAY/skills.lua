@@ -1,12 +1,6 @@
 local this = {}
 
 this.data = {
-	["divine_theology"] = {
-		knowledgeRequirement = function()
-			return tes3.getFaction("Imperial Cult").playerJoined
-		end,
-		sound = "PRAY\\div_pray.wav"
-	},
 	["tribunal_theology"] = {
 		knowledgeRequirement = function()
 			return tes3.getFaction("Temple").playerJoined
