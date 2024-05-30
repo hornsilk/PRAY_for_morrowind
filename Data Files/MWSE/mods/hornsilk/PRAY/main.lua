@@ -29,6 +29,7 @@ end
 
 -- INITIALIZE SKILLS --
 local skillModule = require("OtherSkills.skillModule")
+local ashlanderModule = require("hornsilk.PRAY.theologies.ashlander")
 
 -- Register skills for the Prayer System
 -- decent place to look for icons https://en.uesp.net/wiki/Category:Morrowind-Banner_Images
@@ -68,22 +69,7 @@ local function onSkillReady()
         }
     )
 
-    -- Ashlander Theology skill
-    local ashlanderDescription = (
-        "The Ashlander Theology skill determines your knowledge of traditional prayers and rituals of the Ashlanders of Morrowind."
-    )
-    skillModule.registerSkill(
-        "ashlander_theology",
-        {
-            name = "Ashlander Theology",
-            icon = "Icons\\PRAY\\ashlander.dds",
-            value = 10,
-            attribute =  tes3.attribute.endurance,
-            description = ashlanderDescription,
-            specialization = tes3.specialization.magic,
-            active = "active"
-        }
-    )
+    ashlanderModule.registerSkill()
 
     -- Sixth House Theology skill
     local sixthHouseDescription = (
@@ -133,8 +119,12 @@ local function registerPrayerOrRitual(recipeTable, type)
     end
 
     -- knowledgeRequirement logic
-    local knowledgeRequirement = recipeTable.knowledgeRequirement or skills.data[skill].knowledgeRequirement
-
+    local knowledgeRequirement 
+    if skill == "ashlander_theology" then
+        knowledgeRequirement = ashlanderModule.knowledgeRequirement
+    else
+        knowledgeRequirement= recipeTable.knowledgeRequirement or skills.data[skill].knowledgeRequirement
+    end
     -- materialsReq logic
     local materialsReq = {}
     if type == "prayer" then
@@ -144,7 +134,12 @@ local function registerPrayerOrRitual(recipeTable, type)
     end
 
     -- soundPath logic
-    local soundPath = recipeTable.soundPath or skills.data[skill].sound or "Fx\\envrn\\chant.wav"
+    local soundPath 
+    if skill == "ashlander_theology" then
+        soundPath = ashlanderModule.sound    
+    else
+        soundPath = recipeTable.soundPath or skills.data[skill].sound or "Fx\\envrn\\chant.wav"
+    end
 
     --CONFIG OPTIONS--
     if config.allPrayersShortDuration then prayerDuration = 3 end

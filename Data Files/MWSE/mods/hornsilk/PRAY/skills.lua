@@ -1,12 +1,6 @@
 local this = {}
 
 this.data = {
-	["ashlander_theology"] = {
-		knowledgeRequirement = function()
-			return tes3.getJournalIndex{ id = "A2_1_MeetSulMatuul" } >= 44
-		end,
-		sound = "PRAY\\ash_pray.wav"
-	},
 	["divine_theology"] = {
 		knowledgeRequirement = function()
 			return tes3.getFaction("Imperial Cult").playerJoined

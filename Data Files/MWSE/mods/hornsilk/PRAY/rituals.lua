@@ -646,74 +646,8 @@ this.tribunalRituals = {
     },
 }
 
-this.ashlanderRituals = {
-    {
-        name = "Invocation of Alandro Sul",
-        id = "alandro_sul",
-        handler = "Ashlander Rituals",
-        skillReq = 20,
-        skill = "ashlander_theology",
-        description = "Commune with the whispers of Alandro Sul's Spirit\n\n    Blind 100\n    Sanctuary 100\n    Detect Animal 100\n    Detect Enchantment 100\n    Detect Key 100",
-        prayerDuration = 30,
-        image = "Icons\\PRAY\\art\\alandro_sul.dds",
-        materials = {
-            { material = "pray_ashlander_cuirass", count = 1},
-            { material = "ashlander_lit", count = 1},
-            { material = "candle", count = 5 },
-        },
-        spellEffects = {
-            {
-                id = 47, --blind
-                duration = 720,
-                min = 100,
-                max = 100,
-            },
-            {
-                id = 42, --sanctuary
-                duration = 720,
-                min = 100,
-                max = 100,
-            },
-            {
-                id = 64, --detectAnimal
-                duration = 720,
-                min = 100,
-                max = 100,
-            },
-            {
-                id = 65, --detectEnchantment
-                duration = 720,
-                min = 100,
-                max = 100,
-            },
-            {
-                id = 66, --detectKey
-                duration = 720,
-                min = 100,
-                max = 100,
-            },
-            -- {
-            --     id = 336, --detectDaedra (Enhanced Detection)
-            --     duration = 720,
-            --     min = 100,
-            --     max = 100,
-            -- },
-            -- {
-            --     id = 338, --detectHumanoid (Enhanced Detection)
-            --     duration = 720,
-            --     min = 100,
-            --     max = 100,
-            -- },
-            -- {
-            --     id = 340, --detectUndead (Enhanced Detection)
-            --     duration = 720,
-            --     min = 100,
-            --     max = 100,
-            -- },
-        },
-        text = "When earth is sundered, and skies choked black\nAnd sleepers serve the seven curses\nTo the hearth there comes a stranger,\nJourneyed far 'neath moon and star",
-    }
-}
+local ashlanderModule = require("hornsilk.PRAY.theologies.ashlander")
+this.ashlanderRituals = ashlanderModule.ashlanderRituals
 
 this.sixthHouseRituals = {
     {
