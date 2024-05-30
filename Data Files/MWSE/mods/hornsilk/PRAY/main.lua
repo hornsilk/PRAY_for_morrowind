@@ -7,7 +7,6 @@ local materials = require("hornsilk.PRAY.materials")
 local prayers = require("hornsilk.PRAY.prayers")
 local rituals = require("hornsilk.PRAY.rituals")
 local animation = require("hornsilk.PRAY.animation")
-local skills = require("hornsilk.PRAY.skills")
 
 -- CONFIGURATION --
 local configPath = "PRAY"
@@ -31,49 +30,17 @@ end
 local skillModule = require("OtherSkills.skillModule")
 local ashlanderModule = require("hornsilk.PRAY.theologies.ashlander")
 local divineModule = require("hornsilk.PRAY.theologies.divine")
+local sixthHouseModule = require("hornsilk.PRAY.theologies.sixth_house")
+local tribunalModule = require("hornsilk.PRAY.theologies.tribunal")
 
 -- Register skills for the Prayer System
 -- decent place to look for icons https://en.uesp.net/wiki/Category:Morrowind-Banner_Images
 
 local function onSkillReady()
-    
-
-    -- Tribunal Theology skill
-    local tribunalDescription = (
-        "The Tribunal Theology skill determines your knowledge of traditional prayers and rituals of the Tribunal Temple."
-    )
-    skillModule.registerSkill(
-        "tribunal_theology",
-        {
-            name = "Tribunal Theology",
-            icon = "Icons\\PRAY\\almsivi.dds",
-            value = 10,
-            attribute =  tes3.attribute.intelligence,
-            description = tribunalDescription,
-            specialization = tes3.specialization.magic,
-            active = "active"
-        }
-    )
-
     ashlanderModule.registerSkill()
     divineModule.registerSkill()
-
-    -- Sixth House Theology skill
-    local sixthHouseDescription = (
-        "The Sixth House Theology skill determines your knowledge of traditional prayers and rituals of the Tribe Unmourned."
-    )
-    skillModule.registerSkill(
-        "sixth_house_theology",
-        {
-            name = "Sixth House Theology",
-            icon = "Icons\\PRAY\\sixthHouse.dds",
-            value = 10,
-            attribute =  tes3.attribute.personality,
-            description = sixthHouseDescription,
-            specialization = tes3.specialization.magic,
-            active = "active"
-        }
-    )
+    tribunalModule.registerSkill()
+    sixthHouseModule.registerSkill()
 end
 event.register("OtherSkills:Ready", onSkillReady)
 
@@ -111,8 +78,12 @@ local function registerPrayerOrRitual(recipeTable, type)
         knowledgeRequirement = ashlanderModule.knowledgeRequirement
     elseif skill == "divine_theology" then
         knowledgeRequirement = divineModule.knowledgeRequirement
+    elseif skill == "tribunal_theology" then
+        knowledgeRequirement = tribunalModule.knowledgeRequirement
+    elseif skill == "sixth_house_theology" then
+        knowledgeRequirement = sixthHouseModule.knowledgeRequirement
     else
-        knowledgeRequirement= recipeTable.knowledgeRequirement or skills.data[skill].knowledgeRequirement
+        knowledgeRequirement= recipeTable.knowledgeRequirement --or skills.data[skill].knowledgeRequirement
     end
     -- materialsReq logic
     local materialsReq = {}
@@ -126,10 +97,12 @@ local function registerPrayerOrRitual(recipeTable, type)
     local soundPath 
     if skill == "ashlander_theology" then
         soundPath = ashlanderModule.sound   
-    elseif skill == 'divine_theology' then 
+    elseif skill == "divine_theology" then 
         soundPath = divineModule.sound
+    elseif skill == "tribunal_theology" then
+        soundPath = tribunalModule.sound
     else
-        soundPath = recipeTable.soundPath or skills.data[skill].sound or "Fx\\envrn\\chant.wav"
+        soundPath = recipeTable.soundPath or "Fx\\envrn\\chant.wav"
     end
 
     --CONFIG OPTIONS--
