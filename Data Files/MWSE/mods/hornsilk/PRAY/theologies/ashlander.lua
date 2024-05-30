@@ -2,33 +2,39 @@ local skillModule = require("OtherSkills.skillModule")
 
 local this = {}
 
+-- refactor: from skills.lua
 this.name = "ashlander_theology"
+this.fullName = "Ashlander Theology"
+this.specialization = tes3.specialization.magic
+this.attribute = tes3.attribute.endurance
+this.icon = "Icons\\PRAY\\ashlander.dds"
+this.sound = "PRAY\\ash_pray.wav"
+this.description = (
+    "The Ashlander Theology skill determines your knowledge of traditional prayers and rituals of the Ashlanders of Morrowind."
+)
+
 this.knowledgeRequirement = function()
     return tes3.getJournalIndex{ id = "A2_1_MeetSulMatuul" } >= 44
 end
-this.sound = "PRAY\\ash_pray.wav"
 
-
--- Ashlander Theology skill
+-- refactor: from main.lua
 function this.registerSkill()
-    local ashlanderDescription = (
-        "The Ashlander Theology skill determines your knowledge of traditional prayers and rituals of the Ashlanders of Morrowind."
-    )
     skillModule.registerSkill(
-        "ashlander_theology",
+        this.name,
         {
-            name = "Ashlander Theology",
-            icon = "Icons\\PRAY\\ashlander.dds",
+            name = this.fullName,
+            icon = this.icon,
             value = 10,
-            attribute =  tes3.attribute.endurance,
-            description = ashlanderDescription,
-            specialization = tes3.specialization.magic,
+            attribute =  this.attribute,
+            description = this.description,
+            specialization = this.specialization,
             active = "active"
         }
     )
 end
 
-this.ashlanderPrayers = {
+-- refactor: from prayers.lua
+this.prayers = {
     {
         name = "Acknowledge the Ancestors",
         id = "basic_ancestor_prayer",
@@ -176,7 +182,8 @@ this.ashlanderPrayers = {
     },
 }
 
-this.ashlanderRituals = {
+-- refactor: from rituals.lua
+this.rituals = {
     {
         name = "Invocation of Alandro Sul",
         id = "alandro_sul",
