@@ -4,9 +4,11 @@ if not CraftingFramework then return end
 
 -- Load required modules
 local materials = require("hornsilk.PRAY.materials")
-local prayers = require("hornsilk.PRAY.prayers")
-local rituals = require("hornsilk.PRAY.rituals")
 local animation = require("hornsilk.PRAY.animation")
+local tribunalModule = require("hornsilk.PRAY.theologies.tribunal")
+local divineModule = require("hornsilk.PRAY.theologies.divine")
+local ashlanderModule = require("hornsilk.PRAY.theologies.ashlander")
+local sixthHouseModule = require("hornsilk.PRAY.theologies.sixth_house")
 
 -- CONFIGURATION --
 local configPath = "PRAY"
@@ -28,19 +30,37 @@ end
 
 -- INITIALIZE SKILLS --
 local skillModule = require("OtherSkills.skillModule")
-local ashlanderModule = require("hornsilk.PRAY.theologies.ashlander")
-local divineModule = require("hornsilk.PRAY.theologies.divine")
-local sixthHouseModule = require("hornsilk.PRAY.theologies.sixth_house")
-local tribunalModule = require("hornsilk.PRAY.theologies.tribunal")
 
 -- Register skills for the Prayer System
 -- decent place to look for icons https://en.uesp.net/wiki/Category:Morrowind-Banner_Images
+local theologies = {
+    tribunalModule,
+    divineModule,
+    ashlanderModule,
+    sixthHouseModule,
+}
+
+-- refactor: from main.lua
+local function registerSkill(theology)
+    skillModule.registerSkill(
+        theology.name,
+        {
+            name = theology.fullName,
+            icon = theology.icon,
+            value = 10,
+            attribute =  theology.attribute,
+            description = theology.description,
+            specialization = theology.specialization,
+            active = "active"
+        }
+    )
+end
 
 local function onSkillReady()
-    ashlanderModule.registerSkill()
-    divineModule.registerSkill()
-    tribunalModule.registerSkill()
-    sixthHouseModule.registerSkill()
+    for i, theology in ipairs(theologies) do
+        registerSkill(theology)
+    end
+
 end
 event.register("OtherSkills:Ready", onSkillReady)
 
@@ -193,8 +213,12 @@ end
 local function initialised()
     mwse.log("[PRAY] Registering Materials")
     registerMaterials(materials)
-    mwse.log("[PRAY] Registering Prayers and Rituals")
-    registerPrayersAndRituals()
+    for i, theology in ipairs(theologies) do
+        mwse.log("[PRAY] Importing " .. theology.fullName .. " (" .. i .. ")")
+    end
+
+    -- mwse.log("[PRAY] Registering Prayers and Rituals")
+    -- registerPrayersAndRituals()
 end
 event.register("initialized", initialised)
 

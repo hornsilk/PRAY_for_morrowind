@@ -1,5 +1,3 @@
-local skillModule = require("OtherSkills.skillModule")
-
 local this = {}
 
 -- refactor: from skills.lua
@@ -17,21 +15,6 @@ this.knowledgeRequirement = function()
     return tes3.getJournalIndex{ id = "A2_1_MeetSulMatuul" } >= 44
 end
 
--- refactor: from main.lua
-function this.registerSkill()
-    skillModule.registerSkill(
-        this.name,
-        {
-            name = this.fullName,
-            icon = this.icon,
-            value = 10,
-            attribute =  this.attribute,
-            description = this.description,
-            specialization = this.specialization,
-            active = "active"
-        }
-    )
-end
 
 -- refactor: from prayers.lua
 this.prayers = {

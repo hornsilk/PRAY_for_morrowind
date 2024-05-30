@@ -1,5 +1,3 @@
-local skillModule = require("OtherSkills.skillModule")
-
 local this = {}
 
 this.name = "divine_theology"
@@ -14,21 +12,6 @@ this.description = (
 
 this.knowledgeRequirement = function()
     return tes3.getFaction("Imperial Cult").playerJoined
-end
-
-function this.registerSkill()
-    skillModule.registerSkill(
-        this.name,
-        {
-            name = this.fullName,
-            icon = this.icon,
-            value = 10,
-            attribute =  this.attribute,
-            description = this.description,
-            specialization = this.specialization,
-            active = "active"
-        }
-    )
 end
 
 this.prayers = {

@@ -1,5 +1,3 @@
-local skillModule = require("OtherSkills.skillModule")
-
 local this = {}
 
 this.name = "sixth_house_theology"
@@ -14,22 +12,6 @@ this.description = (
 
 this.knowledgeRequirement = function()
     return tes3.getJournalIndex{ id = "A2_2_6thHouse" } > 41
-end
-
--- TODO: this is identical
-function this.registerSkill()
-    skillModule.registerSkill(
-        this.name,
-        {
-            name = this.fullName,
-            icon = this.icon,
-            value = 10,
-            attribute =  this.attribute,
-            description = this.description,
-            specialization = this.specialization,
-            active = "active"
-        }
-    )
 end
 
 this.prayers = {
