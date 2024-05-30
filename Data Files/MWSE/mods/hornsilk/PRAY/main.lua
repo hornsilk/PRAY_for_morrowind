@@ -2,9 +2,13 @@
 local CraftingFramework = include("CraftingFramework")
 if not CraftingFramework then return end
 
+local skillModule = require("OtherSkills.skillModule")
+if not skillModule then return end
+
 -- Load required modules
 local materials = require("hornsilk.PRAY.materials")
 local animation = require("hornsilk.PRAY.animation")
+
 
 local tribunalModule = require("hornsilk.PRAY.theologies.tribunal")
 local divineModule = require("hornsilk.PRAY.theologies.divine")

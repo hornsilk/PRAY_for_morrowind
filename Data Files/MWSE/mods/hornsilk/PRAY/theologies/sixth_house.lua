@@ -1,5 +1,7 @@
 local this = {}
 
+local skillModule = require("OtherSkills.skillModule")
+
 this.name = "sixth_house_theology"
 this.fullName = "Sixth House Theology"
 this.specialization = tes3.specialization.magic
