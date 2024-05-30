@@ -16,7 +16,7 @@ this.knowledgeRequirement = function()
     return tes3.getJournalIndex{ id = "A2_2_6thHouse" } > 41
 end
 
-this.prayers = {
+this.recipes = {
     {
         name = "Form of the Dreamer",
         id = "sixthHouse_prayer_6",
@@ -61,10 +61,7 @@ this.prayers = {
             },
         },
         text = "He is the Lord, and Father of the Mountain.\nHe wakes, and the land wakes with him.\nAll the land, and all of its people, shall rise from sleep, and sweep the land clean of the n'wah.\nWhy have you denied him?\nAs Lord Dagoth has said. All shall greet him as flesh, or as dust.\nIt is the Hour of Wakening. He comes forth in his glory, and his people shall rejoice, and his enemies shall scatter like dust."
-    }
-}
-
-this.rituals = {
+    },
     {
         name = "First Word of the Dreamer",
         id = "sixthHouse_ritual_1",

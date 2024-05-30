@@ -14,7 +14,7 @@ this.knowledgeRequirement = function()
     return tes3.getFaction("Temple").playerJoined
 end
 
-this.prayers = {
+this.recipes = {
     {
         name = "Restoration of Saint Meris",
         id = "restore_attributes",
@@ -446,9 +446,6 @@ this.prayers = {
         },
         text = "I am the Face-Snaked Queen of the Three in One.\nIn you is an image and a seven-syllable spell,\nAYEM AE SEHTI AE VEHK,\nwhich you will repeat to it until mystery comes.\n\nThe ending of the words is ALMSIVI." -- https://en.uesp.net/wiki/Morrowind:The_36_Lessons_of_Vivec
     },
-}
-
-this.rituals = {
     {
         name = "Prostration Towards Vivec",
         id = "vivec_donation_ritual",

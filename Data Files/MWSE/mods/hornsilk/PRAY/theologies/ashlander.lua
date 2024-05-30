@@ -16,8 +16,7 @@ this.knowledgeRequirement = function()
 end
 
 
--- refactor: from prayers.lua
-this.prayers = {
+this.recipes = {
     {
         name = "Acknowledge the Ancestors",
         id = "basic_ancestor_prayer",
@@ -163,10 +162,6 @@ this.prayers = {
         },
         text = "Rise from darkness, Red Mountain!\nSpread your dark clouds and green vapors!\nBirth earthquakes, shatter stones!\nFeed the winds with fire!\nFlay the tents of the tribes from the land!\nFeed the burned earth with our souls!\n\nYet never shall you have your rule over me."
     },
-}
-
--- refactor: from rituals.lua
-this.rituals = {
     {
         name = "Invocation of Alandro Sul",
         id = "alandro_sul",

@@ -73,7 +73,7 @@ local function registerMaterials(materialTable)
 end
 
 -- Register prayers and rituals
-local function registerPrayerOrRitual(recipeTable, type, theology)
+local function registerPrayerOrRitual(recipeTable, theology)
     -- Extract recipe details
     local id = recipeTable.id
     local name = recipeTable.name
@@ -167,16 +167,10 @@ local function registerPrayersAndRituals()
 
 
     for _, theology in ipairs(theologies) do
-        -- Register prayers
-        local prayers = theology.prayers
-        for _, prayerDict in pairs(prayers) do
-            local recipe = registerPrayerOrRitual(prayerDict, "prayer", theology)
-            table.insert(recipeList, recipe)
-        end
-        -- Register rituals
-        local rituals = theology.rituals
-        for _, ritualDict in pairs(rituals) do
-            local recipe = registerPrayerOrRitual(ritualDict, "ritual", theology)
+        -- Register recipes
+        local recipeList = theology.recipes
+        for _, recipeDict in pairs(recipeList) do
+            local recipe = registerPrayerOrRitual(recipeDict, theology)
             table.insert(recipeList, recipe)
         end
     end

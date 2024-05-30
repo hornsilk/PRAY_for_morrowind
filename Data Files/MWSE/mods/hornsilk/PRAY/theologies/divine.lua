@@ -14,7 +14,7 @@ this.knowledgeRequirement = function()
     return tes3.getFaction("Imperial Cult").playerJoined
 end
 
-this.prayers = {
+this.recipes = {
     {
         name = "Prayer of Akatosh",
         id = "prayer_of_akatosh",
@@ -185,9 +185,6 @@ this.prayers = {
         },
         text = "To ZENITHAR\n\nthe Provider of our Ease.",
     },
-}
-
-this.rituals = {
     {
         name = "Wings of Akatosh",
         id = "ritual_of_akatosh",
