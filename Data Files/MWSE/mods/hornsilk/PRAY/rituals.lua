@@ -1,7 +1,5 @@
 local this = {}
 
-local skillModule = require("OtherSkills.skillModule")
-
 
 -- use these pages to look up spell effects
 -- https://mwse.github.io/MWSE/apis/tes3/?h=script#tes3applymagicsource
@@ -9,17 +7,6 @@ local skillModule = require("OtherSkills.skillModule")
 -- https://mwse.github.io/MWSE/references/attributes/
 -- https://mwse.github.io/MWSE/references/skills/
 -- https://mwse.github.io/MWSE/references/magic-effects-modded/
-
-
-local ashlanderModule = require("hornsilk.PRAY.theologies.ashlander")
-local divineModule = require("hornsilk.PRAY.theologies.divine")
-local sixthHouseModule = require("hornsilk.PRAY.theologies.sixth_house")
-local tribunalModule = require("hornsilk.PRAY.theologies.tribunal")
-
-this.ashlanderRituals = ashlanderModule.rituals
-this.divineRituals = divineModule.rituals
-this.sixthHouseRituals = sixthHouseModule.rituals
-this.tribunalRituals = tribunalModule.rituals
 
 
 this.miscRituals = {

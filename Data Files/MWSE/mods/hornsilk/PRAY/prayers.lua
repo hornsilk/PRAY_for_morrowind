@@ -8,17 +8,6 @@ local this = {}
 -- https://mwse.github.io/MWSE/references/magic-effects-modded/
 
 
-local ashlanderModule = require("hornsilk.PRAY.theologies.ashlander")
-local divineModule = require("hornsilk.PRAY.theologies.divine")
-local sixthHouseModule = require("hornsilk.PRAY.theologies.sixth_house")
-local tribunalModule = require("hornsilk.PRAY.theologies.tribunal")
-
-this.ashlanderPrayers = ashlanderModule.prayers
-this.divinePrayers = divineModule.prayers
-this.sixthHousePrayers = sixthHouseModule.prayers
-this.tribunalPrayers = tribunalModule.prayers
-
-
 this.miscPrayers = {
     {
         name = "The Gray Maybe",

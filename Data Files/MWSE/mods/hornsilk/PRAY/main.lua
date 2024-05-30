@@ -69,7 +69,7 @@ local function registerMaterials(materialTable)
 end
 
 -- Register prayers and rituals
-local function registerPrayerOrRitual(recipeTable, type)
+local function registerPrayerOrRitual(recipeTable, type, theology)
     -- Extract recipe details
     local id = recipeTable.id
     local name = recipeTable.name
@@ -92,37 +92,16 @@ local function registerPrayerOrRitual(recipeTable, type)
     end
 
     -- knowledgeRequirement logic
-    local knowledgeRequirement 
-    if skill == "ashlander_theology" then
-        knowledgeRequirement = ashlanderModule.knowledgeRequirement
-    elseif skill == "divine_theology" then
-        knowledgeRequirement = divineModule.knowledgeRequirement
-    elseif skill == "tribunal_theology" then
-        knowledgeRequirement = tribunalModule.knowledgeRequirement
-    elseif skill == "sixth_house_theology" then
-        knowledgeRequirement = sixthHouseModule.knowledgeRequirement
-    else
-        knowledgeRequirement= recipeTable.knowledgeRequirement --or skills.data[skill].knowledgeRequirement
-    end
+    local knowledgeRequirement = recipeTable.knowledgeRequirement or theology.knowledgeRequirement
+
     -- materialsReq logic
-    local materialsReq = {}
-    if type == "prayer" then
-        materialsReq = {}
-    elseif type == "ritual" then
-        materialsReq = recipeTable.materials
-    end
+    local materialsReq = recipeTable.materials or {}
+
 
     -- soundPath logic
-    local soundPath 
-    if skill == "ashlander_theology" then
-        soundPath = ashlanderModule.sound   
-    elseif skill == "divine_theology" then 
-        soundPath = divineModule.sound
-    elseif skill == "tribunal_theology" then
-        soundPath = tribunalModule.sound
-    else
-        soundPath = recipeTable.soundPath or "Fx\\envrn\\chant.wav"
-    end
+    local soundPath = recipeTable.soundPath or theology.sound
+    -- "Fx\\envrn\\chant.wav"
+
 
     --CONFIG OPTIONS--
     if config.allPrayersShortDuration then prayerDuration = 3 end
@@ -187,13 +166,13 @@ local function registerPrayersAndRituals()
         -- Register prayers
         local prayers = theology.prayers
         for _, prayerDict in pairs(prayers) do
-            local recipe = registerPrayerOrRitual(prayerDict, "prayer")
+            local recipe = registerPrayerOrRitual(prayerDict, "prayer", theology)
             table.insert(recipeList, recipe)
         end
         -- Register rituals
         local rituals = theology.rituals
         for _, ritualDict in pairs(rituals) do
-            local recipe = registerPrayerOrRitual(ritualDict, "ritual")
+            local recipe = registerPrayerOrRitual(ritualDict, "ritual", theology)
             table.insert(recipeList, recipe)
         end
     end
