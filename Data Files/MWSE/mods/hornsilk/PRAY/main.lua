@@ -5,10 +5,18 @@ if not CraftingFramework then return end
 -- Load required modules
 local materials = require("hornsilk.PRAY.materials")
 local animation = require("hornsilk.PRAY.animation")
+
 local tribunalModule = require("hornsilk.PRAY.theologies.tribunal")
 local divineModule = require("hornsilk.PRAY.theologies.divine")
 local ashlanderModule = require("hornsilk.PRAY.theologies.ashlander")
 local sixthHouseModule = require("hornsilk.PRAY.theologies.sixth_house")
+local theologies = {
+    tribunalModule,
+    divineModule,
+    ashlanderModule,
+    sixthHouseModule,
+}
+-- decent place to look for icons https://en.uesp.net/wiki/Category:Morrowind-Banner_Images
 
 -- CONFIGURATION --
 local configPath = "PRAY"
@@ -32,15 +40,6 @@ end
 local skillModule = require("OtherSkills.skillModule")
 
 -- Register skills for the Prayer System
--- decent place to look for icons https://en.uesp.net/wiki/Category:Morrowind-Banner_Images
-local theologies = {
-    tribunalModule,
-    divineModule,
-    ashlanderModule,
-    sixthHouseModule,
-}
-
--- refactor: from main.lua
 local function registerSkill(theology)
     skillModule.registerSkill(
         theology.name,
@@ -182,17 +181,19 @@ local function registerPrayersAndRituals()
 
     -- Create a list to store recipes
     local recipeList = {}
-    -- Register prayers
-    for _, prayerList in pairs(prayers) do
-        for _, prayerTable in pairs(prayerList) do
-            local recipe = registerPrayerOrRitual(prayerTable, "prayer")
+
+
+    for _, theology in ipairs(theologies) do
+        -- Register prayers
+        local prayers = theology.prayers
+        for _, prayerDict in pairs(prayers) do
+            local recipe = registerPrayerOrRitual(prayerDict, "prayer")
             table.insert(recipeList, recipe)
         end
-    end
-    -- Register rituals
-    for _, ritualList in pairs(rituals) do
-        for _, ritualTable in pairs(ritualList) do
-            local recipe = registerPrayerOrRitual(ritualTable, "ritual")
+        -- Register rituals
+        local rituals = theology.rituals
+        for _, ritualDict in pairs(rituals) do
+            local recipe = registerPrayerOrRitual(ritualDict, "ritual")
             table.insert(recipeList, recipe)
         end
     end
@@ -217,8 +218,8 @@ local function initialised()
         mwse.log("[PRAY] Importing " .. theology.fullName .. " (" .. i .. ")")
     end
 
-    -- mwse.log("[PRAY] Registering Prayers and Rituals")
-    -- registerPrayersAndRituals()
+    mwse.log("[PRAY] Registering Prayers and Rituals")
+    registerPrayersAndRituals()
 end
 event.register("initialized", initialised)
 
