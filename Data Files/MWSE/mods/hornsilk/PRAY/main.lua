@@ -21,7 +21,7 @@ local theologies = {
     sixthHouseModule,
 }
 
-local miscRecipes = require("hornsilk.PRAY.misc_recipes")
+local miscModule = require("hornsilk.PRAY.misc_recipes")
 
 -- CONFIGURATION --
 local configPath = "PRAY"
@@ -75,6 +75,8 @@ end
 
 -- Register prayers and rituals
 local function registerPrayerOrRitual(recipeTable, theology)
+    -- mwse.log("[PRAY] registering "..recipeTable.name)
+
     -- Extract recipe details
     local id = recipeTable.id
     local name = recipeTable.name
@@ -177,7 +179,7 @@ local function registerPrayersAndRituals()
         end
     end
 
-    for _, recipeDict in pairs(miscRecipes) do
+    for _, recipeDict in pairs(miscModule.recipes) do
         local recipe = registerPrayerOrRitual(recipeDict, nil)
         table.insert(recipeList, recipe)
     end

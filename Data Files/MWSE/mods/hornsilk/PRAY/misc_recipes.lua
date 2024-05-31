@@ -10,7 +10,7 @@ local this = {}
 -- decent place to look for icons https://en.uesp.net/wiki/Category:Morrowind-Banner_Images
 
 
-this.miscRecipes = {
+this.recipes = {
     {
         name = "The Gray Maybe",
         id = "luck_prayer",
