@@ -9,16 +9,11 @@ if not skillModule then return end
 local materials = require("hornsilk.PRAY.materials")
 local animation = require("hornsilk.PRAY.animation")
 
-
-local tribunalModule = require("hornsilk.PRAY.theologies.tribunal")
-local divineModule = require("hornsilk.PRAY.theologies.divine")
-local ashlanderModule = require("hornsilk.PRAY.theologies.ashlander")
-local sixthHouseModule = require("hornsilk.PRAY.theologies.sixth_house")
 local theologies = {
-    tribunalModule,
-    divineModule,
-    ashlanderModule,
-    sixthHouseModule,
+    require("hornsilk.PRAY.theologies.tribunal"),
+    require("hornsilk.PRAY.theologies.divine"),
+    require("hornsilk.PRAY.theologies.ashlander"),
+    require("hornsilk.PRAY.theologies.sixth_house"),
 }
 
 local miscModule = require("hornsilk.PRAY.misc_recipes")
