@@ -18,51 +18,6 @@ end
 
 this.recipes = {
     {
-        name = "Form of the Dreamer",
-        id = "sixthHouse_prayer_6",
-        handler = "Sixth House Prayers",
-        skillReq = 16,
-        skill = "sixth_house_theology",
-        description = "How will you honor the Sixth House, the tribe unmourned? Together we shall speak for the Law and the Land, and shall drive the mongrel dogs of the Empire from Morrowind.\nCome to me, through fire and war. I welcome you.\nWelcome, Moon-and-Star. I have prepared a place for you.",
-        image = "Icons\\PRAY\\art\\dagoth6.dds",
-        skillProgress = 200,
-        spellEffects = {
-            {
-                id = 79, --fortifyAttribute
-                attribute = 6, --personality
-                duration = 720,
-                min = 60,
-                max = 66,
-            },
-            {
-                id = 79, --fortifyAttribute
-                attribute = 6, --strength
-                duration = 720,
-                min = 60,
-                max = 66,
-            },
-            {
-                id = 3, --shield
-                duration = 720,
-                min = 60,
-                max = 66,
-            },
-            {
-                id = 4, --fireShield
-                duration = 720,
-                min = 60,
-                max = 66,
-            },
-            {
-                id = 98, --resistNormalWeapons
-                duration = 720,
-                min = 60,
-                max = 66,
-            },
-        },
-        text = "He is the Lord, and Father of the Mountain.\nHe wakes, and the land wakes with him.\nAll the land, and all of its people, shall rise from sleep, and sweep the land clean of the n'wah.\nWhy have you denied him?\nAs Lord Dagoth has said. All shall greet him as flesh, or as dust.\nIt is the Hour of Wakening. He comes forth in his glory, and his people shall rejoice, and his enemies shall scatter like dust."
-    },
-    {
         name = "First Word of the Dreamer",
         id = "sixthHouse_ritual_1",
         handler = "Sixth House Rituals",
@@ -213,6 +168,51 @@ this.recipes = {
         knowledgeRequirement = function()
             return tes3.getJournalIndex{ id = "A2_2_6thHouse" } > 41 and skillModule.getSkill('sixth_house_theology').value < 16
         end,
+        spellEffects = {
+            {
+                id = 79, --fortifyAttribute
+                attribute = 6, --personality
+                duration = 720,
+                min = 60,
+                max = 66,
+            },
+            {
+                id = 79, --fortifyAttribute
+                attribute = 6, --strength
+                duration = 720,
+                min = 60,
+                max = 66,
+            },
+            {
+                id = 3, --shield
+                duration = 720,
+                min = 60,
+                max = 66,
+            },
+            {
+                id = 4, --fireShield
+                duration = 720,
+                min = 60,
+                max = 66,
+            },
+            {
+                id = 98, --resistNormalWeapons
+                duration = 720,
+                min = 60,
+                max = 66,
+            },
+        },
+        text = "He is the Lord, and Father of the Mountain.\nHe wakes, and the land wakes with him.\nAll the land, and all of its people, shall rise from sleep, and sweep the land clean of the n'wah.\nWhy have you denied him?\nAs Lord Dagoth has said. All shall greet him as flesh, or as dust.\nIt is the Hour of Wakening. He comes forth in his glory, and his people shall rejoice, and his enemies shall scatter like dust."
+    },
+    {
+        name = "Form of the Dreamer",
+        id = "sixthHouse_prayer_6",
+        handler = "Sixth House Prayers",
+        skillReq = 16,
+        skill = "sixth_house_theology",
+        description = "How will you honor the Sixth House, the tribe unmourned? Together we shall speak for the Law and the Land, and shall drive the mongrel dogs of the Empire from Morrowind.\nCome to me, through fire and war. I welcome you.\nWelcome, Moon-and-Star. I have prepared a place for you.",
+        image = "Icons\\PRAY\\art\\dagoth6.dds",
+        skillProgress = 200,
         spellEffects = {
             {
                 id = 79, --fortifyAttribute
