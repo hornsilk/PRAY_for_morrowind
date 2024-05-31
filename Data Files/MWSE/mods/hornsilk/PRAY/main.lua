@@ -169,8 +169,9 @@ local function registerPrayersAndRituals()
 
     for _, theology in ipairs(theologies) do
         -- Register recipes
-        local recipeList = theology.recipes
-        for _, recipeDict in pairs(recipeList) do
+        -- mwse.log("[PRAY] Registering Theology "..theology.fullName)
+
+        for _, recipeDict in pairs(theology.recipes) do
             local recipe = registerPrayerOrRitual(recipeDict, theology)
             table.insert(recipeList, recipe)
         end
